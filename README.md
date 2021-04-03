@@ -1,0 +1,2 @@
+# codemon
+This is a educational game developed in Godot Game Engine. The main goal is teach about fundamentals of programing, such as concept about variables and yours types (integer, double, string  and boolean), the arithmetic operator (plus, minus, divide, multiply &amp; module), the logic operator (bigger, less, equal, not equal, and &amp; or), control flow (for, if, else &amp; while) and the last challenge the bubble sort algorithm.
