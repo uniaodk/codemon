@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://art/chalenge/circuit_logic/zero_selected.png" type="Texture" id=1]
+[ext_resource path="res://art/chalenge/circuit_logic/one_selected.png" type="Texture" id=2]
+[ext_resource path="res://art/chalenge/circuit_logic/zero.png" type="Texture" id=3]
+[ext_resource path="res://scene/component/zero_one.gd" type="Script" id=4]
+
+[node name="zero_one" type="TextureButton"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="." to="." method="_on_zero_one_button_down"]

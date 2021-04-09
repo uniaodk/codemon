@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://art/object/portal.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 2.91367
+height = 16.9897
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 0.0342464, 0.167334, 0.974121, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 1
+emission_sphere_radius = 17.99
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 105.99
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.8
+orbit_velocity_random = 1.0
+color_ramp = SubResource( 3 )
+
+[node name="portal" type="Area2D"]
+scale = Vector2( 1.5, 1.5 )
+collision_layer = 0
+
+[node name="portal" type="Sprite" parent="."]
+position = Vector2( -0.471405, -7.30677 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0129825, -2.87255 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+shape = SubResource( 1 )
+
+[node name="particles" type="Particles2D" parent="."]
+visible = false
+position = Vector2( -0.792358, -9.50156 )
+amount = 1000
+lifetime = 2.0
+process_material = SubResource( 4 )

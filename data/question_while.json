@@ -1,0 +1,74 @@
+[
+	{
+		"shape_type" : ["triangle", "triangle", "circle"],
+		"assign_type" : ["while", "int", "bool"],
+		"assign" : ["b", "b"],
+		"expression": ["b @c 5", "b + a + 2"],
+		"variable" : [["b", "c"], ["b", "a"]],
+		"return" : "b",
+		"waited" : ["-3", "1", "-2", "5", "0", "7", "-5", "-4", "6", "4", "3", "2", "-1", "9", "8"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "circle"],
+		"assign_type" : ["while", "int", "bool"],
+		"assign" : ["b", "b"],
+		"expression": ["b @c 15", "b - a * 2"],
+		"variable" : [["b", "c"], ["b", "a"]],
+		"return" : "b",
+		"waited" : ["19", "-2", "-4", "1", "-3", "-1", "-5", "3", "15", "17", "16", "4", "22", "5", "24", "0", "18", "20", "2"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["int", "while", "int"],
+		"assign" : ["d", "d", "d"],
+		"expression": ["b * 2", "d < 6", "d #c a"],
+		"variable" : [["b"], ["d"] ,["d", "c", "a"]],
+		"return" : "d",
+		"waited" : ["10", "8", "9", "6", "20", "64", "18", "12", "7", "30", "40", "16"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "circle"],
+		"assign_type" : ["while", "bool", "bool"],
+		"assign" : ["b", "b"],
+		"expression": ["b @c true", "a or false"],
+		"variable" : [["b", "c"], ["a"]],
+		"return" : "b",
+		"waited" : ["True", "False"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "circle"],
+		"assign_type" : ["while", "double", "bool"],
+		"assign" : ["b", "b"],
+		"expression": ["b @c 4.5", "b - a + 1.5"],
+		"variable" : [["b", "c"], ["b", "a"]],
+		"return" : "b",
+		"waited" : ["5.8", "1.6", "4.6", "-0.5", "-3.4", "5.0", "5.9", "4.4", "-0.8", "2.9", "2.1", "3.3", "-2.5", "4.5", "-2.6", "4.9", "-3.8", "6.6", "3.2", "2.7", "-3.6", "-0.6", "-1.6", "1.1", "-1.8", "8.1", "1.0", "5.5", "-1.5", "-3.7", "-0.9", "-1.2", "-4.8", "5.2", "0.7", "0.6", "3.0"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "circle"],
+		"assign_type" : ["while", "double", "bool"],
+		"assign" : ["b", "b"],
+		"expression": ["b @c 1.5", "b + a * 2.5"],
+		"variable" : [["b", "c"], ["b", "a"]],
+		"return" : "b",
+		"waited" : ["-2.0", "1.9", "0.0", "0.5", "2.1", "9.2", "-1.3", "5.9", "1.5", "0.4", "0.3", "-2.5", "3.6", "1.4", "-2.4", "2.9", "4.1", "3.7", "-1.4", "5.0", "-3.3", "0.1", "4.4", "-3.8", "1.8", "5.1", "-1.8", "5.8", "-1.1", "-4.2", "5.4", "3.9", "-2.6", "-0.8", "-3.7", "0.9", "-2.3"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["double", "while", "double"],
+		"assign" : ["d", "d", "d"],
+		"expression": ["b * 0.5", "d < 3.5", "d #c a"],
+		"variable" : [["b"], ["d"] ,["d", "c", "a"]],
+		"return" : "d",
+		"waited" : ["5.1", "4.5", "3.9", "4.9", "16.6", "3.6", "3.8", "5.4", "6.9", "7.4", "4.2", "3.7", "8.2", "12.1", "11.9", "6.8", "4.8", "9.2", "5.9"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["string", "while", "string"],
+		"assign" : ["d", "d", "d"],
+		"expression": ["b + \"f\"", "d == \"of\"", "a #c d"],
+		"variable" : [["b"], ["d"] ,["a", "c", "d"]],
+		"return" : "d",
+		"waited" : [";of", "Mf", "TRof", "mf", "oUf", "!Oof", "CSf", "wSof", "%Jf", "ovf", "caof", "Af", "uf", "-f", "!rf", "'Uf", "f`f", "(of", "f@f", "iEf", "5of", "vf", "vGf", "gf", "ef", "C$of", "hef", "*f", ":of", "1#f", "&of", "!f", ")f", ";Hf", "Iof", "&gf", "1of", "7f", "iof", "bCf", "@0f", "3.of", "F<f", "wYf", "--of", "(af", "ptof", "vXof"]
+	}
+]

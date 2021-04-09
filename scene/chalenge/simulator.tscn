@@ -1,0 +1,378 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://art/chalenge/background_chalenge.png" type="Texture" id=1]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://art/character/codemon/int_selected.png" type="Texture" id=3]
+[ext_resource path="res://art/character/codemon/int.png" type="Texture" id=4]
+[ext_resource path="res://art/character/codemon/string_selected.png" type="Texture" id=5]
+[ext_resource path="res://art/character/codemon/double.png" type="Texture" id=6]
+[ext_resource path="res://art/character/codemon/double_selected.png" type="Texture" id=7]
+[ext_resource path="res://art/character/codemon/string.png" type="Texture" id=8]
+[ext_resource path="res://art/character/codemon/bool_selected.png" type="Texture" id=9]
+[ext_resource path="res://art/character/codemon/bool.png" type="Texture" id=10]
+[ext_resource path="res://art/character/codemon/or_select.png" type="Texture" id=11]
+[ext_resource path="res://art/character/codemon/or.png" type="Texture" id=12]
+[ext_resource path="res://art/character/codemon/and_selected.png" type="Texture" id=13]
+[ext_resource path="res://art/character/codemon/tomada.png" type="Texture" id=14]
+[ext_resource path="res://art/character/codemon/tomada_selected.png" type="Texture" id=15]
+[ext_resource path="res://art/character/codemon/bubble_sort.png" type="Texture" id=16]
+[ext_resource path="res://art/character/codemon/bubble_sort_selected.png" type="Texture" id=17]
+[ext_resource path="res://art/character/codemon/for_selected.png" type="Texture" id=18]
+[ext_resource path="res://art/character/codemon/for.png" type="Texture" id=19]
+[ext_resource path="res://art/character/codemon/bigger_selected.png" type="Texture" id=20]
+[ext_resource path="res://art/character/codemon/and.png" type="Texture" id=21]
+[ext_resource path="res://art/character/codemon/equal_selected.png" type="Texture" id=22]
+[ext_resource path="res://art/character/codemon/not_equal_selected.png" type="Texture" id=23]
+[ext_resource path="res://art/character/codemon/less.png" type="Texture" id=24]
+[ext_resource path="res://art/character/codemon/less_selected.png" type="Texture" id=25]
+[ext_resource path="res://art/character/codemon/not_equal.png" type="Texture" id=26]
+[ext_resource path="res://art/character/codemon/equal.png" type="Texture" id=27]
+[ext_resource path="res://art/character/codemon/bigger.png" type="Texture" id=28]
+[ext_resource path="res://art/character/codemon/plus_selected.png" type="Texture" id=29]
+[ext_resource path="res://art/character/codemon/plus.png" type="Texture" id=30]
+[ext_resource path="res://art/character/codemon/minus.png" type="Texture" id=31]
+[ext_resource path="res://art/character/codemon/multiply.png" type="Texture" id=32]
+[ext_resource path="res://art/character/codemon/multiply_selected.png" type="Texture" id=33]
+[ext_resource path="res://art/character/codemon/divide.png" type="Texture" id=34]
+[ext_resource path="res://art/character/codemon/divide_selected.png" type="Texture" id=35]
+[ext_resource path="res://art/character/codemon/modulo.png" type="Texture" id=36]
+[ext_resource path="res://art/character/codemon/modulo_selected.png" type="Texture" id=37]
+[ext_resource path="res://art/character/codemon/minus_selected.png" type="Texture" id=38]
+[ext_resource path="res://art/character/codemon/while.png" type="Texture" id=39]
+[ext_resource path="res://art/character/codemon/while_selected.png" type="Texture" id=40]
+[ext_resource path="res://art/character/codemon/if_selected.png" type="Texture" id=41]
+[ext_resource path="res://art/character/codemon/if.png" type="Texture" id=42]
+[ext_resource path="res://art/character/codemon/else_selected.png" type="Texture" id=43]
+[ext_resource path="res://art/character/codemon/else.png" type="Texture" id=44]
+[ext_resource path="res://scene/component/check_box.tscn" type="PackedScene" id=45]
+[ext_resource path="res://scene/chalenge/simulator.gd" type="Script" id=46]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=47]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 38
+outline_size = 1
+outline_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 26
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="simulator" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 46 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="."]
+margin_left = 37.9194
+margin_top = 34.8295
+margin_right = 440.919
+margin_bottom = 77.8295
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Simulador"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question" type="Label" parent="."]
+margin_left = 38.0
+margin_top = 100.321
+margin_right = 966.0
+margin_bottom = 233.321
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0.152941, 1, 1 )
+text = "Clique sobre um dos codemons para simular uma batalha.
+Simulação não afeta nos pontos de desafio e captura, nem no ganho de moedas."
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="check_box" parent="." instance=ExtResource( 45 )]
+margin_left = 48.6031
+margin_top = 531.11
+margin_right = 245.603
+margin_bottom = 551.11
+
+[node name="text" type="Label" parent="check_box"]
+margin_left = 32.0628
+margin_top = 9.2339
+margin_right = 184.063
+margin_bottom = 25.2339
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Apresentar tutorial"
+
+[node name="variables" type="HBoxContainer" parent="."]
+margin_left = 45.5569
+margin_top = 234.84
+margin_right = 218.557
+margin_bottom = 274.84
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="int" type="TextureButton" parent="variables"]
+margin_right = 32.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+
+[node name="double" type="TextureButton" parent="variables"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+
+[node name="string" type="TextureButton" parent="variables"]
+margin_left = 94.0
+margin_right = 126.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+
+[node name="bool" type="TextureButton" parent="variables"]
+margin_left = 141.0
+margin_right = 173.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+
+[node name="arithmetic" type="HBoxContainer" parent="."]
+margin_left = 48.8262
+margin_top = 331.313
+margin_right = 268.826
+margin_bottom = 371.313
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plus" type="TextureButton" parent="arithmetic"]
+margin_right = 32.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 30 )
+texture_pressed = ExtResource( 29 )
+texture_hover = ExtResource( 29 )
+
+[node name="minus" type="TextureButton" parent="arithmetic"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 31 )
+texture_pressed = ExtResource( 38 )
+texture_hover = ExtResource( 38 )
+
+[node name="multiply" type="TextureButton" parent="arithmetic"]
+margin_left = 94.0
+margin_right = 126.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 32 )
+texture_pressed = ExtResource( 33 )
+texture_hover = ExtResource( 33 )
+
+[node name="divide" type="TextureButton" parent="arithmetic"]
+margin_left = 141.0
+margin_right = 173.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 34 )
+texture_pressed = ExtResource( 35 )
+texture_hover = ExtResource( 35 )
+
+[node name="modulo" type="TextureButton" parent="arithmetic"]
+margin_left = 188.0
+margin_right = 220.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 36 )
+texture_pressed = ExtResource( 37 )
+texture_hover = ExtResource( 37 )
+
+[node name="logic" type="HBoxContainer" parent="."]
+margin_left = 49.8827
+margin_top = 420.2
+margin_right = 316.883
+margin_bottom = 460.2
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="equal" type="TextureButton" parent="logic"]
+margin_right = 32.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 27 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 22 )
+
+[node name="not_equal" type="TextureButton" parent="logic"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 26 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 23 )
+
+[node name="less" type="TextureButton" parent="logic"]
+margin_left = 94.0
+margin_right = 126.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 25 )
+texture_hover = ExtResource( 25 )
+
+[node name="bigger" type="TextureButton" parent="logic"]
+margin_left = 141.0
+margin_right = 173.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 28 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 20 )
+
+[node name="and" type="TextureButton" parent="logic"]
+margin_left = 188.0
+margin_right = 220.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 13 )
+
+[node name="or" type="TextureButton" parent="logic"]
+margin_left = 235.0
+margin_right = 267.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 11 )
+
+[node name="control" type="HBoxContainer" parent="."]
+margin_left = 632.916
+margin_top = 267.493
+margin_right = 808.916
+margin_bottom = 307.493
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="for" type="TextureButton" parent="control"]
+margin_right = 32.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 18 )
+texture_hover = ExtResource( 18 )
+
+[node name="while" type="TextureButton" parent="control"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 39 )
+texture_pressed = ExtResource( 40 )
+texture_hover = ExtResource( 40 )
+
+[node name="if" type="TextureButton" parent="control"]
+margin_left = 94.0
+margin_right = 126.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 42 )
+texture_pressed = ExtResource( 41 )
+texture_hover = ExtResource( 41 )
+
+[node name="else" type="TextureButton" parent="control"]
+margin_left = 141.0
+margin_right = 173.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 44 )
+texture_pressed = ExtResource( 43 )
+texture_hover = ExtResource( 43 )
+
+[node name="other" type="HBoxContainer" parent="."]
+margin_left = 685.568
+margin_top = 354.178
+margin_right = 812.568
+margin_bottom = 418.178
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plug" type="TextureButton" parent="other"]
+margin_right = 48.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 15 )
+
+[node name="bubble" type="TextureButton" parent="other"]
+margin_left = 63.0
+margin_right = 127.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 17 )
+
+[node name="back" parent="." instance=ExtResource( 47 )]
+margin_left = 430.502
+margin_top = 522.698
+margin_right = 338.182
+margin_bottom = 503.898
+btn_name = "Voltar"
+[connection signal="pressed" from="variables/int" to="." method="_on_int_pressed"]
+[connection signal="pressed" from="variables/double" to="." method="_on_double_pressed"]
+[connection signal="pressed" from="variables/string" to="." method="_on_string_pressed"]
+[connection signal="pressed" from="variables/bool" to="." method="_on_bool_pressed"]
+[connection signal="pressed" from="arithmetic/plus" to="." method="_on_plus_pressed"]
+[connection signal="pressed" from="arithmetic/minus" to="." method="_on_minus_pressed"]
+[connection signal="pressed" from="arithmetic/multiply" to="." method="_on_multiply_pressed"]
+[connection signal="pressed" from="arithmetic/divide" to="." method="_on_divide_pressed"]
+[connection signal="pressed" from="arithmetic/modulo" to="." method="_on_modulo_pressed"]
+[connection signal="pressed" from="logic/equal" to="." method="_on_equal_pressed"]
+[connection signal="pressed" from="logic/not_equal" to="." method="_on_not_equal_pressed"]
+[connection signal="pressed" from="logic/less" to="." method="_on_less_pressed"]
+[connection signal="pressed" from="logic/bigger" to="." method="_on_bigger_pressed"]
+[connection signal="pressed" from="logic/and" to="." method="_on_and_pressed"]
+[connection signal="pressed" from="logic/or" to="." method="_on_or_pressed"]
+[connection signal="pressed" from="control/for" to="." method="_on_for_pressed"]
+[connection signal="pressed" from="control/while" to="." method="_on_while_pressed"]
+[connection signal="pressed" from="control/if" to="." method="_on_if_pressed"]
+[connection signal="pressed" from="control/else" to="." method="_on_else_pressed"]
+[connection signal="pressed" from="other/plug" to="." method="_on_plug_pressed"]
+[connection signal="pressed" from="other/bubble" to="." method="_on_bubble_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

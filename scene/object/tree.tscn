@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art/object/tree_02.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.78236
+height = 1.0811
+
+[node name="tree" type="KinematicBody2D"]
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 3.81004, -45.6043 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( -0.155163, 0.0908737 )
+shape = SubResource( 1 )

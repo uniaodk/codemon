@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mountain.ogg-d045c165052b7d2a267bbf8b45278cae.oggstr"
+
+[deps]
+
+source_file="res://audio/music/mountain.ogg"
+dest_files=[ "res://.import/mountain.ogg-d045c165052b7d2a267bbf8b45278cae.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

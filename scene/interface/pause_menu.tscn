@@ -1,0 +1,218 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://art/component/background_m.png" type="Texture" id=2]
+[ext_resource path="res://font/title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scene/interface/pause_menu.gd" type="Script" id=5]
+[ext_resource path="res://font/text.tres" type="DynamicFont" id=6]
+
+[sub_resource type="InputEventKey" id=1]
+scancode = 16777217
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+extra_spacing_top = 1
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=4]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("btn_name:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.93983, 3.89355 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("btn_name:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.93983, 1.39355 ) ]
+}
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 4 )
+
+[node name="pause_menu" type="Control"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.490196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.0
+margin_top = -155.0
+margin_right = 109.0
+margin_bottom = 115.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vbox_container" type="VBoxContainer" parent="box"]
+margin_left = 29.0
+margin_top = 97.0
+margin_right = 121.0
+margin_bottom = 162.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resume" parent="box/vbox_container" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 92.0
+margin_bottom = 19.0
+rect_scale = Vector2( 1, 1 )
+shortcut_in_tooltip = false
+shortcut = SubResource( 2 )
+
+[node name="option" parent="box/vbox_container" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 23.0
+margin_right = 92.0
+margin_bottom = 42.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="main_menu" parent="box/vbox_container" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 92.0
+margin_bottom = 65.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="btn_name" parent="box/vbox_container/main_menu" index="0"]
+margin_left = 4.43983
+margin_right = 169.44
+custom_fonts/font = SubResource( 3 )
+
+[node name="animation" parent="box/vbox_container/main_menu" index="1"]
+anims/clicked = SubResource( 4 )
+anims/normal = SubResource( 5 )
+
+[node name="paused" type="Label" parent="box"]
+margin_left = 53.0
+margin_top = 35.0
+margin_right = 192.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Pausado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box_confirm" type="TextureRect" parent="."]
+visible = false
+margin_left = 274.0
+margin_top = 212.0
+margin_right = 734.0
+margin_bottom = 365.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question" type="Label" parent="box_confirm"]
+margin_left = 80.0
+margin_top = 23.0
+margin_right = 391.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Deseja realmente sair?"
+
+[node name="obs" type="Label" parent="box_confirm"]
+margin_left = 41.0
+margin_top = 53.0
+margin_right = 425.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.843137, 0.0313726, 0.0313726, 1 )
+text = "O jogo será salvo ao retornar ao Menu Principal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hbox_container" type="HBoxContainer" parent="box_confirm"]
+anchor_left = 0.169565
+anchor_top = 0.575163
+anchor_right = 0.987
+anchor_bottom = 0.824
+margin_left = -35.0
+margin_top = -2.00001
+margin_right = -223.02
+margin_bottom = -21.072
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yes" parent="box_confirm/hbox_container" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 92.0
+margin_bottom = 19.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="no" parent="box_confirm/hbox_container" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 188.0
+margin_bottom = 19.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="tween" type="Tween" parent="."]
+[connection signal="pressed" from="box/vbox_container/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="box/vbox_container/option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="box/vbox_container/main_menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="box_confirm/hbox_container/yes" to="." method="_on_yes_box_confirm_pressed"]
+[connection signal="pressed" from="box_confirm/hbox_container/no" to="." method="_on_no_box_confirm_pressed"]
+[connection signal="tween_completed" from="tween" to="." method="_on_tween_completed"]
+
+[editable path="box/vbox_container/main_menu"]

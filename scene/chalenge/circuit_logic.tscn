@@ -1,0 +1,250 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://art/chalenge/background_chalenge.png" type="Texture" id=1]
+[ext_resource path="res://scene/component/zero_one.tscn" type="PackedScene" id=2]
+[ext_resource path="res://art/chalenge/circuit_logic/lin_off.png" type="Texture" id=3]
+[ext_resource path="res://scene/chalenge/circuit_logic.gd" type="Script" id=4]
+[ext_resource path="res://art/chalenge/circuit_logic/and.png" type="Texture" id=5]
+[ext_resource path="res://art/chalenge/circuit_logic/curve_off.png" type="Texture" id=6]
+[ext_resource path="res://art/chalenge/circuit_logic/off.png" type="Texture" id=7]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=8]
+[ext_resource path="res://art/hud/battery.png" type="Texture" id=9]
+[ext_resource path="res://font/title.tres" type="DynamicFont" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "on"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("notebook:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -2.0, 0.0, 2.0, 0.0, -2.0, 0.0 ]
+}
+
+[node name="circuit_logic" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="zero_one" type="VBoxContainer" parent="."]
+anchor_left = 0.0507813
+anchor_top = 0.28
+anchor_right = 0.113281
+anchor_bottom = 0.806667
+margin_left = 60.0
+margin_top = -11.0
+margin_right = 28.0003
+margin_bottom = -169.0
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_1" parent="zero_one" instance=ExtResource( 2 )]
+margin_right = 32.0
+margin_bottom = 32.0
+
+[node name="btn_2" parent="zero_one" instance=ExtResource( 2 )]
+margin_top = 42.0
+margin_right = 32.0
+margin_bottom = 74.0
+
+[node name="btn_3" parent="zero_one" instance=ExtResource( 2 )]
+margin_top = 84.0
+margin_right = 32.0
+margin_bottom = 116.0
+
+[node name="btn_4" parent="zero_one" instance=ExtResource( 2 )]
+margin_top = 126.0
+margin_right = 32.0
+margin_bottom = 158.0
+
+[node name="first" type="VBoxContainer" parent="."]
+margin_left = 172.127
+margin_top = 171.529
+margin_right = 236.127
+margin_bottom = 335.529
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = -5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="connection_1" type="TextureRect" parent="first"]
+margin_right = 64.0
+margin_bottom = 32.0
+texture = ExtResource( 3 )
+
+[node name="connection_2" type="TextureRect" parent="first"]
+margin_top = 27.0
+margin_right = 64.0
+margin_bottom = 59.0
+texture = ExtResource( 3 )
+
+[node name="split" type="VSplitContainer" parent="first"]
+margin_top = 54.0
+margin_right = 64.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 0, 35 )
+custom_constants/separation = 9
+
+[node name="connection_3" type="TextureRect" parent="first"]
+margin_top = 84.0
+margin_right = 64.0
+margin_bottom = 116.0
+texture = ExtResource( 3 )
+
+[node name="connection_4" type="TextureRect" parent="first"]
+margin_top = 111.0
+margin_right = 64.0
+margin_bottom = 143.0
+texture = ExtResource( 3 )
+
+[node name="second" type="VBoxContainer" parent="."]
+margin_left = 287.825
+margin_top = 184.288
+margin_right = 327.825
+margin_bottom = 291.288
+rect_scale = Vector2( 2.7, 2.7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gate_1" type="TextureRect" parent="second"]
+margin_right = 40.0
+margin_bottom = 32.0
+texture = ExtResource( 5 )
+
+[node name="split" type="VSplitContainer" parent="second"]
+margin_top = 36.0
+margin_right = 40.0
+margin_bottom = 59.0
+rect_min_size = Vector2( 0, 23 )
+custom_constants/separation = 9
+
+[node name="gate_2" type="TextureRect" parent="second"]
+margin_top = 63.0
+margin_right = 40.0
+margin_bottom = 95.0
+texture = ExtResource( 5 )
+
+[node name="third" type="VBoxContainer" parent="."]
+margin_left = 364.421
+margin_top = 196.627
+margin_right = 428.421
+margin_bottom = 355.627
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = -6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="connection_1" type="TextureRect" parent="third"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture = ExtResource( 6 )
+
+[node name="split" type="VSplitContainer" parent="third"]
+margin_top = 58.0
+margin_right = 64.0
+margin_bottom = 58.0
+custom_constants/separation = 5
+
+[node name="connection_2" type="TextureRect" parent="third"]
+margin_top = 52.0
+margin_right = 64.0
+margin_bottom = 116.0
+texture = ExtResource( 6 )
+flip_v = true
+
+[node name="last_gate" type="TextureRect" parent="."]
+margin_left = 465.312
+margin_top = 269.674
+margin_right = 497.312
+margin_bottom = 301.674
+rect_scale = Vector2( 2.7, 2.7 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="last_connection" type="TextureRect" parent="."]
+margin_left = 541.0
+margin_top = 283.0
+margin_right = 605.0
+margin_bottom = 323.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="notebook" type="TextureRect" parent="."]
+margin_left = 625.0
+margin_top = 223.0
+margin_right = 721.0
+margin_bottom = 287.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="animation" type="AnimationPlayer" parent="."]
+anims/on = SubResource( 1 )
+
+[node name="back" parent="." instance=ExtResource( 8 )]
+margin_left = 511.443
+margin_top = 522.0
+margin_right = 419.123
+margin_bottom = 503.2
+btn_name = "Voltar"
+
+[node name="help" parent="." instance=ExtResource( 8 )]
+margin_left = 302.759
+margin_top = 523.41
+margin_right = 210.439
+margin_bottom = 504.61
+btn_name = "Ajuda"
+
+[node name="battery" type="Sprite" parent="."]
+position = Vector2( 772, 190 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+vframes = 11
+
+[node name="title" type="Label" parent="."]
+margin_left = 53.0
+margin_top = 51.0
+margin_right = 334.0
+margin_bottom = 94.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Portas Lógicas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="zero_one/btn_1" to="." method="_on_btn_1_pressed"]
+[connection signal="pressed" from="zero_one/btn_2" to="." method="_on_btn_2_pressed"]
+[connection signal="pressed" from="zero_one/btn_3" to="." method="_on_btn_3_pressed"]
+[connection signal="pressed" from="zero_one/btn_4" to="." method="_on_btn_4_pressed"]
+[connection signal="animation_finished" from="animation" to="." method="_on_animation_finished"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="help" to="." method="_on_help_pressed"]

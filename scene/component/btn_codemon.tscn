@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://art/chalenge/analyze_algorithm/btn_codemon_pressed_hover.png" type="Texture" id=1]
+[ext_resource path="res://art/chalenge/analyze_algorithm/btn_codemon_normal.png" type="Texture" id=2]
+[ext_resource path="res://art/chalenge/analyze_algorithm/btn_codemon_hover.png" type="Texture" id=3]
+[ext_resource path="res://scene/component/btn_codemon.gd" type="Script" id=4]
+[ext_resource path="res://art/chalenge/analyze_algorithm/lab_codemo_hover.png" type="Texture" id=5]
+[ext_resource path="res://art/chalenge/analyze_algorithm/lab_codemon_normal.png" type="Texture" id=6]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://theme.tres" type="Theme" id=8]
+
+[sub_resource type="StyleBoxTexture" id=1]
+
+[sub_resource type="StyleBoxTexture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 26
+font_data = ExtResource( 7 )
+
+[node name="btn_codemon" type="Control"]
+anchor_left = 0.339844
+anchor_top = 0.306667
+anchor_right = 0.339844
+anchor_bottom = 0.783333
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+type = "triangle"
+
+[node name="label" type="TextureButton" parent="."]
+visible = false
+anchor_left = 0.183566
+anchor_top = 0.854788
+anchor_right = 0.584904
+anchor_bottom = 1.1296
+margin_left = -17.0
+margin_top = -3.46936
+margin_right = 54.0
+margin_bottom = -39.0647
+rect_scale = Vector2( 2, 2 )
+disabled = true
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="LineEdit" parent="label"]
+anchor_left = 0.316667
+anchor_top = 0.333333
+anchor_right = 1.61667
+anchor_bottom = 0.708333
+margin_left = -32.1414
+margin_top = 0.813898
+margin_right = 45.8586
+margin_bottom = 14.3139
+rect_min_size = Vector2( 20, 0 )
+rect_scale = Vector2( 0.5, 0.5 )
+mouse_filter = 2
+theme = ExtResource( 8 )
+custom_styles/read_only = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/cursor_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
+align = 1
+max_length = 5
+editable = false
+context_menu_enabled = false
+selecting_enabled = false
+caret_blink = true
+caret_blink_speed = 0.3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn" type="TextureButton" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -71.3811
+margin_top = -40.7307
+margin_right = -39.3811
+margin_bottom = -8.7307
+rect_scale = Vector2( 2.5, 2.5 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprite" type="TextureRect" parent="btn"]
+anchor_left = 0.16875
+anchor_top = 0.152579
+anchor_right = 0.825
+anchor_bottom = 0.808829
+margin_right = 14.0
+margin_bottom = 14.0
+rect_scale = Vector2( 0.6, 0.6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}

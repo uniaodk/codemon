@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art/chalenge/analyze_algorithm/bg_list.png" type="Texture" id=1]
+[ext_resource path="res://scene/component/list_codemon.gd" type="Script" id=2]
+
+[node name="list_codemon" type="Control"]
+anchor_left = 0.0859375
+anchor_top = 0.228333
+anchor_right = 0.290039
+anchor_bottom = 0.628333
+margin_right = -94.0
+margin_bottom = -105.0
+rect_min_size = Vector2( 115, 135 )
+rect_scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+type = "circle"
+
+[node name="bg" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 115, 135 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scroll_container" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+rect_min_size = Vector2( 98, 115 )
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vbox" type="VBoxContainer" parent="scroll_container"]
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,83 @@
+[
+	{
+		"shape_type" : ["triangle", "triangle", "hide"],
+		"assign_type" : ["bool"],
+        "assign" : ["a"],
+		"expression": ["a and b"],
+		"variable" : [["a", "b"]],
+		"return" : "a",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "hide"],
+		"assign_type" : ["bool", "bool"],
+        "assign" : ["a", "d"],
+		"expression": ["a and true", "b and a"],
+		"variable" : [["a"], ["b", "a"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "hide"],
+		"assign_type" : ["bool", "bool", "bool"],
+        "assign" : ["a", "b", "d"],
+		"expression": ["a > 2", "b < 3", "b and a"],
+		"variable" : [["a"], ["b"], ["b", "a"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["int", "bool", "bool"],
+        "assign" : ["a", "b", "d"],
+		"expression": ["a #c 3", "a == 3", "b and true"],
+		"variable" : [["a", "c"], ["a"], ["b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "triangle"],
+		"assign_type" : ["bool"],
+        "assign" : ["a"],
+		"expression": ["a and b and c"],
+		"variable" : [["a", "b", "c"]],
+		"return" : "a",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["string", "bool", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["b #c \"de\"", "a != \"code\"", "b and true"],
+		"variable" : [["b", "c"], ["a"], ["b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["double", "bool", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["b #c 1.5", "a > 4.5", "b and true"],
+		"variable" : [["b", "c"], ["a"], ["b"]],
+		"return" : "d",
+		"waited" :["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["double", "bool", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["b #c 2.3", "a > 9.6", "b and true"],
+		"variable" : [["b", "c"], ["a"], ["b"]],
+		"return" : "d",
+		"waited" :["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "hide"],
+		"assign_type" : ["bool", "bool" ,"bool"],
+        "assign" : ["a", "b", "d"],
+		"expression": ["a and true", "b and true", "b and a"],
+		"variable" : [["a"], ["b"], ["b", "a"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	}
+]

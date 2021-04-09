@@ -1,0 +1,565 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scene/component/rope.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scene/component/btn_swap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/character/codemons/bubble_bad.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/character/codemon/array.png" type="Texture" id=4]
+[ext_resource path="res://art/chalenge/analyze_algorithm/triangle.png" type="Texture" id=5]
+[ext_resource path="res://art/chalenge/background_chalenge.png" type="Texture" id=6]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://scene/component/bubble.tscn" type="PackedScene" id=9]
+[ext_resource path="res://art/character/codemon/int.png" type="Texture" id=10]
+[ext_resource path="res://scene/chalenge/bubble_sort.gd" type="Script" id=11]
+[ext_resource path="res://scene/component/shape.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scene/chalenge/bg.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 38
+outline_size = 1
+outline_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 26
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+resource_local_to_scene = true
+size = 26
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+font_data = ExtResource( 8 )
+
+[node name="bubble_sort" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="TextureRect" parent="."]
+self_modulate = Color( 0.792157, 0.831373, 0.933333, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+expand = true
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="title" type="Label" parent="bg"]
+margin_left = 37.9194
+margin_top = 34.8295
+margin_right = 440.919
+margin_bottom = 77.8295
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Algoritmo Bolha"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question" type="Label" parent="bg"]
+margin_left = 32.7341
+margin_top = 88.1637
+margin_right = 949.734
+margin_bottom = 158.164
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0.152941, 1, 1 )
+text = "Execute a função de troca (swap) corretamente, para que os codemons fiquem na ordem crescente e sejam salvos."
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chalenge" type="Label" parent="bg"]
+margin_left = 680.2
+margin_top = 264.906
+margin_right = 968.2
+margin_bottom = 295.906
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Desafiando Bolha"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="flee" parent="bg" instance=ExtResource( 7 )]
+margin_left = 735.205
+margin_top = 518.319
+margin_right = 642.885
+margin_bottom = 499.519
+btn_name = "Fugir"
+
+[node name="help" parent="bg" instance=ExtResource( 7 )]
+margin_left = 735.205
+margin_top = 477.319
+margin_right = 642.885
+margin_bottom = 458.519
+btn_name = "Ajuda"
+
+[node name="rope" parent="bg" instance=ExtResource( 1 )]
+anchor_left = -0.0618335
+anchor_top = -0.145256
+anchor_right = 0.335628
+anchor_bottom = 0.0164108
+margin_left = 134.414
+margin_top = 415.739
+margin_right = 134.414
+margin_bottom = 415.739
+rect_scale = Vector2( 1.35, 1.6 )
+
+[node name="btn_swap" parent="bg" instance=ExtResource( 2 )]
+anchor_left = 0.0570001
+anchor_top = 0.482659
+anchor_right = 0.383172
+anchor_bottom = 0.824326
+margin_left = 66.2253
+margin_top = 214.898
+margin_right = 66.2253
+margin_bottom = 214.898
+rect_scale = Vector2( 0.8, 0.8 )
+
+[node name="bubbles" type="HBoxContainer" parent="bg"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 92.776
+margin_top = 409.47
+margin_right = -630.224
+margin_bottom = -129.53
+rect_scale = Vector2( 1.7, 1.7 )
+custom_constants/separation = 60
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="b1" parent="bg/bubbles" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_bottom = 61.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="b2" parent="bg/bubbles" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 60.0
+margin_right = 60.0
+margin_bottom = 61.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="b3" parent="bg/bubbles" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 120.0
+margin_right = 120.0
+margin_bottom = 61.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="b4" parent="bg/bubbles" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 180.0
+margin_right = 180.0
+margin_bottom = 61.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="b5" parent="bg/bubbles" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_right = 240.0
+margin_bottom = 61.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="function" type="VBoxContainer" parent="bg"]
+anchor_left = 0.0497417
+anchor_top = 0.121094
+anchor_right = 0.0497417
+anchor_bottom = 0.407761
+margin_left = 35.2019
+margin_top = 94.5001
+margin_right = 613.202
+margin_bottom = 134.5
+rect_scale = Vector2( 0.8, 0.8 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="line_1" type="HBoxContainer" parent="bg/function"]
+margin_right = 578.0
+margin_bottom = 32.0
+
+[node name="var_1" type="TextureRect" parent="bg/function/line_1"]
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 5 )
+
+[node name="dp_1" type="Label" parent="bg/function/line_1"]
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 49.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = ":"
+
+[node name="array" type="TextureRect" parent="bg/function/line_1"]
+margin_left = 53.0
+margin_right = 85.0
+margin_bottom = 32.0
+texture = ExtResource( 4 )
+
+[node name="dp_2" type="Label" parent="bg/function/line_1"]
+margin_left = 89.0
+margin_top = 3.0
+margin_right = 128.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "= ["
+
+[node name="array_value" type="Label" parent="bg/function/line_1"]
+margin_left = 132.0
+margin_top = 3.0
+margin_right = 561.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "\"abc\", \"cdb\", \"agr\", \"sfd\", \"sde\""
+
+[node name="dp_3" type="Label" parent="bg/function/line_1"]
+margin_left = 565.0
+margin_top = 3.0
+margin_right = 578.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "]"
+
+[node name="line_2" type="HBoxContainer" parent="bg/function"]
+margin_top = 42.0
+margin_right = 578.0
+margin_bottom = 74.0
+
+[node name="var_1" type="TextureRect" parent="bg/function/line_2"]
+self_modulate = Color( 0.835294, 0.439216, 0.439216, 1 )
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 5 )
+
+[node name="dp_1" type="Label" parent="bg/function/line_2"]
+margin_left = 36.0
+margin_top = 3.0
+margin_right = 49.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = ":"
+
+[node name="int" type="TextureRect" parent="bg/function/line_2"]
+margin_left = 53.0
+margin_right = 85.0
+margin_bottom = 32.0
+texture = ExtResource( 10 )
+
+[node name="dp_2" type="Label" parent="bg/function/line_2"]
+margin_left = 89.0
+margin_top = 3.0
+margin_right = 115.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "= "
+
+[node name="size_value" type="Label" parent="bg/function/line_2"]
+margin_left = 119.0
+margin_top = 3.0
+margin_right = 132.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "5"
+
+[node name="line_3" type="HBoxContainer" parent="bg/function"]
+margin_top = 84.0
+margin_right = 578.0
+margin_bottom = 116.0
+
+[node name="dp_1" type="Label" parent="bg/function/line_3"]
+margin_top = 3.0
+margin_right = 39.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "for"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="i" parent="bg/function/line_3" instance=ExtResource( 12 )]
+self_modulate = Color( 0.439216, 0.482353, 0.835294, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 43.0
+margin_right = 75.0
+margin_bottom = 32.0
+
+[node name="dp_2" type="Label" parent="bg/function/line_3"]
+margin_left = 79.0
+margin_top = 3.0
+margin_right = 209.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "in range ("
+
+[node name="size" parent="bg/function/line_3" instance=ExtResource( 12 )]
+self_modulate = Color( 0.835294, 0.439216, 0.439216, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 213.0
+margin_right = 245.0
+margin_bottom = 32.0
+
+[node name="dp_3" type="Label" parent="bg/function/line_3"]
+margin_left = 249.0
+margin_top = 3.0
+margin_right = 301.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- 1)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line_4" type="HBoxContainer" parent="bg/function"]
+margin_top = 126.0
+margin_right = 578.0
+margin_bottom = 158.0
+
+[node name="space" type="Label" parent="bg/function/line_4"]
+margin_top = 3.0
+margin_right = 39.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "   "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dp_4" type="Label" parent="bg/function/line_4"]
+margin_left = 43.0
+margin_top = 3.0
+margin_right = 82.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "for"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="j" parent="bg/function/line_4" instance=ExtResource( 12 )]
+self_modulate = Color( 0.439216, 0.835294, 0.529412, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 86.0
+margin_right = 118.0
+margin_bottom = 32.0
+
+[node name="dp_2" type="Label" parent="bg/function/line_4"]
+margin_left = 122.0
+margin_top = 3.0
+margin_right = 252.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "in range ("
+
+[node name="size" parent="bg/function/line_4" instance=ExtResource( 12 )]
+self_modulate = Color( 0.835294, 0.439216, 0.439216, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 256.0
+margin_right = 288.0
+margin_bottom = 32.0
+
+[node name="dp_5" type="Label" parent="bg/function/line_4"]
+margin_left = 292.0
+margin_top = 3.0
+margin_right = 305.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+
+[node name="i" parent="bg/function/line_4" instance=ExtResource( 12 )]
+self_modulate = Color( 0.439216, 0.482353, 0.835294, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 309.0
+margin_right = 341.0
+margin_bottom = 32.0
+
+[node name="dp_3" type="Label" parent="bg/function/line_4"]
+margin_left = 345.0
+margin_top = 3.0
+margin_right = 397.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- 1)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="line_6" type="HBoxContainer" parent="bg/function"]
+margin_top = 168.0
+margin_right = 578.0
+margin_bottom = 200.0
+
+[node name="space" type="Label" parent="bg/function/line_6"]
+margin_top = 3.0
+margin_right = 39.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "   "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="space2" type="Label" parent="bg/function/line_6"]
+margin_left = 43.0
+margin_top = 3.0
+margin_right = 82.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "   "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="swap" type="Label" parent="bg/function/line_6"]
+margin_left = 86.0
+margin_top = 3.0
+margin_right = 151.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "swap("
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="arr1" parent="bg/function/line_6" instance=ExtResource( 12 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 155.0
+margin_right = 187.0
+margin_bottom = 32.0
+
+[node name="dp_2" type="Label" parent="bg/function/line_6"]
+margin_left = 191.0
+margin_top = 3.0
+margin_right = 204.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "["
+
+[node name="j1" parent="bg/function/line_6" instance=ExtResource( 12 )]
+self_modulate = Color( 0.439216, 0.835294, 0.529412, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 208.0
+margin_right = 240.0
+margin_bottom = 32.0
+
+[node name="dp_5" type="Label" parent="bg/function/line_6"]
+margin_left = 244.0
+margin_top = 3.0
+margin_right = 270.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "],"
+
+[node name="arr2" parent="bg/function/line_6" instance=ExtResource( 12 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_right = 306.0
+margin_bottom = 32.0
+
+[node name="dp_3" type="Label" parent="bg/function/line_6"]
+margin_left = 310.0
+margin_top = 3.0
+margin_right = 323.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "["
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="j2" parent="bg/function/line_6" instance=ExtResource( 12 )]
+self_modulate = Color( 0.439216, 0.835294, 0.529412, 1 )
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 327.0
+margin_right = 359.0
+margin_bottom = 32.0
+
+[node name="dp_4" type="Label" parent="bg/function/line_6"]
+margin_left = 363.0
+margin_top = 3.0
+margin_right = 428.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+ 1])"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bubble" parent="bg" instance=ExtResource( 3 )]
+position = Vector2( 822.941, 396 )
+
+[node name="tween" type="Tween" parent="bg"]
+[connection signal="pressed" from="bg/flee" to="." method="_on_flee_pressed"]
+[connection signal="pressed" from="bg/help" to="." method="_on_help_pressed"]
+[connection signal="tween_completed" from="bg/tween" to="." method="_on_tween_completed"]

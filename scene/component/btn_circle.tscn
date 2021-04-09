@@ -1,0 +1,130 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://font/text.tres" type="DynamicFont" id=1]
+[ext_resource path="res://art/component/btn_circle_pressed.png" type="Texture" id=2]
+[ext_resource path="res://art/component/btn_circle_normal.png" type="Texture" id=3]
+[ext_resource path="res://art/component/btn_circle_selected.png" type="Texture" id=4]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends TextureButton
+
+export (String) var btn_name = \"btn_name\"
+
+func _ready() -> void:
+	$btn_name.text = btn_name
+
+func _on_circle_button_down() -> void:
+	play_click()
+	$animation.play(\"clicked\")
+
+func _on_circle_button_up() -> void:
+	$animation.play(\"normal\")
+
+func _on_button_down() -> void:
+	play_click()
+	$animation.play(\"clicked\")
+
+func _on_button_up() -> void:
+	$animation.play(\"normal\")
+
+func play_click() -> void:
+	var music_player: AudioStreamPlayer = AudioStreamPlayer.new()
+	music_player.set_bus(\"effect\")
+	music_player.stream = load(\"res://audio/sfx/button.ogg\")
+	music_player.pause_mode = PAUSE_MODE_PROCESS
+	music_player.play()
+	add_child(music_player)
+	yield(music_player, \"finished\")
+	remove_child(music_player)
+"
+
+[sub_resource type="Animation" id=2]
+resource_name = "clicked"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("btn_name:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 23 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("btn_name:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, 3.5 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "normal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("btn_name:custom_fonts/font:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 28 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("btn_name:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 8, 2 ) ]
+}
+
+[node name="button_circle" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.64645
+margin_top = -2.17678
+margin_right = -993.646
+margin_bottom = -570.177
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+btn_name = "-"
+
+[node name="btn_name" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 3.5
+margin_right = 24.0
+margin_bottom = 35.5
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="animation" type="AnimationPlayer" parent="."]
+autoplay = "normal"
+anims/clicked = SubResource( 2 )
+anims/normal = SubResource( 3 )
+[connection signal="button_down" from="." to="." method="_on_circle_button_down"]
+[connection signal="button_up" from="." to="." method="_on_circle_button_up"]

@@ -1,0 +1,627 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://font/title.tres" type="DynamicFont" id=1]
+[ext_resource path="res://art/component/background_l.png" type="Texture" id=2]
+[ext_resource path="res://scene/component/btn_small.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://art/character/codemon/string.png" type="Texture" id=6]
+[ext_resource path="res://art/character/codemon/bool.png" type="Texture" id=7]
+[ext_resource path="res://art/character/codemon/double.png" type="Texture" id=8]
+[ext_resource path="res://art/character/codemon/int.png" type="Texture" id=9]
+[ext_resource path="res://font/actor.tres" type="DynamicFont" id=10]
+[ext_resource path="res://scene/interface/codex.gd" type="Script" id=11]
+[ext_resource path="res://theme.tres" type="Theme" id=12]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://art/character/codemon/if.png" type="Texture" id=14]
+[ext_resource path="res://art/character/codemon/else.png" type="Texture" id=15]
+[ext_resource path="res://art/character/codemon/for.png" type="Texture" id=16]
+[ext_resource path="res://art/character/codemon/while.png" type="Texture" id=17]
+[ext_resource path="res://art/character/codemon/not_equal.png" type="Texture" id=18]
+[ext_resource path="res://art/character/codemon/or.png" type="Texture" id=19]
+[ext_resource path="res://art/character/codemon/and.png" type="Texture" id=20]
+[ext_resource path="res://art/character/codemon/bigger.png" type="Texture" id=21]
+[ext_resource path="res://art/character/codemon/less.png" type="Texture" id=22]
+[ext_resource path="res://art/character/codemon/equal.png" type="Texture" id=23]
+[ext_resource path="res://art/character/codemon/plus.png" type="Texture" id=24]
+[ext_resource path="res://art/character/codemon/divide.png" type="Texture" id=25]
+[ext_resource path="res://art/character/codemon/minus.png" type="Texture" id=26]
+[ext_resource path="res://art/character/codemon/multiply.png" type="Texture" id=27]
+[ext_resource path="res://art/character/codemon/modulo.png" type="Texture" id=28]
+
+[sub_resource type="InputEventKey" id=1]
+scancode = 67
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 43
+extra_spacing_bottom = 16
+font_data = ExtResource( 13 )
+
+[node name="codex" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -412.0
+margin_top = -251.5
+margin_right = 412.0
+margin_bottom = 251.5
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hbox" type="HBoxContainer" parent="."]
+margin_left = 314.107
+margin_top = 89.7296
+margin_right = 454.107
+margin_bottom = 121.73
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_1" parent="hbox" instance=ExtResource( 3 )]
+rect_scale = Vector2( 1, 1 )
+
+[node name="btn_2" parent="hbox" instance=ExtResource( 3 )]
+margin_left = 36.0
+margin_right = 68.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="btn_3" parent="hbox" instance=ExtResource( 3 )]
+margin_left = 72.0
+margin_right = 104.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="btn_4" parent="hbox" instance=ExtResource( 3 )]
+margin_left = 108.0
+margin_right = 140.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="title" type="Label" parent="."]
+margin_left = 154.719
+margin_top = 103.663
+margin_right = 253.719
+margin_bottom = 146.663
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Codex"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" parent="." instance=ExtResource( 4 )]
+margin_left = 419.439
+margin_top = 464.045
+margin_right = 327.119
+margin_bottom = 445.245
+shortcut_in_tooltip = false
+shortcut = SubResource( 2 )
+
+[node name="status" type="Label" parent="."]
+margin_left = 162.0
+margin_top = 345.0
+margin_right = 315.0
+margin_bottom = 432.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Desafiado
+
+Capturado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mountain" type="Control" parent="."]
+visible = false
+anchor_left = 0.15918
+anchor_top = 0.291667
+anchor_right = 0.836914
+anchor_bottom = 0.726667
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="title" type="Label" parent="mountain"]
+margin_right = 370.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Montanha dos Operadores"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hbox_codemon" type="HBoxContainer" parent="mountain"]
+anchor_left = 0.267
+anchor_top = 0.283525
+anchor_right = 0.901
+anchor_bottom = 0.498
+margin_left = 31.1183
+margin_top = -6.17842
+margin_right = -187.878
+margin_bottom = -30.1564
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plus" type="TextureRect" parent="mountain/hbox_codemon"]
+margin_right = 32.0
+margin_bottom = 32.0
+hint_tooltip = "Plus
+"
+theme = ExtResource( 12 )
+texture = ExtResource( 24 )
+
+[node name="minus" type="TextureRect" parent="mountain/hbox_codemon"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+hint_tooltip = "Minus"
+theme = ExtResource( 12 )
+texture = ExtResource( 26 )
+
+[node name="multiply" type="TextureRect" parent="mountain/hbox_codemon"]
+margin_left = 94.0
+margin_right = 126.0
+margin_bottom = 32.0
+hint_tooltip = "Multiply"
+theme = ExtResource( 12 )
+texture = ExtResource( 27 )
+
+[node name="divide" type="TextureRect" parent="mountain/hbox_codemon"]
+margin_left = 141.0
+margin_right = 173.0
+margin_bottom = 32.0
+hint_tooltip = "Divide"
+theme = ExtResource( 12 )
+texture = ExtResource( 25 )
+
+[node name="module" type="TextureRect" parent="mountain/hbox_codemon"]
+margin_left = 188.0
+margin_right = 220.0
+margin_bottom = 32.0
+hint_tooltip = "Module"
+theme = ExtResource( 12 )
+texture = ExtResource( 28 )
+
+[node name="plus" type="Label" parent="mountain"]
+margin_left = 230.206
+margin_top = 155.269
+margin_right = 252.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="minus" type="Label" parent="mountain"]
+margin_left = 324.206
+margin_top = 155.269
+margin_right = 346.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="multiply" type="Label" parent="mountain"]
+margin_left = 418.206
+margin_top = 155.269
+margin_right = 440.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="divide" type="Label" parent="mountain"]
+margin_left = 512.206
+margin_top = 155.269
+margin_right = 534.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="module" type="Label" parent="mountain"]
+margin_left = 606.206
+margin_top = 155.269
+margin_right = 628.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="beach" type="Control" parent="."]
+visible = false
+anchor_left = 0.15918
+anchor_top = 0.291667
+anchor_right = 0.836914
+anchor_bottom = 0.726667
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="title" type="Label" parent="beach"]
+margin_right = 370.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Praia das Condicionais"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="less" type="Label" parent="beach"]
+margin_left = 230.206
+margin_top = 155.269
+margin_right = 252.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="bigger" type="Label" parent="beach"]
+margin_left = 310.206
+margin_top = 155.269
+margin_right = 332.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="equal" type="Label" parent="beach"]
+margin_left = 390.206
+margin_top = 155.269
+margin_right = 412.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="nott" type="Label" parent="beach"]
+margin_left = 470.206
+margin_top = 155.269
+margin_right = 492.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="andd" type="Label" parent="beach"]
+margin_left = 550.206
+margin_top = 155.269
+margin_right = 572.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="orr" type="Label" parent="beach"]
+margin_left = 630.206
+margin_top = 155.269
+margin_right = 652.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="hbox_codemon" type="HBoxContainer" parent="beach"]
+anchor_left = 0.267
+anchor_top = 0.283525
+anchor_right = 0.901
+anchor_bottom = 0.498
+margin_left = 30.0589
+margin_top = -3.00002
+margin_right = -177.937
+margin_bottom = -26.978
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="less" type="TextureRect" parent="beach/hbox_codemon"]
+margin_right = 32.0
+margin_bottom = 32.0
+hint_tooltip = "Less
+"
+theme = ExtResource( 12 )
+texture = ExtResource( 22 )
+
+[node name="bigger" type="TextureRect" parent="beach/hbox_codemon"]
+margin_left = 40.0
+margin_right = 72.0
+margin_bottom = 32.0
+hint_tooltip = "Bigger"
+theme = ExtResource( 12 )
+texture = ExtResource( 21 )
+
+[node name="equal" type="TextureRect" parent="beach/hbox_codemon"]
+margin_left = 80.0
+margin_right = 112.0
+margin_bottom = 32.0
+hint_tooltip = "Equal"
+theme = ExtResource( 12 )
+texture = ExtResource( 23 )
+
+[node name="nott" type="TextureRect" parent="beach/hbox_codemon"]
+margin_left = 120.0
+margin_right = 152.0
+margin_bottom = 32.0
+hint_tooltip = "Not"
+theme = ExtResource( 12 )
+texture = ExtResource( 18 )
+
+[node name="andd" type="TextureRect" parent="beach/hbox_codemon"]
+margin_left = 160.0
+margin_right = 192.0
+margin_bottom = 32.0
+hint_tooltip = "And"
+theme = ExtResource( 12 )
+texture = ExtResource( 20 )
+
+[node name="orr" type="TextureRect" parent="beach/hbox_codemon"]
+margin_left = 200.0
+margin_right = 232.0
+margin_bottom = 32.0
+hint_tooltip = "Or"
+theme = ExtResource( 12 )
+texture = ExtResource( 19 )
+
+[node name="desert" type="Control" parent="."]
+visible = false
+anchor_left = 0.15918
+anchor_top = 0.291667
+anchor_right = 0.836914
+anchor_bottom = 0.726667
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="title" type="Label" parent="desert"]
+margin_right = 370.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Deserto do Controle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="if" type="Label" parent="desert"]
+margin_left = 226.238
+margin_top = 155.269
+margin_right = 248.238
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="else" type="Label" parent="desert"]
+margin_left = 350.238
+margin_top = 155.269
+margin_right = 372.238
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="for" type="Label" parent="desert"]
+margin_left = 474.238
+margin_top = 155.269
+margin_right = 496.238
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="while" type="Label" parent="desert"]
+margin_left = 598.238
+margin_top = 155.269
+margin_right = 620.238
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="hbox_codemon" type="HBoxContainer" parent="desert"]
+anchor_left = 0.267
+anchor_top = 0.283525
+anchor_right = 0.901
+anchor_bottom = 0.498
+margin_left = 31.1183
+margin_top = -3.00002
+margin_right = -187.878
+margin_bottom = -26.978
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="if" type="TextureRect" parent="desert/hbox_codemon"]
+margin_right = 32.0
+margin_bottom = 32.0
+hint_tooltip = "If
+
+"
+theme = ExtResource( 12 )
+texture = ExtResource( 14 )
+
+[node name="else" type="TextureRect" parent="desert/hbox_codemon"]
+margin_left = 62.0
+margin_right = 94.0
+margin_bottom = 32.0
+hint_tooltip = "Else"
+theme = ExtResource( 12 )
+texture = ExtResource( 15 )
+
+[node name="for" type="TextureRect" parent="desert/hbox_codemon"]
+margin_left = 124.0
+margin_right = 156.0
+margin_bottom = 32.0
+hint_tooltip = "For"
+theme = ExtResource( 12 )
+texture = ExtResource( 16 )
+
+[node name="while" type="TextureRect" parent="desert/hbox_codemon"]
+margin_left = 186.0
+margin_right = 218.0
+margin_bottom = 32.0
+hint_tooltip = "While"
+theme = ExtResource( 12 )
+texture = ExtResource( 17 )
+
+[node name="forest" type="Control" parent="."]
+anchor_left = 0.15918
+anchor_top = 0.291667
+anchor_right = 0.836914
+anchor_bottom = 0.726667
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="title" type="Label" parent="forest"]
+margin_right = 370.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Floresta das Variáveis"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hbox_codemon" type="HBoxContainer" parent="forest"]
+anchor_left = 0.267
+anchor_top = 0.283525
+anchor_right = 0.901
+anchor_bottom = 0.498
+margin_left = 32.1778
+margin_top = -3.00002
+margin_right = -186.818
+margin_bottom = -26.978
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="int" type="TextureRect" parent="forest/hbox_codemon"]
+pause_mode = 2
+margin_right = 32.0
+margin_bottom = 32.0
+hint_tooltip = "Int
+"
+theme = ExtResource( 12 )
+texture = ExtResource( 9 )
+
+[node name="double" type="TextureRect" parent="forest/hbox_codemon"]
+margin_left = 47.0
+margin_right = 79.0
+margin_bottom = 32.0
+hint_tooltip = "Double"
+theme = ExtResource( 12 )
+texture = ExtResource( 8 )
+
+[node name="string" type="TextureRect" parent="forest/hbox_codemon"]
+margin_left = 94.0
+margin_right = 126.0
+margin_bottom = 32.0
+hint_tooltip = "String"
+theme = ExtResource( 12 )
+texture = ExtResource( 6 )
+
+[node name="bool" type="TextureRect" parent="forest/hbox_codemon"]
+margin_left = 141.0
+margin_right = 173.0
+margin_bottom = 32.0
+hint_tooltip = "Bool"
+theme = ExtResource( 12 )
+texture = ExtResource( 7 )
+
+[node name="int" type="Label" parent="forest"]
+margin_left = 230.206
+margin_top = 155.269
+margin_right = 252.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="double" type="Label" parent="forest"]
+margin_left = 324.206
+margin_top = 155.269
+margin_right = 346.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="string" type="Label" parent="forest"]
+margin_left = 421.206
+margin_top = 155.269
+margin_right = 443.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+
+[node name="bool" type="Label" parent="forest"]
+margin_left = 515.206
+margin_top = 155.269
+margin_right = 537.206
+margin_bottom = 278.269
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "0
+0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="hbox/btn_1" to="." method="_on_btn_1_pressed"]
+[connection signal="pressed" from="hbox/btn_2" to="." method="_on_btn_2_pressed"]
+[connection signal="pressed" from="hbox/btn_3" to="." method="_on_btn_3_pressed"]
+[connection signal="pressed" from="hbox/btn_4" to="." method="_on_btn_4_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

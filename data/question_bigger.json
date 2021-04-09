@@ -1,0 +1,76 @@
+[
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["int", "int", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a + 1", "b #c 4", "a > b"],
+		"variable" : [["a"], ["b", "c"], ["a","b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["int", "int", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a + 2", "b #c -3", "a > b"],
+		"variable" : [["a"], ["b", "c"], ["a","b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "square", "square"],
+		"assign_type" : ["int", "int", "bool"],
+		"assign" : ["a", "a", "d"],
+		"expression": ["a #b 1", "a #c 2", "a > 5"],
+		"variable" : [["a", "b"], ["a", "c"], ["a"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["int", "int", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a * 3", "b #c 2", "b > a"],
+		"variable" : [["a"], ["b", "c"], ["b", "a"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["double", "double", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a * 1.5", "b #c 3.5", "a > b"],
+		"variable" : [["a"], ["b", "c"], ["a", "b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["double", "bool"],
+		"assign" : ["a", "d"],
+		"expression": ["a + b #c 1.7", "a > b"],
+		"variable" : [["a", "b", "c"], ["a", "b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "square", "hide"],
+		"assign_type" : ["double", "bool"],
+		"assign" : ["a", "d"],
+		"expression": ["a #b 1.2", "a > 5.9"],
+		"variable" : [["a", "b"], ["a"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["double", "double", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a * 1.7", "b #c 2.3" ,"a > b"],
+		"variable" : [["a"], ["b", "c"], ["a", "b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	}
+
+
+]

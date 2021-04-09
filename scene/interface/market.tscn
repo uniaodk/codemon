@@ -1,0 +1,339 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://art/object/pen_capture.png" type="Texture" id=1]
+[ext_resource path="res://art/object/battery.png" type="Texture" id=2]
+[ext_resource path="res://art/component/back_item.png" type="Texture" id=3]
+[ext_resource path="res://art/object/pen_coin.png" type="Texture" id=4]
+[ext_resource path="res://art/component/background_m.png" type="Texture" id=5]
+[ext_resource path="res://scene/component/btn_medium.tscn" type="PackedScene" id=6]
+[ext_resource path="res://art/hud/coin.png" type="Texture" id=7]
+[ext_resource path="res://font/text.tres" type="DynamicFont" id=8]
+[ext_resource path="res://font/title.tres" type="DynamicFont" id=9]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scene/interface/market.gd" type="Script" id=11]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 16 )
+
+[node name="market" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.490196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -419.317
+margin_top = -247.391
+margin_right = 437.683
+margin_bottom = 256.609
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="market" type="Label" parent="."]
+margin_left = 178.607
+margin_top = 128.148
+margin_right = 257.607
+margin_bottom = 171.148
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Loja"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bag" type="Label" parent="."]
+margin_left = 658.087
+margin_top = 129.637
+margin_right = 817.087
+margin_bottom = 172.637
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Carrinho"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back_item" type="TextureRect" parent="."]
+margin_left = 636.316
+margin_top = 227.623
+margin_right = 850.316
+margin_bottom = 428.623
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="battery" type="Control" parent="."]
+margin_left = 165.683
+margin_top = 356.245
+margin_right = 611.683
+margin_bottom = 428.245
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon" type="TextureRect" parent="battery"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="desc3" type="Label" parent="battery"]
+margin_left = 63.0
+margin_top = -41.0
+margin_right = 318.0
+margin_bottom = -6.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "+20% de chance de captura
+Durante 5 minutos"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="battery"]
+margin_left = 63.7496
+margin_top = 21.6135
+margin_right = 288.75
+margin_bottom = 52.6135
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Bateria Portátil"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="price" parent="battery" instance=ExtResource( 6 )]
+anchor_left = 0.740612
+anchor_top = 0.226384
+anchor_right = 0.964828
+anchor_bottom = 0.754161
+margin_left = 24.1818
+margin_top = 17.9249
+margin_right = -25.8183
+margin_bottom = -1.07513
+rect_pivot_offset = Vector2( 24.1818, 17.9249 )
+focus_next = NodePath("../../buy")
+focus_previous = NodePath("../../capture/price")
+
+[node name="capture" type="Control" parent="."]
+margin_left = 164.865
+margin_top = 274.83
+margin_right = 613.865
+margin_bottom = 346.83
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon" type="TextureRect" parent="capture"]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+
+[node name="desc2" type="Label" parent="capture"]
+margin_left = 64.0
+margin_top = 125.0
+margin_right = 317.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Recarrega 50% da energiaq"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="capture"]
+margin_left = 63.7496
+margin_top = 16.5681
+margin_right = 274.75
+margin_bottom = 47.5681
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pen-drive Verde"
+
+[node name="price" parent="capture" instance=ExtResource( 6 )]
+anchor_left = 0.73513
+anchor_top = 0.123198
+anchor_right = 0.957847
+anchor_bottom = 0.650976
+margin_left = 24.1818
+margin_top = 17.9249
+margin_right = -25.8182
+margin_bottom = -1.07513
+rect_pivot_offset = Vector2( 24.1818, 17.9249 )
+focus_next = NodePath("../../battery/price")
+focus_previous = NodePath("../../coin/price")
+
+[node name="coin" type="Control" parent="."]
+anchor_left = 0.0915894
+anchor_top = 0.262213
+anchor_right = 0.589839
+anchor_bottom = 0.414991
+margin_left = 76.8991
+margin_top = 24.7995
+margin_right = 76.8991
+margin_bottom = 24.7995
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="icon" type="TextureRect" parent="coin"]
+margin_left = -10.4785
+margin_top = 13.0296
+margin_right = 21.5215
+margin_bottom = 45.0296
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="coin"]
+margin_left = 53.6873
+margin_top = 29.1787
+margin_right = 292.687
+margin_bottom = 60.1787
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pen-drive Dourado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="desc" type="Label" parent="coin"]
+margin_left = 54.0
+margin_top = 51.0
+margin_right = 312.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Dobro de Moeda
+Durante 5 minutos"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="price" parent="coin" instance=ExtResource( 6 )]
+anchor_left = 0.630899
+anchor_top = 0.257202
+anchor_right = 0.826897
+anchor_bottom = 0.671747
+margin_left = 24.1818
+margin_top = 17.9249
+margin_right = -25.8182
+margin_bottom = -1.07513
+rect_pivot_offset = Vector2( 24.1818, 17.9249 )
+focus_next = NodePath("../../capture/price")
+focus_previous = NodePath("../../back")
+
+[node name="total" type="Control" parent="."]
+margin_left = 92.6832
+margin_top = 52.609
+margin_right = 132.683
+margin_bottom = 92.609
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin" type="TextureRect" parent="total"]
+margin_left = 593.994
+margin_top = 383.891
+margin_right = 625.994
+margin_bottom = 415.891
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="total"]
+anchor_right = 1.0
+anchor_bottom = 0.775
+margin_left = 645.017
+margin_top = 390.864
+margin_right = 665.017
+margin_bottom = 448.864
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0.0392157, 1, 1 )
+text = "000
+"
+
+[node name="back" parent="." instance=ExtResource( 10 )]
+margin_left = 438.192
+margin_top = 456.609
+margin_right = 375.932
+margin_bottom = 443.857
+focus_next = NodePath("../coin/price")
+focus_previous = NodePath("../buy")
+
+[node name="buy" parent="." instance=ExtResource( 10 )]
+anchor_left = 0.202317
+anchor_top = 0.75984
+anchor_right = 0.440715
+anchor_bottom = 0.843334
+margin_top = -3.05176e-05
+margin_right = -122.06
+margin_bottom = -25.048
+focus_next = NodePath("../back")
+focus_previous = NodePath("../battery/price")
+
+[node name="warning" type="Label" parent="."]
+margin_left = 642.481
+margin_top = 190.53
+margin_right = 842.481
+margin_bottom = 225.53
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Clique duas vezes no item
+para remover do carrinho"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="grid" type="GridContainer" parent="."]
+anchor_right = 0.048
+anchor_bottom = 0.074
+margin_left = 642.585
+margin_top = 234.142
+margin_right = 711.433
+margin_bottom = 300.742
+rect_scale = Vector2( 1.7, 1.7 )
+focus_mode = 2
+custom_constants/hseparation = 8
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="battery/price" to="." method="_on_battery_price_pressed"]
+[connection signal="pressed" from="capture/price" to="." method="_on_capture_price_pressed"]
+[connection signal="pressed" from="coin/price" to="." method="_on_coin_price_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="buy" to="." method="_on_buy_pressed"]

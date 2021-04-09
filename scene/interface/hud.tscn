@@ -1,0 +1,279 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://art/hud/scroll.png" type="Texture" id=1]
+[ext_resource path="res://art/hud/buff_coin.png" type="Texture" id=2]
+[ext_resource path="res://art/hud/scroll_selected.png" type="Texture" id=3]
+[ext_resource path="res://art/hud/gear_selected.png" type="Texture" id=4]
+[ext_resource path="res://art/hud/gear.png" type="Texture" id=5]
+[ext_resource path="res://art/hud/book.png" type="Texture" id=6]
+[ext_resource path="res://art/hud/book_selected.png" type="Texture" id=7]
+[ext_resource path="res://art/hud/bag_selected.png" type="Texture" id=8]
+[ext_resource path="res://art/hud/map_selected.png" type="Texture" id=9]
+[ext_resource path="res://art/hud/bag.png" type="Texture" id=10]
+[ext_resource path="res://art/hud/map.png" type="Texture" id=11]
+[ext_resource path="res://art/hud/buff_capture.png" type="Texture" id=12]
+[ext_resource path="res://art/hud/battery.png" type="Texture" id=13]
+[ext_resource path="res://art/hud/coin.png" type="Texture" id=14]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://scene/interface/hud.gd" type="Script" id=16]
+[ext_resource path="res://theme.tres" type="Theme" id=17]
+
+[sub_resource type="InputEventKey" id=1]
+scancode = 16777217
+
+[sub_resource type="ShortCut" id=2]
+resource_local_to_scene = true
+shortcut = SubResource( 1 )
+
+[sub_resource type="InputEventKey" id=3]
+scancode = 67
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[sub_resource type="InputEventKey" id=5]
+scancode = 81
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 5 )
+
+[sub_resource type="InputEventKey" id=7]
+scancode = 73
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 7 )
+
+[sub_resource type="InputEventKey" id=9]
+scancode = 77
+
+[sub_resource type="ShortCut" id=10]
+shortcut = SubResource( 9 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 15 )
+
+[node name="hud" type="CanvasLayer"]
+script = ExtResource( 16 )
+
+[node name="button" type="TextureRect" parent="."]
+margin_left = 792.0
+margin_top = -23.0
+margin_right = 1004.0
+margin_bottom = 43.0
+rect_scale = Vector2( 1.2, 1.2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gear" type="TextureButton" parent="button"]
+margin_left = 153.333
+margin_top = 21.6667
+margin_right = 185.333
+margin_bottom = 53.6667
+hint_tooltip = "Opções (ESC)"
+focus_mode = 0
+theme = ExtResource( 17 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 2 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="codex" type="TextureButton" parent="button"]
+margin_left = 111.667
+margin_top = 21.6667
+margin_right = 143.667
+margin_bottom = 53.6667
+hint_tooltip = "Codex (C)"
+focus_mode = 0
+theme = ExtResource( 17 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 4 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="scroll" type="TextureButton" parent="button"]
+margin_left = 72.5
+margin_top = 22.5
+margin_right = 104.5
+margin_bottom = 54.5
+hint_tooltip = "Missões (Q)"
+focus_mode = 0
+theme = ExtResource( 17 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 6 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bag" type="TextureButton" parent="button"]
+margin_left = 31.6666
+margin_top = 19.1667
+margin_right = 63.6666
+margin_bottom = 51.1667
+hint_tooltip = "Mochilha (I)"
+focus_mode = 0
+theme = ExtResource( 17 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 8 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="map" type="TextureButton" parent="button"]
+margin_left = -7.49998
+margin_top = 21.6667
+margin_right = 24.5
+margin_bottom = 53.6667
+hint_tooltip = "Mapa (M)"
+focus_mode = 0
+theme = ExtResource( 17 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+shortcut = SubResource( 10 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="info" type="TextureRect" parent="."]
+margin_top = 1.0
+margin_right = 152.0
+margin_bottom = 41.0
+rect_scale = Vector2( 1.2, 1.2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="control" type="Control" parent="info"]
+margin_right = 67.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="battery" type="Sprite" parent="info/control"]
+position = Vector2( 32.5, 19.1667 )
+texture = ExtResource( 13 )
+vframes = 11
+
+[node name="coin" type="TextureRect" parent="info"]
+margin_left = 75.8333
+margin_top = 2.5
+margin_right = 107.833
+margin_bottom = 34.5
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin_qtd" type="Label" parent="info"]
+margin_left = 111.667
+margin_top = 11.0
+margin_right = 168.667
+margin_bottom = 43.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 11 )
+text = "999"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buff" type="TextureRect" parent="."]
+margin_left = 347.0
+margin_top = 2.0
+margin_right = 608.0
+margin_bottom = 42.0
+rect_scale = Vector2( 1.2, 1.2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin" type="TextureRect" parent="buff"]
+visible = false
+margin_left = 43.3333
+margin_top = 2.5
+margin_right = 75.3333
+margin_bottom = 34.5
+hint_tooltip = "x2 moeda ao derrotar um codemon"
+theme = ExtResource( 17 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin_time" type="Label" parent="buff"]
+pause_mode = 2
+visible = false
+margin_left = 80.0
+margin_top = 11.0
+margin_right = 160.0
+margin_bottom = 43.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 11 )
+text = "00:00"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="capture" type="TextureRect" parent="buff"]
+visible = false
+margin_left = 137.5
+margin_top = 3.33333
+margin_right = 169.5
+margin_bottom = 35.3333
+hint_tooltip = "+20% de chance de captura ao derrotar um codemon"
+theme = ExtResource( 17 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="capture_time" type="Label" parent="buff"]
+pause_mode = 2
+visible = false
+margin_left = 174.167
+margin_top = 11.0
+margin_right = 254.167
+margin_bottom = 43.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 11 )
+text = "00:00"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="delay" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+[connection signal="pressed" from="button/gear" to="." method="_on_gear_pressed"]
+[connection signal="pressed" from="button/codex" to="." method="_on_codex_pressed"]
+[connection signal="pressed" from="button/scroll" to="." method="_on_scroll_pressed"]
+[connection signal="pressed" from="button/bag" to="." method="_on_bag_pressed"]
+[connection signal="pressed" from="button/map" to="." method="_on_map_pressed"]
+[connection signal="timeout" from="delay" to="." method="_on_delay_timeout"]

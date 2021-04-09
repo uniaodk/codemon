@@ -1,0 +1,905 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://art/character/codemon/int.png" type="Texture" id=2]
+[ext_resource path="res://scene/component/btn_medium.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/interface/feedback_ok.gd" type="Script" id=4]
+[ext_resource path="res://art/component/background_m.png" type="Texture" id=5]
+[ext_resource path="res://art/hud/correct.png" type="Texture" id=6]
+[ext_resource path="res://art/hud/coin.png" type="Texture" id=7]
+[ext_resource path="res://art/hud/operator_mission.png" type="Texture" id=8]
+[ext_resource path="res://art/hud/variable_mission.png" type="Texture" id=9]
+[ext_resource path="res://art/hud/buff_capture.png" type="Texture" id=10]
+[ext_resource path="res://art/hud/buff_coin.png" type="Texture" id=11]
+[ext_resource path="res://art/hud/conditional_mission.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 26
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "rollete_fail"
+length = 2.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("result_capture:custom_colors/font_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.2, 1.5, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("result_capture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.2, 1.5, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+} ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 2.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("result_capture:custom_colors/font_color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.2, 1.5, 1.9, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ), Color( 1, 0, 0, 1 ), Color( 0.152941, 0.756863, 0.105882, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("result_capture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.2, 1.5, 1.9, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+}, {
+"args": [  ],
+"method": "set_result_fled"
+}, {
+"args": [  ],
+"method": "set_result_captured"
+} ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonus_capture/buff:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bonus_capture/buff:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 31.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bonus_capture/buff:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "splash_buff_coin"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonus_coin/buff:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bonus_coin/buff:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 31.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bonus_coin/buff:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonus_capture/normal:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bonus_capture/normal:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 31.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bonus_capture/normal:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "splash_coin"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonus_coin/normal:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bonus_coin/normal:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 31.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bonus_coin/normal:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "splash_gain_coin"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("result_coin:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("result_coin:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 31.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("result_coin:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonus_capture/logic:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bonus_capture/logic:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 31.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bonus_capture/logic:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonus_capture/operator:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bonus_capture/operator:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 31.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bonus_capture/operator:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("bonus_coin/variable:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bonus_coin/variable:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 31.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bonus_coin/variable:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="feedback_ok" type="Control"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -206.0
+margin_top = -231.5
+margin_right = 206.0
+margin_bottom = 231.5
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="image" type="TextureRect" parent="."]
+margin_left = 470.0
+margin_top = 112.0
+margin_right = 517.0
+margin_bottom = 157.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="result" type="Label" parent="."]
+margin_left = 449.0
+margin_top = 202.0
+margin_right = 589.0
+margin_bottom = 242.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Correto"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ok" parent="." instance=ExtResource( 3 )]
+anchor_left = -0.0078125
+anchor_top = 0.175
+anchor_right = -0.0078125
+anchor_bottom = 0.175
+margin_left = 474.0
+margin_top = 335.0
+margin_right = 524.0
+margin_bottom = 359.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 345.0
+margin_top = 244.0
+margin_right = 537.0
+margin_bottom = 337.0
+color = Color( 0.67451, 0.839216, 0.74902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 345.0
+margin_top = 342.0
+margin_right = 537.0
+margin_bottom = 435.0
+color = Color( 0.839216, 0.831373, 0.67451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title_capture" type="Label" parent="."]
+margin_left = 349.0
+margin_top = 249.0
+margin_right = 517.0
+margin_bottom = 273.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Captura"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bonus_capture" type="HBoxContainer" parent="."]
+margin_left = 341.0
+margin_top = 294.0
+margin_right = 545.0
+margin_bottom = 339.0
+rect_scale = Vector2( 0.9, 0.9 )
+rect_pivot_offset = Vector2( 86.1225, 14.6939 )
+custom_constants/separation = 24
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="normal" type="Label" parent="bonus_capture"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 10.0
+margin_right = 36.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "20%"
+align = 1
+
+[node name="buff" type="TextureRect" parent="bonus_capture"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 60.0
+margin_right = 92.0
+margin_bottom = 45.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="percent" type="Label" parent="bonus_capture/buff"]
+anchor_left = 0.125
+anchor_top = -0.53125
+anchor_right = 0.875
+anchor_bottom = -0.03125
+margin_top = 7.84375
+margin_bottom = 2.34375
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "20%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plus" type="Label" parent="bonus_capture/buff"]
+margin_left = -18.3333
+margin_top = 7.0
+margin_right = 21.6667
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="operator" type="TextureRect" parent="bonus_capture"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 116.0
+margin_right = 148.0
+margin_bottom = 45.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="percent" type="Label" parent="bonus_capture/operator"]
+anchor_left = 0.125
+anchor_top = -0.53125
+anchor_right = 0.875
+anchor_bottom = -0.03125
+margin_top = 7.84375
+margin_bottom = 2.34375
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "20%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plus" type="Label" parent="bonus_capture/operator"]
+margin_left = -18.3333
+margin_top = 7.0
+margin_right = 21.6667
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "+"
+
+[node name="logic" type="TextureRect" parent="bonus_capture"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 172.0
+margin_right = 204.0
+margin_bottom = 45.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="percent" type="Label" parent="bonus_capture/logic"]
+anchor_left = 0.125
+anchor_top = -0.53125
+anchor_right = 0.875
+anchor_bottom = -0.03125
+margin_top = 7.84375
+margin_bottom = 2.34375
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "20%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="plus" type="Label" parent="bonus_capture/logic"]
+margin_left = -18.3334
+margin_top = 7.0
+margin_right = 21.6666
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="codemon" type="Sprite" parent="."]
+position = Vector2( 613, 278 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="result_capture" type="Label" parent="."]
+margin_left = 555.0
+margin_top = 308.0
+margin_right = 672.0
+margin_bottom = 335.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.152941, 0.756863, 0.105882, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title_coin" type="Label" parent="."]
+margin_left = 349.0
+margin_top = 343.0
+margin_right = 517.0
+margin_bottom = 367.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Codecoin"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bonus_coin" type="HBoxContainer" parent="."]
+margin_left = 341.0
+margin_top = 389.0
+margin_right = 545.0
+margin_bottom = 434.0
+rect_scale = Vector2( 0.9, 0.9 )
+rect_pivot_offset = Vector2( 86.1225, 14.6939 )
+custom_constants/separation = 24
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="normal" type="Label" parent="bonus_coin"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 40.0
+margin_top = 10.0
+margin_right = 52.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "3"
+align = 1
+
+[node name="buff" type="TextureRect" parent="bonus_coin"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 76.0
+margin_right = 108.0
+margin_bottom = 45.0
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="percent" type="Label" parent="bonus_coin/buff"]
+anchor_left = 0.125
+anchor_top = -0.53125
+anchor_right = 0.875
+anchor_bottom = -0.03125
+margin_left = -0.680267
+margin_top = 7.82913
+margin_right = -0.680267
+margin_bottom = 2.32913
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mult" type="Label" parent="bonus_coin/buff"]
+margin_left = -15.5692
+margin_top = 7.25623
+margin_right = 24.4308
+margin_bottom = 31.2563
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="variable" type="TextureRect" parent="bonus_coin"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 132.0
+margin_right = 164.0
+margin_bottom = 45.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="percent" type="Label" parent="bonus_coin/variable"]
+anchor_left = 0.125
+anchor_top = -0.53125
+anchor_right = 0.875
+anchor_bottom = -0.03125
+margin_left = 6.65311
+margin_top = 7.82913
+margin_right = -8.34689
+margin_bottom = 2.32913
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="multi" type="Label" parent="bonus_coin/variable"]
+margin_left = -17.1247
+margin_top = 7.25623
+margin_right = 22.8753
+margin_bottom = 31.2562
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.0745098, 0, 0.72549, 1 )
+text = "x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="result_coin" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 608.0
+margin_top = 385.0
+margin_right = 671.0
+margin_bottom = 412.0
+rect_rotation = 31.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin" type="Sprite" parent="result_coin"]
+position = Vector2( -20, 11 )
+texture = ExtResource( 7 )
+
+[node name="animation" type="AnimationPlayer" parent="."]
+anims/rollete_fail = SubResource( 7 )
+anims/rollete_sucess = SubResource( 8 )
+anims/splash_buff_capture = SubResource( 9 )
+anims/splash_buff_coin = SubResource( 10 )
+anims/splash_capture = SubResource( 11 )
+anims/splash_coin = SubResource( 12 )
+anims/splash_gain_coin = SubResource( 13 )
+anims/splash_logic_capture = SubResource( 14 )
+anims/splash_operator_capture = SubResource( 15 )
+anims/splash_variable_coin = SubResource( 16 )
+
+[node name="tween" type="Tween" parent="."]
+[connection signal="pressed" from="ok" to="." method="_on_ok_pressed"]
+[connection signal="animation_finished" from="animation" to="." method="_on_animation_finished"]

@@ -1,0 +1,3836 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://addons/dialogue_tree/scripts/dialogue.gd" type="Script" id=1]
+[ext_resource path="res://addons/dialogue_tree/resource/dialogue_tree.gd" type="Script" id=2]
+[ext_resource path="res://art/component/dialog_next_btn.png" type="Texture" id=3]
+[ext_resource path="res://font/actor.tres" type="DynamicFont" id=4]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://scene/interface/dialogue.gd" type="Script" id=6]
+[ext_resource path="res://addons/dialogue_tree/assets/ResIcon.png" type="Texture" id=7]
+[ext_resource path="res://art/component/dialog_box.png" type="Texture" id=8]
+[ext_resource path="res://art/chalenge/background_chalenge.png" type="Texture" id=9]
+[ext_resource path="res://art/component/dialog_choice_box.png" type="Texture" id=10]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "StartNode",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0005,
+"rect_size_y": 55.0,
+"rect_x": 1119.0,
+"rect_y": 15.0
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0,
+"rect_size_y": 55.0,
+"rect_x": 279.0,
+"rect_y": 15.0
+}, {
+"Actor": "Jimmy",
+"Dialogue": "INTRO_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 251.0,
+"rect_size_y": 213.0,
+"rect_x": 399.0,
+"rect_y": 15.0
+}, {
+"Actor": "Jimmy",
+"Dialogue": "INTRO_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 253.0,
+"rect_size_y": 215.0,
+"rect_x": 759.0,
+"rect_y": 15.0
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Actor": "Jimmy",
+"Dialogue": "INTRO_1",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": 1
+}, {
+"Actor": "Jimmy",
+"Dialogue": "INTRO_2",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": "End"
+} ],
+"start_index": 0
+}
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "BasicDialogue6",
+"to_port": 0
+}, {
+"from": "BasicDialogue6",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0002,
+"rect_size_y": 55.0,
+"rect_x": 708.361,
+"rect_y": 677.25
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0001,
+"rect_size_y": 55.0,
+"rect_x": 195.361,
+"rect_y": 209.25
+}, {
+"Actor": "Jimmy",
+"Dialogue": "LAB_PART_1-1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 339.361,
+"rect_y": 209.25
+}, {
+"Actor": "Jimmy",
+"Dialogue": "LAB_PART_1-3",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 339.361,
+"rect_y": 447.25
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_1-5",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 339.361,
+"rect_y": 679.25
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_1-2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue6",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 711.361,
+"rect_y": 210.25
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_1-4",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 711.361,
+"rect_y": 445.25
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Actor": "Jimmy",
+"Dialogue": "LAB_PART_1-1",
+"NodeName": "BasicDialogue3",
+"Ref": "",
+"next": 3
+}, {
+"Actor": "Jimmy",
+"Dialogue": "LAB_PART_1-3",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 4
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_1-5",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": "End"
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_1-2",
+"NodeName": "BasicDialogue6",
+"Ref": "",
+"next": 1
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_1-4",
+"NodeName": "BasicDialogue4",
+"Ref": "",
+"next": 2
+} ],
+"start_index": 0
+}
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "ConditonalDialogue",
+"to_port": 0
+}, {
+"from": "ConditonalDialogue",
+"from_port": 0,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "ConditonalDialogue",
+"from_port": 1,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0002,
+"rect_size_y": 55.0,
+"rect_x": 1059.96,
+"rect_y": 443.25
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0003,
+"rect_size_y": 55.0,
+"rect_x": 129.71,
+"rect_y": 385.25
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_2-1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 595.787,
+"rect_y": 230.5
+}, {
+"conditonal": "{did_get_notebook}",
+"filename": "res://addons/dialogue_tree/scenes/ConditonalDialogue.tscn",
+"name": "ConditonalDialogue",
+"rect_size_x": 238.0,
+"rect_size_y": 121.0,
+"rect_x": 294.68,
+"rect_y": 385.0
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_2-2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 593.787,
+"rect_y": 476.5
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Actor": "DR",
+"Dialogue": "LAB_PART_2-1",
+"NodeName": "BasicDialogue3",
+"Ref": "",
+"next": "End"
+}, {
+"Condition": "{did_get_notebook}",
+"NodeName": "ConditonalDialogue",
+"Ref": "",
+"failnext": 2,
+"next": 0
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_PART_2-2",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": "End"
+} ],
+"start_index": 1
+}
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "BasicDialogue9",
+"from_port": 0,
+"to": "ChoiceDialogue2",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 1,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "ChoiceDialogue",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 2,
+"to": "BasicDialogue10",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 3,
+"to": "BasicDialogue12",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 4,
+"to": "BasicDialogue13",
+"to_port": 0
+}, {
+"from": "BasicDialogue13",
+"from_port": 0,
+"to": "BasicDialogue14",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 5,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue15",
+"from_port": 0,
+"to": "BasicDialogue5",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 6,
+"to": "BasicDialogue16",
+"to_port": 0
+}, {
+"from": "BasicDialogue16",
+"from_port": 0,
+"to": "BasicDialogue17",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 7,
+"to": "BasicDialogue6",
+"to_port": 0
+}, {
+"from": "BasicDialogue6",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "BasicDialogue18",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 1,
+"to": "BasicDialogue6",
+"to_port": 0
+}, {
+"from": "BasicDialogue18",
+"from_port": 0,
+"to": "BasicDialogue19",
+"to_port": 0
+}, {
+"from": "BasicDialogue19",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "BasicDialogue7",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "BasicDialogue10",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "BasicDialogue12",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "BasicDialogue14",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "BasicDialogue5",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "BasicDialogue17",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0,
+"rect_size_y": 55.0,
+"rect_x": 2427.22,
+"rect_y": 1053.04
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0005,
+"rect_size_y": 55.0,
+"rect_x": -38.0258,
+"rect_y": 224.04
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "GEAR",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "BOOK",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "SCROLL",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "BAG",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "MAP",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "BATTERY",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "COIN",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue",
+"rect_size_x": 352.999,
+"rect_size_y": 307.0,
+"rect_x": 487.48,
+"rect_y": 102.29
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 112.48,
+"rect_y": 116.29
+}, {
+"Actor": "DR",
+"Dialogue": "GEAR_DESC_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 342.998,
+"rect_size_y": 220.0,
+"rect_x": 1276.61,
+"rect_y": -607.941
+}, {
+"Actor": "DR",
+"Dialogue": "BOOK_DESC",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue7",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 917.72,
+"rect_y": -380.441
+}, {
+"Actor": "DR",
+"Dialogue": "SCROLL_DESC",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue10",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 916.146,
+"rect_y": -144.941
+}, {
+"Actor": "DR",
+"Dialogue": "BAG_DESC",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue12",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 918.146,
+"rect_y": 88.059
+}, {
+"Actor": "DR",
+"Dialogue": "MAP_DESC_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue13",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 919.146,
+"rect_y": 325.059
+}, {
+"Actor": "DR",
+"Dialogue": "MAP_DESC_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue14",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1283.15,
+"rect_y": 325.059
+}, {
+"Actor": "DR",
+"Dialogue": "BATTERY_DESC_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue5",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1279.42,
+"rect_y": 559.06
+}, {
+"Actor": "DR",
+"Dialogue": "COIN_DESC_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue16",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 915.418,
+"rect_y": 796.06
+}, {
+"Actor": "DR",
+"Dialogue": "COIN_DESC_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue17",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1276.42,
+"rect_y": 794.06
+}, {
+"Actor": "DR",
+"Dialogue": "GEAR_DESC_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 917.613,
+"rect_y": -609.941
+}, {
+"Actor": "DR",
+"Dialogue": "BATTERY_DESC_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue15",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 915.418,
+"rect_y": 560.06
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_5",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue18",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1643.23,
+"rect_y": 1029.04
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_6",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue19",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 2008.23,
+"rect_y": 1029.04
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue9",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1793.72,
+"rect_y": 88.559
+}, {
+"Conditonal": false,
+"RefName": "choice_2",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue2",
+"rect_size_x": 300.997,
+"rect_size_y": 143.0,
+"rect_x": 1884.67,
+"rect_y": 540.31
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_3",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue6",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 912.418,
+"rect_y": 1029.06
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_4",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 342.998,
+"rect_size_y": 220.0,
+"rect_x": 1279.01,
+"rect_y": 1025.25
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "GEAR",
+"PassCondition": true,
+"ToolTip": "",
+"next": 11
+}, {
+"Conditional": "",
+"Dialogue": "BOOK",
+"PassCondition": true,
+"ToolTip": "",
+"next": 3
+}, {
+"Conditional": "",
+"Dialogue": "SCROLL",
+"PassCondition": true,
+"ToolTip": "",
+"next": 4
+}, {
+"Conditional": "",
+"Dialogue": "BAG",
+"PassCondition": true,
+"ToolTip": "",
+"next": 5
+}, {
+"Conditional": "",
+"Dialogue": "MAP",
+"PassCondition": true,
+"ToolTip": "",
+"next": 6
+}, {
+"Conditional": "",
+"Dialogue": "BATTERY",
+"PassCondition": true,
+"ToolTip": "",
+"next": 12
+}, {
+"Conditional": "",
+"Dialogue": "COIN",
+"PassCondition": true,
+"ToolTip": "",
+"next": 9
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"PassCondition": true,
+"ToolTip": "",
+"next": 17
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue",
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_1",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 0
+}, {
+"Actor": "DR",
+"Dialogue": "GEAR_DESC_2",
+"NodeName": "BasicDialogue3",
+"Ref": "",
+"next": 15
+}, {
+"Actor": "DR",
+"Dialogue": "BOOK_DESC",
+"NodeName": "BasicDialogue7",
+"Ref": "",
+"next": 15
+}, {
+"Actor": "DR",
+"Dialogue": "SCROLL_DESC",
+"NodeName": "BasicDialogue10",
+"Ref": "",
+"next": 15
+}, {
+"Actor": "DR",
+"Dialogue": "BAG_DESC",
+"NodeName": "BasicDialogue12",
+"Ref": "",
+"next": 15
+}, {
+"Actor": "DR",
+"Dialogue": "MAP_DESC_1",
+"NodeName": "BasicDialogue13",
+"Ref": "",
+"next": 7
+}, {
+"Actor": "DR",
+"Dialogue": "MAP_DESC_2",
+"NodeName": "BasicDialogue14",
+"Ref": "",
+"next": 15
+}, {
+"Actor": "DR",
+"Dialogue": "BATTERY_DESC_2",
+"NodeName": "BasicDialogue5",
+"Ref": "",
+"next": 15
+}, {
+"Actor": "DR",
+"Dialogue": "COIN_DESC_1",
+"NodeName": "BasicDialogue16",
+"Ref": "",
+"next": 10
+}, {
+"Actor": "DR",
+"Dialogue": "COIN_DESC_2",
+"NodeName": "BasicDialogue17",
+"Ref": "",
+"next": 15
+}, {
+"Actor": "DR",
+"Dialogue": "GEAR_DESC_1",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": 2
+}, {
+"Actor": "DR",
+"Dialogue": "BATTERY_DESC_1",
+"NodeName": "BasicDialogue15",
+"Ref": "",
+"next": 8
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_5",
+"NodeName": "BasicDialogue18",
+"Ref": "",
+"next": 14
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_6",
+"NodeName": "BasicDialogue19",
+"Ref": "",
+"next": "End"
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_2",
+"NodeName": "BasicDialogue9",
+"Ref": "",
+"next": 16
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"PassCondition": true,
+"ToolTip": "",
+"next": 1
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"PassCondition": true,
+"ToolTip": "",
+"next": 17
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue2",
+"Ref": "choice_2"
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_3",
+"NodeName": "BasicDialogue6",
+"Ref": "",
+"next": 18
+}, {
+"Actor": "DR",
+"Dialogue": "LAB_TUT_4",
+"NodeName": "BasicDialogue4",
+"Ref": "",
+"next": 13
+} ],
+"start_index": 1
+}
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "BasicDialogue9",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "BasicDialogue10",
+"to_port": 0
+}, {
+"from": "BasicDialogue10",
+"from_port": 0,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "BasicDialogue11",
+"from_port": 0,
+"to": "ChoiceDialogue",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 1,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 2,
+"to": "BasicDialogue12",
+"to_port": 0
+}, {
+"from": "BasicDialogue12",
+"from_port": 0,
+"to": "BasicDialogue13",
+"to_port": 0
+}, {
+"from": "BasicDialogue6",
+"from_port": 0,
+"to": "BasicDialogue14",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue13",
+"from_port": 0,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue14",
+"from_port": 0,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue15",
+"from_port": 0,
+"to": "ChoiceDialogue2",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 1,
+"to": "BasicDialogue16",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 0,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 3,
+"to": "BasicDialogue6",
+"to_port": 0
+}, {
+"from": "BasicDialogue16",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "StartNode",
+"from_port": 0,
+"to": "RandomDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 1,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 4,
+"to": "BasicDialogue16",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0001,
+"rect_size_y": 55.0,
+"rect_x": 1364.65,
+"rect_y": 1380.0
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0005,
+"rect_size_y": 55.0,
+"rect_x": 4.64905,
+"rect_y": 340.0
+}, {
+"RefName": "",
+"choices": [ {
+"Conditional": "{cond} == 1"
+}, {
+"Conditional": "{cond} == 0"
+} ],
+"conditonal": true,
+"filename": "res://addons/dialogue_tree/scenes/RandomDialogue.tscn",
+"name": "RandomDialogue",
+"rect_size_x": 206.0,
+"rect_size_y": 141.0,
+"rect_x": 104.648,
+"rect_y": 340.0
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue9",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 344.648,
+"rect_y": 180.0
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 704.648,
+"rect_y": 180.0
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_3",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue10",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1064.65,
+"rect_y": 180.0
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_4",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue11",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 344.648,
+"rect_y": 480.0
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "Int",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Double",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Bool",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "String",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue",
+"rect_size_x": 215.0,
+"rect_size_y": 229.0,
+"rect_x": 704.648,
+"rect_y": 480.0
+}, {
+"Actor": "DR",
+"Dialogue": "INT_DESC",
+"RefName": "int",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1004.65,
+"rect_y": 420.0
+}, {
+"Actor": "DR",
+"Dialogue": "BOOL_DESC_1",
+"RefName": "bool",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue12",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1004.65,
+"rect_y": 660.0
+}, {
+"Actor": "DR",
+"Dialogue": "BOOL_DESC_2",
+"RefName": "bool",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue13",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1364.65,
+"rect_y": 660.0
+}, {
+"Actor": "DR",
+"Dialogue": "DOUBLE_DESC_1",
+"RefName": "double",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1004.65,
+"rect_y": 900.0
+}, {
+"Actor": "DR",
+"Dialogue": "DOUBLE_DESC_2",
+"RefName": "double",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1364.65,
+"rect_y": 900.0
+}, {
+"Actor": "DR",
+"Dialogue": "STRING_DESC_1",
+"RefName": "string",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue6",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1004.65,
+"rect_y": 1140.0
+}, {
+"Actor": "DR",
+"Dialogue": "STRING_DESC_2",
+"RefName": "string",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue14",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1364.65,
+"rect_y": 1140.0
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_6",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue16",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1004.65,
+"rect_y": 1380.0
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_5",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue15",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1824.65,
+"rect_y": 860.0
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue2",
+"rect_size_x": 213.0,
+"rect_size_y": 141.0,
+"rect_x": 2184.65,
+"rect_y": 860.0
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Conditonal": true,
+"NodeName": "RandomDialogue",
+"RandomChoices": [ {
+"Conditional": "{cond} == 1",
+"PassCondition": true,
+"next": 1
+}, {
+"Conditional": "{cond} == 0",
+"PassCondition": true,
+"next": 4
+} ],
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_1",
+"NodeName": "BasicDialogue9",
+"Ref": "",
+"next": 2
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_2",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 3
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_3",
+"NodeName": "BasicDialogue10",
+"Ref": "",
+"next": 4
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_4",
+"NodeName": "BasicDialogue11",
+"Ref": "",
+"next": 5
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "Int",
+"PassCondition": true,
+"ToolTip": "",
+"next": 6
+}, {
+"Conditional": "",
+"Dialogue": "Double",
+"PassCondition": true,
+"ToolTip": "",
+"next": 9
+}, {
+"Conditional": "",
+"Dialogue": "Bool",
+"PassCondition": true,
+"ToolTip": "",
+"next": 7
+}, {
+"Conditional": "",
+"Dialogue": "String",
+"PassCondition": true,
+"ToolTip": "",
+"next": 11
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"PassCondition": true,
+"ToolTip": "",
+"next": 13
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue",
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "INT_DESC",
+"NodeName": "BasicDialogue2",
+"Ref": "int",
+"next": 14
+}, {
+"Actor": "DR",
+"Dialogue": "BOOL_DESC_1",
+"NodeName": "BasicDialogue12",
+"Ref": "bool",
+"next": 8
+}, {
+"Actor": "DR",
+"Dialogue": "BOOL_DESC_2",
+"NodeName": "BasicDialogue13",
+"Ref": "bool",
+"next": 14
+}, {
+"Actor": "DR",
+"Dialogue": "DOUBLE_DESC_1",
+"NodeName": "BasicDialogue3",
+"Ref": "double",
+"next": 10
+}, {
+"Actor": "DR",
+"Dialogue": "DOUBLE_DESC_2",
+"NodeName": "BasicDialogue4",
+"Ref": "double",
+"next": 14
+}, {
+"Actor": "DR",
+"Dialogue": "STRING_DESC_1",
+"NodeName": "BasicDialogue6",
+"Ref": "string",
+"next": 12
+}, {
+"Actor": "DR",
+"Dialogue": "STRING_DESC_2",
+"NodeName": "BasicDialogue14",
+"Ref": "string",
+"next": 14
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_6",
+"NodeName": "BasicDialogue16",
+"Ref": "",
+"next": "End"
+}, {
+"Actor": "DR",
+"Dialogue": "F_TUT_5",
+"NodeName": "BasicDialogue15",
+"Ref": "",
+"next": 15
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"PassCondition": true,
+"ToolTip": "",
+"next": 4
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"PassCondition": true,
+"ToolTip": "",
+"next": 13
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue2",
+"Ref": ""
+} ],
+"start_index": 0
+}
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "ChoiceDialogue",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 0,
+"to": "BasicDialogue5",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 1,
+"to": "BasicDialogue6",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 2,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 3,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 4,
+"to": "BasicDialogue8",
+"to_port": 0
+}, {
+"from": "BasicDialogue11",
+"from_port": 0,
+"to": "ChoiceDialogue2",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 1,
+"to": "BasicDialogue12",
+"to_port": 0
+}, {
+"from": "BasicDialogue12",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue7",
+"from_port": 0,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "BasicDialogue14",
+"from_port": 0,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "BasicDialogue8",
+"from_port": 0,
+"to": "BasicDialogue14",
+"to_port": 0
+}, {
+"from": "BasicDialogue9",
+"from_port": 0,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "StartNode",
+"from_port": 0,
+"to": "RandomDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 1,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 5,
+"to": "BasicDialogue12",
+"to_port": 0
+}, {
+"from": "BasicDialogue5",
+"from_port": 0,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "BasicDialogue6",
+"from_port": 0,
+"to": "BasicDialogue11",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0,
+"rect_size_y": 55.0,
+"rect_x": 2022.9,
+"rect_y": 940.0
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0005,
+"rect_size_y": 55.0,
+"rect_x": -357.101,
+"rect_y": 0.0
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 82.8984,
+"rect_y": -220.0
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 442.898,
+"rect_y": -220.0
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_3",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 802.899,
+"rect_y": -220.0
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_4",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 82.8984,
+"rect_y": 160.0
+}, {
+"Actor": "DR",
+"Dialogue": "PLUS_DESC",
+"RefName": "plus",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue5",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 742.898,
+"rect_y": 20.0
+}, {
+"Actor": "DR",
+"Dialogue": "MINUS_DESC",
+"RefName": "minus",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue6",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 742.898,
+"rect_y": 260.0
+}, {
+"Actor": "DR",
+"Dialogue": "MULTIPLY_DESC",
+"RefName": "multiply",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue7",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 742.898,
+"rect_y": 500.0
+}, {
+"Actor": "DR",
+"Dialogue": "MODULE_DESC_1",
+"RefName": "modulo",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue8",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 742.898,
+"rect_y": 980.0
+}, {
+"Actor": "DR",
+"Dialogue": "MODULE_DESC_2",
+"RefName": "modulo",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue14",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1102.9,
+"rect_y": 980.0
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_5",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue11",
+"rect_size_x": 343.001,
+"rect_size_y": 220.0,
+"rect_x": 1562.9,
+"rect_y": 560.0
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue2",
+"rect_size_x": 213.0,
+"rect_size_y": 148.0,
+"rect_x": 1942.9,
+"rect_y": 560.0
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_6",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue12",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1662.9,
+"rect_y": 940.0
+}, {
+"RefName": "",
+"choices": [ {
+"Conditional": "{cond} == 1"
+}, {
+"Conditional": "{cond} == 0"
+} ],
+"conditonal": true,
+"filename": "res://addons/dialogue_tree/scenes/RandomDialogue.tscn",
+"name": "RandomDialogue",
+"rect_size_x": 206.0,
+"rect_size_y": 141.0,
+"rect_x": -217.101,
+"rect_y": 0.0
+}, {
+"Actor": "DR",
+"Dialogue": "DIVIDE_DESC",
+"RefName": "divide",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue9",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 742.898,
+"rect_y": 740.0
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "Plus",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Minus",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Multiply",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Divide",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Modulo",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue",
+"rect_size_x": 213.0,
+"rect_size_y": 249.0,
+"rect_x": 444.898,
+"rect_y": 167.25
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Actor": "DR",
+"Dialogue": "M_TUT_1",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 1
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_2",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": 2
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_3",
+"NodeName": "BasicDialogue3",
+"Ref": "",
+"next": 3
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_4",
+"NodeName": "BasicDialogue4",
+"Ref": "",
+"next": 14
+}, {
+"Actor": "DR",
+"Dialogue": "PLUS_DESC",
+"NodeName": "BasicDialogue5",
+"Ref": "plus",
+"next": 9
+}, {
+"Actor": "DR",
+"Dialogue": "MINUS_DESC",
+"NodeName": "BasicDialogue6",
+"Ref": "minus",
+"next": 9
+}, {
+"Actor": "DR",
+"Dialogue": "MULTIPLY_DESC",
+"NodeName": "BasicDialogue7",
+"Ref": "multiply",
+"next": 9
+}, {
+"Actor": "DR",
+"Dialogue": "MODULE_DESC_1",
+"NodeName": "BasicDialogue8",
+"Ref": "modulo",
+"next": 8
+}, {
+"Actor": "DR",
+"Dialogue": "MODULE_DESC_2",
+"NodeName": "BasicDialogue14",
+"Ref": "modulo",
+"next": 9
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_5",
+"NodeName": "BasicDialogue11",
+"Ref": "",
+"next": 10
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"PassCondition": true,
+"ToolTip": "",
+"next": 3
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"PassCondition": true,
+"ToolTip": "",
+"next": 11
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue2",
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "M_TUT_6",
+"NodeName": "BasicDialogue12",
+"Ref": "",
+"next": "End"
+}, {
+"Conditonal": true,
+"NodeName": "RandomDialogue",
+"RandomChoices": [ {
+"Conditional": "{cond} == 1",
+"PassCondition": true,
+"next": 0
+}, {
+"Conditional": "{cond} == 0",
+"PassCondition": true,
+"next": 3
+} ],
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "DIVIDE_DESC",
+"NodeName": "BasicDialogue9",
+"Ref": "divide",
+"next": 9
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "Plus",
+"PassCondition": true,
+"ToolTip": "",
+"next": 4
+}, {
+"Conditional": "",
+"Dialogue": "Minus",
+"PassCondition": true,
+"ToolTip": "",
+"next": 5
+}, {
+"Conditional": "",
+"Dialogue": "Multiply",
+"PassCondition": true,
+"ToolTip": "",
+"next": 6
+}, {
+"Conditional": "",
+"Dialogue": "Divide",
+"PassCondition": true,
+"ToolTip": "",
+"next": 13
+}, {
+"Conditional": "",
+"Dialogue": "Modulo",
+"PassCondition": true,
+"ToolTip": "",
+"next": 7
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"PassCondition": true,
+"ToolTip": "",
+"next": 11
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue",
+"Ref": ""
+} ],
+"start_index": 12
+}
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "RandomDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 1,
+"to": "BasicDialogue5",
+"to_port": 0
+}, {
+"from": "BasicDialogue5",
+"from_port": 0,
+"to": "ChoiceDialogue",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 0,
+"to": "BasicDialogue6",
+"to_port": 0
+}, {
+"from": "BasicDialogue6",
+"from_port": 0,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "BasicDialogue7",
+"from_port": 0,
+"to": "ChoiceDialogue2",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 0,
+"to": "BasicDialogue5",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 1,
+"to": "BasicDialogue8",
+"to_port": 0
+}, {
+"from": "BasicDialogue8",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "BasicDialogue9",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 1,
+"to": "BasicDialogue10",
+"to_port": 0
+}, {
+"from": "BasicDialogue10",
+"from_port": 0,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 2,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "BasicDialogue11",
+"from_port": 0,
+"to": "BasicDialogue12",
+"to_port": 0
+}, {
+"from": "BasicDialogue12",
+"from_port": 0,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 3,
+"to": "BasicDialogue13",
+"to_port": 0
+}, {
+"from": "BasicDialogue13",
+"from_port": 0,
+"to": "BasicDialogue14",
+"to_port": 0
+}, {
+"from": "BasicDialogue14",
+"from_port": 0,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 4,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue15",
+"from_port": 0,
+"to": "BasicDialogue16",
+"to_port": 0
+}, {
+"from": "BasicDialogue16",
+"from_port": 0,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 6,
+"to": "BasicDialogue8",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 5,
+"to": "BasicDialogue17",
+"to_port": 0
+}, {
+"from": "BasicDialogue17",
+"from_port": 0,
+"to": "BasicDialogue18",
+"to_port": 0
+}, {
+"from": "BasicDialogue18",
+"from_port": 0,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "BasicDialogue5",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0,
+"rect_size_y": 55.0,
+"rect_x": 2976.44,
+"rect_y": 742.5
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0004,
+"rect_size_y": 55.0,
+"rect_x": 280.437,
+"rect_y": 273.5
+}, {
+"RefName": "",
+"choices": [ {
+"Conditional": "{cond} == 1"
+}, {
+"Conditional": "{cond} == 0"
+} ],
+"conditonal": true,
+"filename": "res://addons/dialogue_tree/scenes/RandomDialogue.tscn",
+"name": "RandomDialogue",
+"rect_size_x": 206.0,
+"rect_size_y": 141.0,
+"rect_x": 380.437,
+"rect_y": 273.5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1020.44,
+"rect_y": 33.5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_3",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1380.44,
+"rect_y": 33.5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_4",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1740.44,
+"rect_y": 33.5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_5",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue5",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 659.436,
+"rect_y": 472.5
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue2",
+"rect_size_x": 213.001,
+"rect_size_y": 141.0,
+"rect_x": 2596.44,
+"rect_y": 502.5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_6",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue7",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 2236.44,
+"rect_y": 502.5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_7",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue8",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 2236.44,
+"rect_y": 742.5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_8	",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue9",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 2596.44,
+"rect_y": 742.5
+}, {
+"Actor": "DR",
+"Dialogue": "BIGGER_DESC",
+"RefName": "bigger",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue6",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1396.44,
+"rect_y": 282.5
+}, {
+"Actor": "DR",
+"Dialogue": "LESS_DESC",
+"RefName": "less",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue10",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1396.44,
+"rect_y": 522.5
+}, {
+"Actor": "DR",
+"Dialogue": "EQUAL_DESC_1",
+"RefName": "equal",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue11",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1396.44,
+"rect_y": 762.5
+}, {
+"Actor": "DR",
+"Dialogue": "EQUAL_DESC_2",
+"RefName": "equal",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue12",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1756.44,
+"rect_y": 762.5
+}, {
+"Actor": "DR",
+"Dialogue": "NOT_EQUAL_DESC_1",
+"RefName": "not_equal",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue13",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1396.44,
+"rect_y": 1002.5
+}, {
+"Actor": "DR",
+"Dialogue": "NOT_EQUAL_DESC_2",
+"RefName": "not_equal",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue14",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1756.44,
+"rect_y": 1002.5
+}, {
+"Actor": "DR",
+"Dialogue": "AND_DESC_1",
+"RefName": "and",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue15",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1396.44,
+"rect_y": 1242.5
+}, {
+"Actor": "DR",
+"Dialogue": "AND_DESC_2",
+"RefName": "and",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue16",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1756.44,
+"rect_y": 1242.5
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "Bigger",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Less",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Equal",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Not Equal",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "And",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Or",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue",
+"rect_size_x": 213.0,
+"rect_size_y": 276.0,
+"rect_x": 1056.44,
+"rect_y": 482.5
+}, {
+"Actor": "DR",
+"Dialogue": " OR_DESC_1",
+"RefName": "or",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue17",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1396.44,
+"rect_y": 1482.5
+}, {
+"Actor": "DR",
+"Dialogue": "OR_DESC_2",
+"RefName": "or",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue18",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1756.44,
+"rect_y": 1482.5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 660.436,
+"rect_y": 33.5
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Conditonal": true,
+"NodeName": "RandomDialogue",
+"RandomChoices": [ {
+"Conditional": "{cond} == 1",
+"PassCondition": true,
+"next": 20
+}, {
+"Conditional": "{cond} == 0",
+"PassCondition": true,
+"next": 4
+} ],
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_2",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": 2
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_3",
+"NodeName": "BasicDialogue3",
+"Ref": "",
+"next": 3
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_4",
+"NodeName": "BasicDialogue4",
+"Ref": "",
+"next": 4
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_5",
+"NodeName": "BasicDialogue5",
+"Ref": "",
+"next": 17
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"PassCondition": true,
+"ToolTip": "",
+"next": 4
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"PassCondition": true,
+"ToolTip": "",
+"next": 7
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue2",
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_6",
+"NodeName": "BasicDialogue7",
+"Ref": "",
+"next": 5
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_7",
+"NodeName": "BasicDialogue8",
+"Ref": "",
+"next": 8
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_8	",
+"NodeName": "BasicDialogue9",
+"Ref": "",
+"next": "End"
+}, {
+"Actor": "DR",
+"Dialogue": "BIGGER_DESC",
+"NodeName": "BasicDialogue6",
+"Ref": "bigger",
+"next": 6
+}, {
+"Actor": "DR",
+"Dialogue": "LESS_DESC",
+"NodeName": "BasicDialogue10",
+"Ref": "less",
+"next": 6
+}, {
+"Actor": "DR",
+"Dialogue": "EQUAL_DESC_1",
+"NodeName": "BasicDialogue11",
+"Ref": "equal",
+"next": 12
+}, {
+"Actor": "DR",
+"Dialogue": "EQUAL_DESC_2",
+"NodeName": "BasicDialogue12",
+"Ref": "equal",
+"next": 6
+}, {
+"Actor": "DR",
+"Dialogue": "NOT_EQUAL_DESC_1",
+"NodeName": "BasicDialogue13",
+"Ref": "not_equal",
+"next": 14
+}, {
+"Actor": "DR",
+"Dialogue": "NOT_EQUAL_DESC_2",
+"NodeName": "BasicDialogue14",
+"Ref": "not_equal",
+"next": 6
+}, {
+"Actor": "DR",
+"Dialogue": "AND_DESC_1",
+"NodeName": "BasicDialogue15",
+"Ref": "and",
+"next": 16
+}, {
+"Actor": "DR",
+"Dialogue": "AND_DESC_2",
+"NodeName": "BasicDialogue16",
+"Ref": "and",
+"next": 6
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "Bigger",
+"PassCondition": true,
+"ToolTip": "",
+"next": 9
+}, {
+"Conditional": "",
+"Dialogue": "Less",
+"PassCondition": true,
+"ToolTip": "",
+"next": 10
+}, {
+"Conditional": "",
+"Dialogue": "Equal",
+"PassCondition": true,
+"ToolTip": "",
+"next": 11
+}, {
+"Conditional": "",
+"Dialogue": "Not Equal",
+"PassCondition": true,
+"ToolTip": "",
+"next": 13
+}, {
+"Conditional": "",
+"Dialogue": "And",
+"PassCondition": true,
+"ToolTip": "",
+"next": 15
+}, {
+"Conditional": "",
+"Dialogue": "Or",
+"PassCondition": true,
+"ToolTip": "",
+"next": 18
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"PassCondition": true,
+"ToolTip": "",
+"next": 7
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue",
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": " OR_DESC_1",
+"NodeName": "BasicDialogue17",
+"Ref": "or",
+"next": 19
+}, {
+"Actor": "DR",
+"Dialogue": "OR_DESC_2",
+"NodeName": "BasicDialogue18",
+"Ref": "or",
+"next": 6
+}, {
+"Actor": "DR",
+"Dialogue": "B_TUT_1",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 1
+} ],
+"start_index": 0
+}
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "RandomDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 1,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "ChoiceDialogue",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 0,
+"to": "BasicDialogue5",
+"to_port": 0
+}, {
+"from": "BasicDialogue6",
+"from_port": 0,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "BasicDialogue5",
+"from_port": 0,
+"to": "BasicDialogue6",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 1,
+"to": "BasicDialogue8",
+"to_port": 0
+}, {
+"from": "BasicDialogue8",
+"from_port": 0,
+"to": "BasicDialogue9",
+"to_port": 0
+}, {
+"from": "BasicDialogue9",
+"from_port": 0,
+"to": "BasicDialogue10",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 2,
+"to": "BasicDialogue11",
+"to_port": 0
+}, {
+"from": "BasicDialogue11",
+"from_port": 0,
+"to": "BasicDialogue12",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 3,
+"to": "BasicDialogue13",
+"to_port": 0
+}, {
+"from": "BasicDialogue13",
+"from_port": 0,
+"to": "BasicDialogue14",
+"to_port": 0
+}, {
+"from": "BasicDialogue7",
+"from_port": 0,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue10",
+"from_port": 0,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue12",
+"from_port": 0,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue14",
+"from_port": 0,
+"to": "BasicDialogue15",
+"to_port": 0
+}, {
+"from": "BasicDialogue15",
+"from_port": 0,
+"to": "ChoiceDialogue2",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue2",
+"from_port": 1,
+"to": "BasicDialogue16",
+"to_port": 0
+}, {
+"from": "BasicDialogue16",
+"from_port": 0,
+"to": "BasicDialogue17",
+"to_port": 0
+}, {
+"from": "BasicDialogue17",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "ChoiceDialogue",
+"from_port": 4,
+"to": "BasicDialogue16",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0,
+"rect_size_y": 55.0,
+"rect_x": 2208.59,
+"rect_y": 688.0
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0005,
+"rect_size_y": 55.0,
+"rect_x": -723.407,
+"rect_y": 60.0
+}, {
+"RefName": "",
+"choices": [ {
+"Conditional": "{cond} == 1"
+}, {
+"Conditional": "{cond} == 0"
+} ],
+"conditonal": true,
+"filename": "res://addons/dialogue_tree/scenes/RandomDialogue.tscn",
+"name": "RandomDialogue",
+"rect_size_x": 206.0,
+"rect_size_y": 141.0,
+"rect_x": -623.407,
+"rect_y": 60.0
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": -343.407,
+"rect_y": -200.0
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 16.5928,
+"rect_y": -200.0
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_3",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 376.594,
+"rect_y": -200.0
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "For",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "While",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "If",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "Else",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue",
+"rect_size_x": 213.0,
+"rect_size_y": 222.0,
+"rect_x": 28.5928,
+"rect_y": 268.0
+}, {
+"Actor": "Dr Compilador",
+"Dialogue": "D_TUT_4",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": -331.407,
+"rect_y": 268.0
+}, {
+"Actor": "DR",
+"Dialogue": "FOR_DESC_1",
+"RefName": "for",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue5",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 348.594,
+"rect_y": 48.0
+}, {
+"Actor": "DR",
+"Dialogue": "FOR_DESC_3",
+"RefName": "for",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue7",
+"rect_size_x": 343.001,
+"rect_size_y": 220.0,
+"rect_x": 1068.59,
+"rect_y": 48.0
+}, {
+"Actor": "DR",
+"Dialogue": "FOR_DESC_2",
+"RefName": "for",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue6",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 708.594,
+"rect_y": 48.0
+}, {
+"Actor": "DR",
+"Dialogue": "WHILE_DESC_1",
+"RefName": "while",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue8",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 348.594,
+"rect_y": 288.0
+}, {
+"Actor": "DR",
+"Dialogue": "WHILE_DESC_2",
+"RefName": "while",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue9",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 708.594,
+"rect_y": 288.0
+}, {
+"Actor": "DR",
+"Dialogue": "WHILE_DESC_3",
+"RefName": "while",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue10",
+"rect_size_x": 343.001,
+"rect_size_y": 220.0,
+"rect_x": 1068.59,
+"rect_y": 288.0
+}, {
+"Actor": "DR",
+"Dialogue": "IF_DESC_1",
+"RefName": "if",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue11",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 348.594,
+"rect_y": 528.0
+}, {
+"Actor": "DR",
+"Dialogue": "IF_DESC_2",
+"RefName": "if",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue12",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 708.594,
+"rect_y": 528.0
+}, {
+"Actor": "DR",
+"Dialogue": "ELSE_DESC_1",
+"RefName": "else",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue13",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 348.594,
+"rect_y": 768.0
+}, {
+"Actor": "DR",
+"Dialogue": "ELSE_DESC_2",
+"RefName": "else",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue14",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 708.594,
+"rect_y": 768.0
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_5",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue15",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1488.59,
+"rect_y": 448.0
+}, {
+"Conditonal": false,
+"RefName": "",
+"choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"ToolTip": ""
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"ToolTip": ""
+} ],
+"filename": "res://addons/dialogue_tree/scenes/ChoiceDialogue.tscn",
+"name": "ChoiceDialogue2",
+"rect_size_x": 213.001,
+"rect_size_y": 141.0,
+"rect_x": 1848.59,
+"rect_y": 448.0
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_6",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue16",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1488.59,
+"rect_y": 688.0
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_7",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue17",
+"rect_size_x": 342.999,
+"rect_size_y": 220.0,
+"rect_x": 1848.59,
+"rect_y": 688.0
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Conditonal": true,
+"NodeName": "RandomDialogue",
+"RandomChoices": [ {
+"Conditional": "{cond} == 1",
+"PassCondition": true,
+"next": 1
+}, {
+"Conditional": "{cond} == 0",
+"PassCondition": true,
+"next": 5
+} ],
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_1",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 2
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_2",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": 3
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_3",
+"NodeName": "BasicDialogue3",
+"Ref": "",
+"next": 5
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "For",
+"PassCondition": true,
+"ToolTip": "",
+"next": 6
+}, {
+"Conditional": "",
+"Dialogue": "While",
+"PassCondition": true,
+"ToolTip": "",
+"next": 9
+}, {
+"Conditional": "",
+"Dialogue": "If",
+"PassCondition": true,
+"ToolTip": "",
+"next": 12
+}, {
+"Conditional": "",
+"Dialogue": "Else",
+"PassCondition": true,
+"ToolTip": "",
+"next": 14
+}, {
+"Conditional": "",
+"Dialogue": "NOTHING",
+"PassCondition": true,
+"ToolTip": "",
+"next": 18
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue",
+"Ref": ""
+}, {
+"Actor": "Dr Compilador",
+"Dialogue": "D_TUT_4",
+"NodeName": "BasicDialogue4",
+"Ref": "",
+"next": 4
+}, {
+"Actor": "DR",
+"Dialogue": "FOR_DESC_1",
+"NodeName": "BasicDialogue5",
+"Ref": "for",
+"next": 8
+}, {
+"Actor": "DR",
+"Dialogue": "FOR_DESC_3",
+"NodeName": "BasicDialogue7",
+"Ref": "for",
+"next": 16
+}, {
+"Actor": "DR",
+"Dialogue": "FOR_DESC_2",
+"NodeName": "BasicDialogue6",
+"Ref": "for",
+"next": 7
+}, {
+"Actor": "DR",
+"Dialogue": "WHILE_DESC_1",
+"NodeName": "BasicDialogue8",
+"Ref": "while",
+"next": 10
+}, {
+"Actor": "DR",
+"Dialogue": "WHILE_DESC_2",
+"NodeName": "BasicDialogue9",
+"Ref": "while",
+"next": 11
+}, {
+"Actor": "DR",
+"Dialogue": "WHILE_DESC_3",
+"NodeName": "BasicDialogue10",
+"Ref": "while",
+"next": 16
+}, {
+"Actor": "DR",
+"Dialogue": "IF_DESC_1",
+"NodeName": "BasicDialogue11",
+"Ref": "if",
+"next": 13
+}, {
+"Actor": "DR",
+"Dialogue": "IF_DESC_2",
+"NodeName": "BasicDialogue12",
+"Ref": "if",
+"next": 16
+}, {
+"Actor": "DR",
+"Dialogue": "ELSE_DESC_1",
+"NodeName": "BasicDialogue13",
+"Ref": "else",
+"next": 15
+}, {
+"Actor": "DR",
+"Dialogue": "ELSE_DESC_2",
+"NodeName": "BasicDialogue14",
+"Ref": "else",
+"next": 16
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_5",
+"NodeName": "BasicDialogue15",
+"Ref": "",
+"next": 17
+}, {
+"Choices": [ {
+"Conditional": "",
+"Dialogue": "YES",
+"PassCondition": true,
+"ToolTip": "",
+"next": 5
+}, {
+"Conditional": "",
+"Dialogue": "NO",
+"PassCondition": true,
+"ToolTip": "",
+"next": 18
+} ],
+"Conditonal": false,
+"NodeName": "ChoiceDialogue2",
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_6",
+"NodeName": "BasicDialogue16",
+"Ref": "",
+"next": 19
+}, {
+"Actor": "DR",
+"Dialogue": "D_TUT_7",
+"NodeName": "BasicDialogue17",
+"Ref": "",
+"next": "End"
+} ],
+"start_index": 0
+}
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "RandomDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 1,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "BasicDialogue5",
+"to_port": 0
+}, {
+"from": "BasicDialogue5",
+"from_port": 0,
+"to": "BasicDialogue6",
+"to_port": 0
+}, {
+"from": "BasicDialogue6",
+"from_port": 0,
+"to": "BasicDialogue7",
+"to_port": 0
+}, {
+"from": "BasicDialogue7",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "BasicDialogue3",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0,
+"rect_size_y": 55.0,
+"rect_x": 1474.27,
+"rect_y": 419.25
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0006,
+"rect_size_y": 55.0,
+"rect_x": -25.7305,
+"rect_y": 179.25
+}, {
+"RefName": "",
+"choices": [ {
+"Conditional": "{cond} == 1"
+}, {
+"Conditional": "{cond} == 0"
+} ],
+"conditonal": true,
+"filename": "res://addons/dialogue_tree/scenes/RandomDialogue.tscn",
+"name": "RandomDialogue",
+"rect_size_x": 207.0,
+"rect_size_y": 141.0,
+"rect_x": 74.2695,
+"rect_y": 179.25
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 334.27,
+"rect_y": -40.75
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 714.27,
+"rect_y": -40.75
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_3",
+"RefName": "bubble_sort",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 334.27,
+"rect_y": 359.25
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_4",
+"RefName": "bubble_sort",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 694.27,
+"rect_y": 359.25
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_5",
+"RefName": "bubble_sort",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue5",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 334.27,
+"rect_y": 599.25
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_7",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue7",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 1094.27,
+"rect_y": 419.25
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_6",
+"RefName": "bubble_sort",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue6",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 695.27,
+"rect_y": 604.5
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Conditonal": true,
+"NodeName": "RandomDialogue",
+"RandomChoices": [ {
+"Conditional": "{cond} == 1",
+"PassCondition": true,
+"next": 1
+}, {
+"Conditional": "{cond} == 0",
+"PassCondition": true,
+"next": 3
+} ],
+"Ref": ""
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_1",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 2
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_2",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": 3
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_3",
+"NodeName": "BasicDialogue3",
+"Ref": "bubble_sort",
+"next": 4
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_4",
+"NodeName": "BasicDialogue4",
+"Ref": "bubble_sort",
+"next": 5
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_5",
+"NodeName": "BasicDialogue5",
+"Ref": "bubble_sort",
+"next": 7
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_7",
+"NodeName": "BasicDialogue7",
+"Ref": "",
+"next": "End"
+}, {
+"Actor": "DR",
+"Dialogue": "BOSS_TUT_6",
+"NodeName": "BasicDialogue6",
+"Ref": "bubble_sort",
+"next": 6
+} ],
+"start_index": 0
+}
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "BasicDialogue3",
+"to_port": 0
+}, {
+"from": "BasicDialogue3",
+"from_port": 0,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "StartNode",
+"from_port": 0,
+"to": "RandomDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 1,
+"to": "BasicDialogue4",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0001,
+"rect_size_y": 55.0,
+"rect_x": 632.102,
+"rect_y": 458.75
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0005,
+"rect_size_y": 55.0,
+"rect_x": -347.892,
+"rect_y": 298.75
+}, {
+"Actor": "Alfred",
+"Dialogue": "ALFRED_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.001,
+"rect_size_y": 220.0,
+"rect_x": 112.108,
+"rect_y": 158.75
+}, {
+"Actor": "Alfred",
+"Dialogue": "ALFRED_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 492.108,
+"rect_y": 158.75
+}, {
+"Actor": "Alfred",
+"Dialogue": "ALFRED_3",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue3",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 872.102,
+"rect_y": 158.75
+}, {
+"Actor": "Alfred",
+"Dialogue": "ALFRED_4",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 132.108,
+"rect_y": 458.75
+}, {
+"RefName": "",
+"choices": [ {
+"Conditional": "{cond} == 0"
+}, {
+"Conditional": "{cond} == 1"
+} ],
+"conditonal": true,
+"filename": "res://addons/dialogue_tree/scenes/RandomDialogue.tscn",
+"name": "RandomDialogue",
+"rect_size_x": 206.0,
+"rect_size_y": 141.0,
+"rect_x": -187.892,
+"rect_y": 298.75
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Actor": "Alfred",
+"Dialogue": "ALFRED_1",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 1
+}, {
+"Actor": "Alfred",
+"Dialogue": "ALFRED_2",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": 2
+}, {
+"Actor": "Alfred",
+"Dialogue": "ALFRED_3",
+"NodeName": "BasicDialogue3",
+"Ref": "",
+"next": 3
+}, {
+"Actor": "Alfred",
+"Dialogue": "ALFRED_4",
+"NodeName": "BasicDialogue4",
+"Ref": "",
+"next": "End"
+}, {
+"Conditonal": true,
+"NodeName": "RandomDialogue",
+"RandomChoices": [ {
+"Conditional": "{cond} == 0",
+"PassCondition": true,
+"next": 0
+}, {
+"Conditional": "{cond} == 1",
+"PassCondition": true,
+"next": 3
+} ],
+"Ref": ""
+} ],
+"start_index": 4
+}
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "RandomDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "RandomDialogue",
+"from_port": 1,
+"to": "BasicDialogue4",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+}, {
+"from": "BasicDialogue4",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0004,
+"rect_size_y": 55.0001,
+"rect_x": 1056.28,
+"rect_y": 353.75
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0,
+"rect_size_y": 55.0,
+"rect_x": -78.7889,
+"rect_y": 268.75
+}, {
+"Actor": "INFECTED_BUBBLE",
+"Dialogue": "BUBBLE_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 421.211,
+"rect_y": 68.75
+}, {
+"RefName": "",
+"choices": [ {
+"Conditional": "{cond} == 1"
+}, {
+"Conditional": "{cond} == 2"
+} ],
+"conditonal": true,
+"filename": "res://addons/dialogue_tree/scenes/RandomDialogue.tscn",
+"name": "RandomDialogue",
+"rect_size_x": 206.0,
+"rect_size_y": 187.0,
+"rect_x": 101.211,
+"rect_y": 268.75
+}, {
+"Actor": "INFECTED_BUBBLE",
+"Dialogue": "BUBBLE_2",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue4",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 401.211,
+"rect_y": 468.75
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Actor": "INFECTED_BUBBLE",
+"Dialogue": "BUBBLE_1",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": "End"
+}, {
+"Conditonal": true,
+"NodeName": "RandomDialogue",
+"RandomChoices": [ {
+"Conditional": "{cond} == 1",
+"PassCondition": true,
+"next": 0
+}, {
+"Conditional": "{cond} == 2",
+"PassCondition": true,
+"next": 2
+} ],
+"Ref": ""
+}, {
+"Actor": "INFECTED_BUBBLE",
+"Dialogue": "BUBBLE_2",
+"NodeName": "BasicDialogue4",
+"Ref": "",
+"next": "End"
+} ],
+"start_index": 1
+}
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "BasicDialogue2",
+"to_port": 0
+}, {
+"from": "BasicDialogue2",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+} ]
+Nodes = [ {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0,
+"rect_size_y": 55.0,
+"rect_x": 1080.28,
+"rect_y": 323.25
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0,
+"rect_size_y": 55.0,
+"rect_x": 196.275,
+"rect_y": 318.25
+}, {
+"Actor": "BUBBLE",
+"Dialogue": "BUBBLE_4",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue2",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 696.275,
+"rect_y": 318.25
+}, {
+"Actor": "BUBBLE",
+"Dialogue": "BUBBLE_3",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 316.275,
+"rect_y": 318.25
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Actor": "BUBBLE",
+"Dialogue": "BUBBLE_4",
+"NodeName": "BasicDialogue2",
+"Ref": "",
+"next": "End"
+}, {
+"Actor": "BUBBLE",
+"Dialogue": "BUBBLE_3",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": 0
+} ],
+"start_index": 1
+}
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_icon": ExtResource( 7 )
+}
+connections = [ {
+"from": "StartNode",
+"from_port": 0,
+"to": "BasicDialogue",
+"to_port": 0
+}, {
+"from": "BasicDialogue",
+"from_port": 0,
+"to": "EndNode",
+"to_port": 0
+} ]
+Nodes = [ {
+"Actor": "COMPUTER",
+"Dialogue": "COMPUTER_1",
+"RefName": "",
+"filename": "res://addons/dialogue_tree/scenes/BasicDialogue.tscn",
+"name": "BasicDialogue",
+"rect_size_x": 343.0,
+"rect_size_y": 220.0,
+"rect_x": 558.275,
+"rect_y": 244.5
+}, {
+"filename": "res://addons/dialogue_tree/scenes/StartNode.tscn",
+"name": "StartNode",
+"rect_size_x": 88.0,
+"rect_size_y": 55.0,
+"rect_x": 438.275,
+"rect_y": 244.5
+}, {
+"filename": "res://addons/dialogue_tree/scenes/EndNode.tscn",
+"name": "EndNode",
+"rect_size_x": 82.0001,
+"rect_size_y": 55.0,
+"rect_x": 938.275,
+"rect_y": 244.5
+} ]
+DialogueTree = {
+"dialogue": [ {
+"Actor": "COMPUTER",
+"Dialogue": "COMPUTER_1",
+"NodeName": "BasicDialogue",
+"Ref": "",
+"next": "End"
+} ],
+"start_index": 0
+}
+
+[sub_resource type="DynamicFont" id=14]
+size = 25
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=15]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[node name="dialogue" type="CanvasLayer"]
+script = ExtResource( 6 )
+
+[node name="intro" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 1 )
+
+[node name="laboratory_part_1" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 2 )
+
+[node name="laboratory_part_2" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 3 )
+
+[node name="laboratory_tutorial" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 4 )
+RandomizeBeforeRandom = true
+
+[node name="forest_tutorial" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 5 )
+
+[node name="mountain_tutorial" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 6 )
+
+[node name="beach_tutorial" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 7 )
+
+[node name="desert_tutorial" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 8 )
+
+[node name="boss_tutorial" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 9 )
+
+[node name="doorman" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 10 )
+
+[node name="bubble" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 11 )
+RandomizeBeforeRandom = true
+
+[node name="bubble_good" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 12 )
+
+[node name="simulator" type="Node" parent="."]
+script = ExtResource( 1 )
+DialogueResource = SubResource( 13 )
+
+[node name="dialogue_choice" type="TextureRect" parent="."]
+margin_left = 733.0
+margin_top = -6.0
+margin_right = 862.0
+margin_bottom = 217.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="container" type="VBoxContainer" parent="dialogue_choice"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 18.0
+margin_top = 22.0
+margin_right = -19.0
+margin_bottom = -15.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dialogue_box" type="TextureRect" parent="."]
+margin_left = 48.2885
+margin_top = 417.73
+margin_right = 981.288
+margin_bottom = 593.73
+rect_pivot_offset = Vector2( 450.721, -131.066 )
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="dialogue_box"]
+margin_left = 37.7345
+margin_top = 61.588
+margin_right = 825.734
+margin_bottom = 147.588
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "text"
+align = 3
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="actor" type="Label" parent="dialogue_box"]
+margin_left = 59.0
+margin_top = 10.0
+margin_right = 376.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "actor"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tween" type="Tween" parent="dialogue_box"]
+
+[node name="sprite_btn" type="Sprite" parent="dialogue_box"]
+visible = false
+position = Vector2( 865.499, 115.966 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+hframes = 2
+frame = 1
+
+[node name="animation" type="AnimationPlayer" parent="dialogue_box/sprite_btn"]
+autoplay = "normal"
+anims/normal = SubResource( 15 )
+
+[node name="dialog_help" type="TextureRect" parent="."]
+anchor_left = 0.164962
+anchor_top = 0.0341894
+anchor_right = 0.808516
+anchor_bottom = 0.685856
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="img" type="TextureRect" parent="dialog_help"]
+anchor_left = 0.0409712
+anchor_top = 0.0767263
+anchor_right = 0.963581
+anchor_bottom = 0.928389
+margin_top = 1.90735e-06
+__meta__ = {
+"_edit_use_anchors_": true
+}
+[connection signal="Dialogue_Ended" from="intro" to="." method="_on_street_introduction_dialogue_ended"]
+[connection signal="Dialogue_Next" from="intro" to="." method="_on_street_introduction_dialogue_next"]
+[connection signal="Dialogue_Started" from="intro" to="." method="_on_street_introduction_dialogue_started"]
+[connection signal="Dialogue_Ended" from="laboratory_part_1" to="." method="_on_laboratory_part_1_dialogue_ended"]
+[connection signal="Dialogue_Next" from="laboratory_part_1" to="." method="_on_laboratory_part_1_dialogue_next"]
+[connection signal="Dialogue_Started" from="laboratory_part_1" to="." method="_on_laboratory_part_1_dialogue_started"]
+[connection signal="Conditonal_Data_Needed" from="laboratory_part_2" to="." method="_on_laboratory_part_2_conditonal_data_needed"]
+[connection signal="Dialogue_Ended" from="laboratory_part_2" to="." method="_on_laboratory_part_2_dialogue_ended"]
+[connection signal="Dialogue_Next" from="laboratory_part_2" to="." method="_on_laboratory_part_2_dialogue_next"]
+[connection signal="Dialogue_Started" from="laboratory_part_2" to="." method="_on_laboratory_part_2_dialogue_started"]
+[connection signal="Choice_Next" from="laboratory_tutorial" to="." method="_on_laboratory_tutorial_choice_next"]
+[connection signal="Dialogue_Ended" from="laboratory_tutorial" to="." method="_on_laboratory_tutorial_dialogue_ended"]
+[connection signal="Dialogue_Next" from="laboratory_tutorial" to="." method="_on_laboratory_tutorial_dialogue_next"]
+[connection signal="Dialogue_Started" from="laboratory_tutorial" to="." method="_on_laboratory_tutorial_dialogue_started"]
+[connection signal="Choice_Next" from="forest_tutorial" to="." method="_on_forest_tutorial_choice_next"]
+[connection signal="Conditonal_Data_Needed" from="forest_tutorial" to="." method="_on_forest_tutorial_conditonal_data_needed"]
+[connection signal="Dialogue_Ended" from="forest_tutorial" to="." method="_on_forest_tutorial_dialogue_ended"]
+[connection signal="Dialogue_Next" from="forest_tutorial" to="." method="_on_forest_tutorial_dialogue_next"]
+[connection signal="Dialogue_Started" from="forest_tutorial" to="." method="_on_forest_tutorial_dialogue_started"]
+[connection signal="Choice_Next" from="mountain_tutorial" to="." method="_on_montain_tutorial_choice_next"]
+[connection signal="Conditonal_Data_Needed" from="mountain_tutorial" to="." method="_on_montain_tutorial_conditonal_data_needed"]
+[connection signal="Dialogue_Ended" from="mountain_tutorial" to="." method="_on_montain_tutorial_dialogue_ended"]
+[connection signal="Dialogue_Next" from="mountain_tutorial" to="." method="_on_montain_tutorial_dialogue_next"]
+[connection signal="Dialogue_Started" from="mountain_tutorial" to="." method="_on_montain_tutorial_dialogue_started"]
+[connection signal="Choice_Next" from="beach_tutorial" to="." method="_on_beach_tutorial_choice_next"]
+[connection signal="Conditonal_Data_Needed" from="beach_tutorial" to="." method="_on_beach_tutorial_conditonal_data_needed"]
+[connection signal="Dialogue_Ended" from="beach_tutorial" to="." method="_on_beach_tutorial_dialogue_ended"]
+[connection signal="Dialogue_Next" from="beach_tutorial" to="." method="_on_beach_tutorial_dialogue_next"]
+[connection signal="Dialogue_Started" from="beach_tutorial" to="." method="_on_beach_tutorial_dialogue_started"]
+[connection signal="Choice_Next" from="desert_tutorial" to="." method="_on_desert_tutorial_choice_next"]
+[connection signal="Conditonal_Data_Needed" from="desert_tutorial" to="." method="_on_desert_tutorial_conditonal_data_needed"]
+[connection signal="Dialogue_Ended" from="desert_tutorial" to="." method="_on_desert_tutorial_dialogue_ended"]
+[connection signal="Dialogue_Next" from="desert_tutorial" to="." method="_on_desert_tutorial_dialogue_next"]
+[connection signal="Dialogue_Started" from="desert_tutorial" to="." method="_on_desert_tutorial_dialogue_started"]
+[connection signal="Conditonal_Data_Needed" from="boss_tutorial" to="." method="_on_boss_tutorial_conditonal_data_needed"]
+[connection signal="Dialogue_Ended" from="boss_tutorial" to="." method="_on_boss_tutorial_dialogue_ended"]
+[connection signal="Dialogue_Next" from="boss_tutorial" to="." method="_on_boss_tutorial_dialogue_next"]
+[connection signal="Dialogue_Started" from="boss_tutorial" to="." method="_on_boss_tutorial_dialogue_started"]
+[connection signal="Conditonal_Data_Needed" from="doorman" to="." method="_on_doorman_conditonal_data_needed"]
+[connection signal="Dialogue_Ended" from="doorman" to="." method="_on_doorman_dialogue_ended"]
+[connection signal="Dialogue_Next" from="doorman" to="." method="_on_doorman_dialogue_next"]
+[connection signal="Dialogue_Started" from="doorman" to="." method="_on_doorman_dialogue_started"]
+[connection signal="Conditonal_Data_Needed" from="bubble" to="." method="_on_bubble_conditonal_data_needed"]
+[connection signal="Dialogue_Ended" from="bubble" to="." method="_on_bubble_dialogue_ended"]
+[connection signal="Dialogue_Next" from="bubble" to="." method="_on_bubble_dialogue_next"]
+[connection signal="Dialogue_Started" from="bubble" to="." method="_on_bubble_dialogue_started"]
+[connection signal="Dialogue_Ended" from="bubble_good" to="." method="_on_bubble_good_dialogue_ended"]
+[connection signal="Dialogue_Next" from="bubble_good" to="." method="_on_bubble_good_dialogue_next"]
+[connection signal="Dialogue_Started" from="bubble_good" to="." method="_on_bubble_good_dialogue_started"]
+[connection signal="Dialogue_Ended" from="simulator" to="." method="_on_simlator_dialogue_ended"]
+[connection signal="Dialogue_Next" from="simulator" to="." method="_on_simlator_dialogue_next"]
+[connection signal="Dialogue_Started" from="simulator" to="." method="_on_simlator_dialogue_started"]
+[connection signal="tween_completed" from="dialogue_box/tween" to="." method="_on_tween_completed"]

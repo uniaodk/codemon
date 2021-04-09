@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://art/component/btn_selected.png" type="Texture" id=1]
+[ext_resource path="res://art/component/btn_normal.png" type="Texture" id=2]
+[ext_resource path="res://font/text.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scene/component/btn.gd" type="Script" id=4]
+[ext_resource path="res://art/component/btn_clicked.png" type="Texture" id=5]
+[ext_resource path="res://art/component/btn_disabled.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "clicked"
+length = 0.01
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("btn_name:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.93983, 3.89355 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "normal"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("btn_name:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.93983, 1.39355 ) ]
+}
+
+[node name="button" type="TextureButton"]
+anchor_right = 0.18
+anchor_bottom = 0.063
+margin_right = -92.32
+margin_bottom = -18.8
+rect_scale = Vector2( 2, 2 )
+size_flags_horizontal = 5
+size_flags_vertical = 5
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 1 )
+texture_disabled = ExtResource( 6 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_name" type="Label" parent="."]
+margin_left = 4.93983
+margin_top = 3.89355
+margin_right = 169.94
+margin_bottom = 35.8936
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "option"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="animation" type="AnimationPlayer" parent="."]
+autoplay = "normal"
+anims/clicked = SubResource( 1 )
+anims/normal = SubResource( 2 )
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

@@ -1,0 +1,219 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://font/text.tres" type="DynamicFont" id=1]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/component/btn_circle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/component/check_box.tscn" type="PackedScene" id=5]
+[ext_resource path="res://art/component/background_m.png" type="Texture" id=6]
+[ext_resource path="res://art/component/volume.png" type="Texture" id=7]
+[ext_resource path="res://scene/interface/option_menu.gd" type="Script" id=8]
+[ext_resource path="res://font/title.tres" type="DynamicFont" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 2 )
+
+[node name="option_menu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -169.0
+margin_bottom = -99.0
+rect_scale = Vector2( 1.2, 1.2 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.490196 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.169
+margin_top = -219.493
+margin_right = -38.1686
+margin_bottom = -41.4925
+rect_scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 6 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="."]
+margin_left = 335.346
+margin_top = 90.2705
+margin_right = 574.346
+margin_bottom = 133.271
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Configuração"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music" type="Label" parent="."]
+margin_left = 261.663
+margin_top = 158.566
+margin_right = 339.663
+margin_bottom = 217.566
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Música
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="decrease" parent="music" instance=ExtResource( 4 )]
+anchor_right = 4.744
+anchor_bottom = 1.551
+margin_left = -1.03357
+margin_top = 33.7984
+margin_right = -339.066
+margin_bottom = -25.7106
+rect_scale = Vector2( 1.5, 1.5 )
+
+[node name="volume" type="Sprite" parent="music"]
+position = Vector2( 119.505, 52.1721 )
+scale = Vector2( 1.5, 2 )
+texture = ExtResource( 7 )
+vframes = 6
+
+[node name="increase" parent="music" instance=ExtResource( 4 )]
+anchor_right = 4.744
+anchor_bottom = 1.551
+margin_left = 195.89
+margin_top = 34.5908
+margin_right = -142.142
+margin_bottom = -24.9182
+rect_scale = Vector2( 1.5, 1.5 )
+btn_name = "+"
+
+[node name="lab_mute" type="Label" parent="music"]
+margin_left = 272.409
+margin_top = 46.3791
+margin_right = 323.409
+margin_bottom = 74.3791
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Mudo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mute" parent="music" instance=ExtResource( 5 )]
+margin_left = 317.302
+margin_top = 23.7841
+margin_right = 349.302
+margin_bottom = 55.7841
+rect_scale = Vector2( 2, 2 )
+
+[node name="effect" type="Label" parent="."]
+margin_left = 263.147
+margin_top = 260.472
+margin_right = 341.147
+margin_bottom = 319.472
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Efeito
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="decrease" parent="effect" instance=ExtResource( 4 )]
+anchor_right = 4.744
+anchor_bottom = 1.551
+margin_left = -1.03354
+margin_top = 34.7289
+margin_right = -339.066
+margin_bottom = -24.7802
+rect_scale = Vector2( 1.5, 1.5 )
+
+[node name="volume" type="Sprite" parent="effect"]
+position = Vector2( 119.357, 52.3187 )
+scale = Vector2( 1.5, 2 )
+texture = ExtResource( 7 )
+vframes = 6
+
+[node name="increase" parent="effect" instance=ExtResource( 4 )]
+anchor_right = 4.744
+anchor_bottom = 1.551
+margin_left = 195.806
+margin_top = 33.9037
+margin_right = -142.226
+margin_bottom = -25.6053
+rect_scale = Vector2( 1.5, 1.5 )
+btn_name = "+"
+
+[node name="lab_mute" type="Label" parent="effect"]
+margin_left = 272.409
+margin_top = 46.9581
+margin_right = 323.409
+margin_bottom = 74.9581
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Mudo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mute" parent="effect" instance=ExtResource( 5 )]
+margin_left = 317.302
+margin_top = 26.3631
+margin_right = 349.302
+margin_bottom = 58.3631
+rect_scale = Vector2( 2, 2 )
+
+[node name="hbox_container" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -153.177
+margin_top = 129.568
+margin_right = 34.8235
+margin_bottom = 148.568
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="save" parent="hbox_container" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 92.0
+margin_bottom = 19.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="back" parent="hbox_container" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 188.0
+margin_bottom = 19.0
+rect_scale = Vector2( 1, 1 )
+[connection signal="pressed" from="music/decrease" to="." method="_on_decrease_music_pressed"]
+[connection signal="pressed" from="music/increase" to="." method="_on_increase_music_pressed"]
+[connection signal="pressed" from="music/mute" to="." method="_on_mute_music_pressed"]
+[connection signal="pressed" from="effect/decrease" to="." method="_on_decrease_effect_pressed"]
+[connection signal="pressed" from="effect/increase" to="." method="_on_increase_effect_pressed"]
+[connection signal="pressed" from="effect/mute" to="." method="_on_mute_effect_pressed"]
+[connection signal="pressed" from="hbox_container/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="hbox_container/back" to="." method="_on_back_pressed"]

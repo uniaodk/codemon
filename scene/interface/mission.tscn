@@ -1,0 +1,292 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://art/component/background_m.png" type="Texture" id=1]
+[ext_resource path="res://font/title.tres" type="DynamicFont" id=2]
+[ext_resource path="res://art/hud/operator_mission.png" type="Texture" id=3]
+[ext_resource path="res://art/hud/control_mission.png" type="Texture" id=4]
+[ext_resource path="res://art/hud/conditional_mission.png" type="Texture" id=5]
+[ext_resource path="res://art/hud/variable_mission.png" type="Texture" id=6]
+[ext_resource path="res://font/text.tres" type="DynamicFont" id=7]
+[ext_resource path="res://theme.tres" type="Theme" id=8]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scene/interface/mission.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+font_data = ExtResource( 9 )
+
+[sub_resource type="ShaderMaterial" id=2]
+
+[sub_resource type="ShaderMaterial" id=3]
+
+[sub_resource type="ShaderMaterial" id=4]
+
+[sub_resource type="ShaderMaterial" id=5]
+
+[sub_resource type="InputEventKey" id=6]
+scancode = 81
+
+[sub_resource type="ShortCut" id=7]
+shortcut = SubResource( 6 )
+
+[node name="mission" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="box" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -432.0
+margin_top = -253.0
+margin_right = 425.0
+margin_bottom = 256.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="."]
+anchor_left = 0.172852
+anchor_top = 0.175
+anchor_right = 0.308594
+anchor_bottom = 0.246667
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Missões"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="description" type="Label" parent="."]
+margin_left = 176.0
+margin_top = 149.0
+margin_right = 717.0
+margin_bottom = 180.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Capture os seguintes tipos de codemons"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hbox_type" type="HBoxContainer" parent="."]
+margin_left = 206.0
+margin_top = 197.0
+margin_right = 864.0
+margin_bottom = 262.0
+custom_constants/separation = 58
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="variable" type="Label" parent="hbox_type"]
+margin_top = 20.0
+margin_right = 108.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "Variáveis"
+align = 1
+
+[node name="operator" type="Label" parent="hbox_type"]
+margin_left = 166.0
+margin_top = 7.0
+margin_right = 286.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "Operador
+Aritmético"
+align = 1
+
+[node name="logic" type="Label" parent="hbox_type"]
+margin_left = 344.0
+margin_top = 7.0
+margin_right = 440.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "Operador
+Lógico"
+align = 1
+
+[node name="control" type="Label" parent="hbox_type"]
+margin_left = 498.0
+margin_top = 7.0
+margin_right = 606.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.00784314, 0, 1, 1 )
+text = "Controle 
+Escopo"
+align = 1
+
+[node name="hbox_icon" type="HBoxContainer" parent="."]
+margin_left = 231.0
+margin_top = 278.0
+margin_right = 569.0
+margin_bottom = 310.0
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="variable_mission" type="TextureRect" parent="hbox_icon"]
+material = SubResource( 2 )
+margin_right = 32.0
+margin_bottom = 32.0
+hint_tooltip = "Mais fácil que o Alfabeto"
+theme = ExtResource( 8 )
+texture = ExtResource( 6 )
+
+[node name="operator_mission" type="TextureRect" parent="hbox_icon"]
+material = SubResource( 3 )
+margin_left = 82.0
+margin_right = 114.0
+margin_bottom = 32.0
+hint_tooltip = "Mestre dos Cálculos"
+theme = ExtResource( 8 )
+texture = ExtResource( 3 )
+
+[node name="logic_mission" type="TextureRect" parent="hbox_icon"]
+material = SubResource( 4 )
+margin_left = 164.0
+margin_right = 196.0
+margin_bottom = 32.0
+hint_tooltip = "Entre 0 e 1"
+theme = ExtResource( 8 )
+texture = ExtResource( 5 )
+
+[node name="control_mission" type="TextureRect" parent="hbox_icon"]
+material = SubResource( 5 )
+margin_left = 246.0
+margin_right = 278.0
+margin_bottom = 32.0
+hint_tooltip = "Tudo sobre Controle"
+theme = ExtResource( 8 )
+texture = ExtResource( 4 )
+
+[node name="hbox_objetive" type="HBoxContainer" parent="."]
+margin_left = 180.0
+margin_top = 329.0
+margin_right = 838.0
+margin_bottom = 394.0
+custom_constants/separation = 80
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="variable" type="Label" parent="hbox_objetive"]
+margin_left = 41.0
+margin_top = 20.0
+margin_right = 125.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00 / 20"
+align = 1
+
+[node name="operator" type="Label" parent="hbox_objetive"]
+margin_left = 205.0
+margin_top = 20.0
+margin_right = 289.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00 / 20"
+align = 1
+
+[node name="logic" type="Label" parent="hbox_objetive"]
+margin_left = 369.0
+margin_top = 20.0
+margin_right = 453.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00 / 20"
+align = 1
+
+[node name="control" type="Label" parent="hbox_objetive"]
+margin_left = 533.0
+margin_top = 20.0
+margin_right = 617.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00 / 20"
+align = 1
+
+[node name="hbox_buff" type="HBoxContainer" parent="."]
+margin_left = 114.0
+margin_top = 379.0
+margin_right = 901.0
+margin_bottom = 444.0
+custom_constants/separation = 34
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="variable" type="Label" parent="hbox_buff"]
+margin_left = 96.0
+margin_top = 20.0
+margin_right = 204.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.576471, 0.266667, 1 )
+text = "2x Moedas"
+align = 1
+
+[node name="operator" type="Label" parent="hbox_buff"]
+margin_left = 238.0
+margin_top = 20.0
+margin_right = 382.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.576471, 0.266667, 1 )
+text = "+20% captura"
+align = 1
+
+[node name="logic" type="Label" parent="hbox_buff"]
+margin_left = 416.0
+margin_top = 20.0
+margin_right = 560.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.576471, 0.266667, 1 )
+text = "+20% captura"
+align = 1
+
+[node name="control" type="Label" parent="hbox_buff"]
+margin_left = 594.0
+margin_top = 7.0
+margin_right = 690.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.576471, 0.266667, 1 )
+text = "Energia 
+Infinita"
+align = 1
+
+[node name="back" parent="." instance=ExtResource( 10 )]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -87.0
+margin_top = -133.0
+margin_right = 5.0
+margin_bottom = -114.0
+shortcut_in_tooltip = false
+shortcut = SubResource( 7 )
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

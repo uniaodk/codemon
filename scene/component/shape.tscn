@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://art/chalenge/analyze_algorithm/triangle.png" type="Texture" id=1]
+[ext_resource path="res://art/chalenge/analyze_algorithm/balloon.png" type="Texture" id=2]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 15
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "pop_up"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("balloon:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("balloon:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -7.6, 7.6, -3.0, 3.0, 0.0 ]
+}
+
+[node name="shape" type="TextureRect"]
+anchor_right = 0.0322266
+anchor_bottom = 0.06
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="balloon" type="TextureRect" parent="."]
+visible = false
+anchor_left = 0.442331
+anchor_top = -0.664256
+anchor_right = 3.40327
+anchor_bottom = 1.18574
+margin_right = -30.7109
+margin_bottom = -29.6
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="value" type="Label" parent="balloon"]
+margin_left = 9.0
+margin_top = 5.0
+margin_right = 58.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "aBcDe"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="animation" type="AnimationPlayer" parent="."]
+anims/pop_up = SubResource( 2 )

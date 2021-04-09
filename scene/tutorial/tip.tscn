@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scene/component/btn_medium.tscn" type="PackedScene" id=2]
+[ext_resource path="res://art/tutorial/tip.png" type="Texture" id=3]
+[ext_resource path="res://scene/tutorial/tip.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+
+[node name="tip" type="TextureRect"]
+pause_mode = 2
+anchor_right = 0.366211
+anchor_bottom = 0.271667
+rect_pivot_offset = Vector2( 180.403, 67.1766 )
+texture = ExtResource( 3 )
+expand = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="label" type="Label" parent="."]
+anchor_bottom = 0.015
+margin_left = 18.0
+margin_top = 14.0
+margin_right = 349.0
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Algum texto para fazer parte desse diálogo bem bacana né meu amigo de fé meu imrão camarada"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="tween" type="Tween" parent="."]
+
+[node name="ok" parent="." instance=ExtResource( 2 )]
+anchor_left = 0.780394
+anchor_top = 0.542082
+anchor_right = 0.780394
+anchor_bottom = 0.542082
+rect_scale = Vector2( 1.2, 1.2 )
+expand = true
+
+[node name="animation" type="AnimationPlayer" parent="."]
+anims/fade_in = SubResource( 2 )
+[connection signal="tween_completed" from="tween" to="." method="_on_tween_completed"]
+[connection signal="tween_started" from="tween" to="." method="_on_tween_tween_started"]
+[connection signal="animation_finished" from="animation" to="." method="_on_animation_animation_finished"]

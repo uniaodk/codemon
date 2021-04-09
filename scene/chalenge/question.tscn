@@ -1,0 +1,151 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://art/chalenge/background_chalenge.png" type="Texture" id=1]
+[ext_resource path="res://scene/component/btn_question.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/chalenge/question.gd" type="Script" id=3]
+[ext_resource path="res://font/title.tres" type="DynamicFont" id=4]
+[ext_resource path="res://font/text.tres" type="DynamicFont" id=5]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://art/hud/battery.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "shake"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("battery:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -2.0, 0.0, 2.0, 0.0, -2.0, 0.0, -2.0, 0.0 ]
+}
+
+[node name="question" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+codemon_chalenged = "int"
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="VBoxContainer" parent="."]
+margin_left = 49.0
+margin_top = 287.0
+margin_right = 273.0
+margin_bottom = 411.0
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 14
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="a" parent="options" instance=ExtResource( 2 )]
+margin_right = 224.0
+margin_bottom = 32.0
+rect_scale = Vector2( 1, 1 )
+
+[node name="b" parent="options" instance=ExtResource( 2 )]
+margin_top = 46.0
+margin_right = 224.0
+margin_bottom = 78.0
+rect_scale = Vector2( 1, 1 )
+letter = "b"
+
+[node name="c" parent="options" instance=ExtResource( 2 )]
+margin_top = 92.0
+margin_right = 224.0
+margin_bottom = 124.0
+rect_scale = Vector2( 1, 1 )
+letter = "c"
+
+[node name="title" type="Label" parent="."]
+margin_left = 53.0
+margin_top = 43.0
+margin_right = 416.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Pergunta e Resposta"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 151.0
+margin_right = 965.0
+margin_bottom = 253.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0.152941, 1, 1 )
+text = "Alguma pergunta bem grande para que possa testar o limite de palavras dentro do desafio de perguntas e resposta, já que no máximo vão ser somente 3 linhas."
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chalenge" type="Label" parent="."]
+anchor_left = 0.544916
+anchor_top = 0.417576
+anchor_right = 0.932611
+anchor_bottom = 0.469243
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Desafiando "
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="capture" parent="." instance=ExtResource( 6 )]
+margin_left = 672.279
+margin_top = 409.319
+margin_right = 579.959
+margin_bottom = 390.519
+disabled = true
+
+[node name="help" parent="." instance=ExtResource( 6 )]
+margin_left = 672.339
+margin_top = 454.34
+margin_right = 580.018
+margin_bottom = 435.54
+
+[node name="flee" parent="." instance=ExtResource( 6 )]
+margin_left = 672.003
+margin_top = 498.641
+margin_right = 579.683
+margin_bottom = 479.841
+
+[node name="battery" type="Sprite" parent="."]
+position = Vector2( 931, 63 )
+rotation = -0.0349066
+scale = Vector2( 2, 2 )
+texture = ExtResource( 7 )
+vframes = 11
+
+[node name="animation" type="AnimationPlayer" parent="."]
+anims/shake = SubResource( 1 )
+[connection signal="pressed" from="options/a" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="options/b" to="." method="_on_b_pressed"]
+[connection signal="pressed" from="options/c" to="." method="_on_c_pressed"]
+[connection signal="pressed" from="capture" to="." method="_on_capture_pressed"]
+[connection signal="pressed" from="help" to="." method="_on_help_pressed"]
+[connection signal="pressed" from="flee" to="." method="_on_flee_pressed"]

@@ -1,0 +1,220 @@
+﻿keys;en;pt_BR
+NEW_GAME;New Game;Novo Jogo
+CONTINUE;Continue;Continue
+OPTIONS;Options;Opções
+SIMULATOR;Simulator;Simulador
+SIMULATOR_HINT;Defeat Bubble to unlock;Derrote o Bubble para desbloquear
+MUSIC;Music;Música
+EFFECT;Effect;Efeito
+MUTE;Mute;Mudo
+LANGUAGE;Languages;Idiomas
+PT;Portuguese;Portugês
+EN;English;Inglês
+SAVE;Save;Salvar
+BACK;Back;Voltar
+GEAR;Gear;Engrenagem
+BOOK;Book;Livro
+SCROLL;Scroll;Pergaminho
+BAG;Bag;Mochila
+MAP;Map;Mapa
+BATTERY;Battery;Bateria
+COIN;Coin;Moeda
+YES;Yes;Sim
+NO;No;Não
+NOTHING;Nothing;Nada
+CHALLENGED;Challenged;Desafiado
+CAPTURED;Captured;Capturado
+CAPTURE;Capture;Capturar
+FLED;Fled;Fugiu
+HELP;Help;Ajuda
+LAB;Lab (Tutorial);Laboratório (Tutorial)
+F_VARIABLES;Variable's Forest;Floresta das Variáveis
+M_OPERATORS;Operator's Mountain;Montanha dos Operadores
+B_CONDITIONS;Condition's Beach;Praia das Condicionais
+D_CONTROLS;Control's Desert;Deserto do Controle
+BOSS;Boss;Chefe
+ALL_MAPS;All maps;Todos Mapas
+DR;Dr Compiler;Dr Compilador
+INCORRECT;Incorrect;Incorreto
+INCORRECT_MSG;Codemon Fled, don't give up!\nDoubts look for the Dr Compiler;Codemon Fugiu, não desista!\nDúvidas procure o Dr Compilador
+CORRECT;Correct;Correto
+INVENTORY;Inventory;Inventário
+QUESTS;Quests;Missões
+GOLD_PEN_DRIVE;Gold Pen Drive;Pen Drive Dourado
+BUFF_COIN_DESC;x2 coin when defeating a codemon;x2 moeda ao derrotar um codemon
+GREEN_PEN_DRIVE;Green Pen Drive;Pen Drive Verde
+BUFF_CAPTURE_DESC;+20% capture chance when defeating a codemon;+20% chance de captura ao derrotar um codemon
+PORTABLE_BATTERY;Portable Battery;Bateria Portátil
+BATTERY_DESC;Instantly recharges 50% of the battery;Recarrega 50% da bateria instantaneamente
+FAST_TRAVEL;Do you want to take a quick trip to:;Deseja realizar uma viagem rápida para:
+STORE;Store;Loja
+CART;Cart;Carrinho
+BUY;Buy;Comprar
+OBS_STORE;Double-click on item to remove from cart;Clique duas vezes no item para remover do carrinho
+DESC_QUEST;Capture the following types of codemons;Capture os seguintes tipos de codemons
+VARIABLES;Variables;Variáveis
+ARITHMETIC_OP;Arithmetic\nOperator;Operador\nAritmético
+LOGIC_OP;Logic\nOperator;Operador\nLógico
+CONTROL_FLOW;Control\nFlow;Controle\nEscopo
+VAR_HINT;Easier than the Alphabet;Mais fácil que o Alfabeto
+ARITH_HINT;Master of Calculations;Mestre dos Cálculos
+LOGIC_HINT;Between 0 and 1;Entre 0 e 1
+CONTROL_HINT;Everything under control;Tudo sobre Controle
+BONUS_COIN;2x Coins;2x Moedas
+BONUS_CAPTURE;+20% capture;+20% captura
+INFINITE_ENERGY;Infinite\nEnergy;Energia\nInfinita
+PAUSE;Pause;Parado
+RESUME;Resume;Resumir
+MAIN_MENU;Main Menu;Menu Principal
+QUIT_MSG;Do you really want to leave?;Deseja realmente sair?
+QUIT_OBS;The game will be saved when you return to the Main Menu;O jogo será salvo ao retornar ao Menu Principal
+VARIABLE;Variable;Variável
+ARITHMETIC;Arithmetic;Aritmético
+LOGIC;Logic;Lógico
+CONTROL;Control;Controle
+SORT;Sort;Ordenação
+LOGIC_GATE;Logic Gate;Porta Lógica
+NO_BATTERY;Insufficient battery\nRecharge with NPC Plug;Bateria insuficiente\nRecarregar com NPC Tomada
+NO_COIN;Insufficient Codecoin;Codecoin insuficiente
+NO_TYPE;Different variable types\n;Tipos de variáveis diferentes\n
+NO_INFINITE;Avoid performing more than 10\niterations in the function;Evite realizar mais de 10\niterações na função
+NO_DIVIDE_ZERO;Operation with divisor 0\ninvalid operation;Operação com divisor 0\noperação inválida
+NO_EXPRESSION;Operation does not exist\n;Operação não existe\n
+TYPE;Type;Tipo
+LOCATION;Location;Localização
+INTRO_1;Wow! If it weren't for the bus strike and this chaos in the traffic, I wouldn't have been late for my first class.;Nossa! Se não fosse a greve de ônibus e esse caos que está o trânsito, eu não teria me atrasado para a minha primeira aula.
+INTRO_2;I can't wait to start my academic journey and capture my first Codemon!;Mal posso esperar para começar minha jornada acadêmica e capturar o meu primeiro Codemon!
+LAB_PART_1-1;Excuse me, teacher! I'm looking for Dr. Compiler, do you know where I can find him?;Com licença, professor! Estou procurando o Drº Compilador, sabe onde posso encontrá-lo?
+LAB_PART_1-2;Of course ... you are talking to him personally. You must be the new academic who is late. Hmmm, let me see here ... Jimmy, is your name?;Claro... estás falando com ele pessoalmente. Você deve ser o novo acadêmico que está atrasado. Hmmm, deixa eu ver aqui... Jimmy, é o seu nome?
+LAB_PART_1-3;Hehe ... That's right, nice to meet you teacher!;Hehe... Isso mesmo, prazer em conhecê-lo professor!
+LAB_PART_1-4;Nice to meet you, too! Before I start to explain everything about codemons, get that notebook on the right table, it will be fundamental in your journey ...;Prazer em conhecê-lo também carinha! Antes de começar a te explicar tudo sobre os codemons, pegue aquele notebook na mesa direita, ele será fundamental na sua jornada... 
+LAB_PART_1-5;To perform this task, I wrote some guidelines on the board.;Para executar essa tarefa, escrevi algumas orientações no quadro.
+LAB_PART_2-1;You noticed that several objects appeared on your screen, right ?! I can explain the function of each one …;Você reparou que apareceu vários objetos na sua tela, né?! Posso te explicar a função de cada um...
+LAB_PART_2-2;Take that notebook on the table to your right, it will be instrumental in your journey ... To perform this task, I wrote some guidelines on the board.;Pegue aquele notebook na mesa a sua direita, ele será fundamental na sua jornada... Para executar essa tarefa, escrevi algumas orientações no quadro.
+LAB_TUT_1;What would you like to know?;O que gostaria de saber?
+LAB_TUT_2;Can I help you with anything else?;Posso te ajudar em mais alguma coisa?
+LAB_TUT_3;Well! So you must be curious why there is no one else here in the room ... The reason is that I had to send all academics to the field, because the world of codemons;Bom! Então deves estar curioso o porquê não tem mais ninguém aqui na sala...O motivo é que tive que mandar todos os acadêmicos para campo, pois o mundo dos codemons 
+LAB_TUT_4;is experiencing a disorder. All of this, because the Bubble codemon, which maintains order between codemons, was infected by a virus that messed up its algorithm.;está passando por uma desordem. Tudo isso, porque o codemon Bubble, que mantém a ordem entre os codemons, foi infectado por um vírus que bagunçou o seu algoritmo. 
+LAB_TUT_5;And this situation is being a good way to teach all my students to have experience and to accumulate knowledge with practice. But do not worry,;E essa situação, está sendo uma boa maneira de ensinar todos os meus alunos a ter experiência e acumular conhecimento com a prática. Mas não se preocupe,
+LAB_TUT_6;I know you have no experience, so I will accompany and instruct you on this incredible journey! I wait for you in the Forest of Variables then Jimmy, see you!;sei que não tens experiência nenhuma, por isso irei te acompanhar e instruir nessa jornada incrível! Te aguardo na Floresta das Variáveis então Jimmy, até mais!
+GEAR_DESC_1;"When you click on the gear or the ""ESC"" key, you pause the game, having the options to return to the main menu. Don't worry, if you come back, the game will be saved.";"Ao clicar na engrenagem ou pela tecla ""ESC"" você pausa o jogo, tendo as opções de voltar para o menu principal. Não se preocupe, se você voltar, fica salvo onde parou."
+GEAR_DESC_2;You can also adjust the volume of the music and effects or simply return to the game.;Você também pode ajustar o volume da música e dos efeitos ou simplesmente retornar ao jogo. 
+BOOK_DESC;"The book is actually a bestiary, a strange name, right? You can access it using the ""C"" key, thus visualizing all the codemons you have already faced and captured.";"O livro na verdade é um bestiário, nome estranho né? Você pode acessa-lo pela tecla ""C"", visualizando assim todos os codemons que você já enfrentou e capturou."
+SCROLL_DESC;"Here are all the available side missions, it takes some work to complete them, but they are worth your effort. You can access it by pressing ""Q"".";"Aqui estão todas as missões secundárias disponíveis, dão um certo trabalho para concluí-las, mas valem o seu esforço. Você pode acessar pela tecla ""Q""."
+BAG_DESC;"All the items you buy from the merchant go to the backpack, to use them just double click on the image of the item. Access quickly with the ""I"" key.";"Todos os itens que você comprar com o mercador vão para a mochila, para usá-los basta clicar duas vezes sob a imagem do item. Acesse  rapidamente com a tecla ""I""."
+MAP_DESC_1;This is the CodeWorld map, it will help you on your journey both for location and to expedite your trip. Maps that have not been visited are marked with;Esse é o mapa do CodeWorld, te ajudará na sua jornada tanto para localização, quanto para agilizar sua viagem. Mapas que não foram visitados estão marcados com 
+MAP_DESC_2;a gray circle, and the red ones are the ones already visited. To make quick trips it is only possible on maps already visited. You can access it using the “M” key.;um círculo cinza, e os vermelhos são o já visitados. Para realizar viagens rápidas é possível somente em mapas já visitados. Você pode acessar pela tecla “M”.
+BATTERY_DESC_1;It is the power of your notebook, to start a challenge it is necessary to have at least 20% of the battery charged. Each challenge that you start, 10% energy is spent and if;É a energia do seu notebook, para iniciar um desafio é necessário ter pelo menos 20% da bateria carregada. Cada desafio que você iniciar, é gasto 10% de energia e se
+BATTERY_DESC_2;fails the challenge, an additional 10% energy is withdrawn. To reload you must look for the Plug codemon on the map, it recharges its energy by the challenge of the logic gates.;falhar no desafio, mais 10% de energia é retirado. Para recarregar você deve procurar o codemon Tomada no mapa, ele recarrega sua energia pelo desafio das portas lógicas.
+COIN_DESC_1;Every codemon challenge you win, you will be rewarded with coins and the chance to capture it.;Todos os desafios dos codemons que vencer, você será recompensado com moedas e a chance de capturá-lo. 
+COIN_DESC_2;This on-screen currency represents how much you have accumulated ♫ Moneyyy ♫, which you can use to purchase items to help you on your journey.;Essa moeda na tela representa o quanto você já acumulou de ♫ Moneyyy ♫, podendo utilizar na compra de itens para ajudar na sua jornada. 
+F_TUT_1;You didn't waste time Jimmy, I like that excitement! You might be wondering what these jumping codemons are here in the Forest of Variables ... Well, those are;Não perdeu tempo Jimmy, gosto dessa empolgação! Você deve estar se perguntando o que são esses codemons pulantes aqui na Floresta das Variáveis... Bom, esses são 
+F_TUT_2;the codemons of the variable type, they are fundamental in a code, they are able to retain and represent values ​​in the memory of a computer by means of the equal symbol [=],;os codemons do tipo variável, eles são fundamentais em um código, são capazes de reter e representar valores na memória de um computador por meio do símbolo igual [ = ], 
+F_TUT_3;that we can call attribution. But to work properly, variables need a name and type. And each of these codemons that you see here represent one.;que podemos chamar de atribuição. Mas para funcionar corretamente, as variáveis precisam de um nome e tipo. E cada um desses codemons que você vê aqui representam um.
+F_TUT_4;Which of these would you like to know more about?;Qual desses gostaria de saber mais? 
+F_TUT_5;Would you like to know about any other variables?;Gostaria de saber sobre mais alguma variável?
+F_TUT_6;Great! May the force be with you my padawan, if you need to reinforce about the variables I will be here to guide you, even more!;Excelente! Que a força esteja com você meu padawan, se precisar reforçar sobre as variáveis estarei aqui para te orientar, até mais!
+INT_DESC;The int type are variables that store whole numbers, which can be negative or positive, such as 1, -1, 0, 1254 ... They are great for storing quantity or position.;O tipo int são variáveis que armazenam números inteiros, podendo ser negativos ou positivos como 1, -1, 0, 1254... São ótimos para armazenar quantidade ou posição.
+BOOL_DESC_1;The bool type are variables that store only two values, false and true (false / true). They are known as Boolean variables, generally used in conjunction with;O tipo bool são variáveis que armazenam somente dois valores, falso e verdadeiro (false/true). São conhecidos como variáveis booleana, usados geralmente junto com 
+BOOL_DESC_2;logical operators such as and, or or not as well as control commands such as, if, while, among others that you will encounter on your journey.;os operadores lógicos como  and, or ou not assim como em comandos de controle como for, if, while, entre outros que você vai encontrar em sua jornada.
+DOUBLE_DESC_1;The double type are variables that store decimal numbers, they can be negative or positive like -1.0, 0.5, 1.5879 ... They are great in interest and percentage operations,;O tipo double são variáveis que armazenam números decimais, podem ser negativos ou positivos como -1.0, 0.5, 1.5879... São ótimos em operações de juros e porcentagem,
+DOUBLE_DESC_2;and are generally more accurate in division calculations than the int variables.;e geralmente são mais precisos em cálculos de divisão do que as variáveis int. 
+STRING_DESC_1;"The string type are variables that store a string or character string (char), such as ""codemon123"", ""this is a string!"", Etc.";"O tipo string são variáveis que armazenam uma sequência ou cadeia de caracteres (char), como por exemplo ""codemon123"", ""isso é uma string!"", etc. "
+STRING_DESC_2;"They are great for storing text and are usually assigned with double quotes [""] at the beginning and end of the text.";"São ótimo para armazenar texto e geralmente são atribuidas juntamente com aspas duplas [ "" ] no início e no fim do texto."
+M_TUT_1;I see that you've been exercising Jimmy. This is good, it keeps your body and mind in shape. Since the only option is to climb the mountain …;Estou vendo que você anda se exercitando Jimmy. Isso é bom, mantém o corpo e mente em forma. Já que a única opção é subir a montanha... 
+M_TUT_2;But since we're here, let me tell you about Operator Mountain. Did you notice that there are other codemons in this habitat?;Mas já que estamos aqui, deixa eu te contar sobre a Montanha dos Operadores. Você percebeu que existem outros codemons nesse habitat? 
+M_TUT_3;They are the arithmetic operators responsible for the mathematical functions of adding, subtracting, dividing, etc. They are useful for modifying a variable or calculating operations.;Eles são os operadores aritméticos responsáveis nas funções matemáticas de somar, subtrair, dividir, etc. São úteis para modificar uma variável ou calcular operações.
+M_TUT_4;Which of these would you like to know more about?;Qual desses gostaria de saber mais? 
+M_TUT_5;Would you like to know more about any arithmetic operator?;Gostaria de saber sobre mais algum operador aritmético?
+M_TUT_6;Very good! I'll be here for more details and don't forget to enjoy the beautiful view from the top of the mountain, not everything is code!;Muito bem! Estarei aqui para mais detalhes e não se esqueça de aproveitar a linda vista do topo da montanha, nem tudo são códigos!
+PLUS_DESC;"The arithmetic plus operator has the function of adding the numeric values ​​(4 + 2 = 6), concatenating texts (""code"" + ""mon"" = ""codemon""). It is represented by the plus symbol [+].";"O operador aritmético plus tem como função somar os valores numéricos (4 + 2 = 6), concatenar textos (""code"" + ""mon"" = ""codemon""). É representado pelo símbolo mais [ + ]."
+MINUS_DESC;The minus arithmetic operator has the function of subtracting the numerical values ​​(5 - 3 = 2). It is represented by the minus symbol [-].;O operador aritmético minus tem como função subtrair os valores numéricos (5 - 3 = 2). É representado pelo símbolo menos [ - ].
+MULTIPLY_DESC;The function of the arithmetic multiply is to multiply the numerical values ​​(2 * 2 = 4), being represented by the asteristic symbol [*].;O operador aritmético multiply tem como função multiplicar os valores numéricos (2 * 2 = 4), sendo representado pelo símbolo asterístico [ * ].
+DIVIDE_DESC;The arithmetic operator divides has the function of dividing the numerical values ​​(6/3 = 2), being represented by the symbol bar [/].;O operador aritmético divide tem como função dividir os valores numéricos (6 / 3 = 2), sendo representado pelo símbolo barra [ / ].
+MODULE_DESC_1;The module arithmetic operator has the function of calculating the remainder of a division (5% 2 = 1), useful to identify whether a value is odd or even when a number is applied;O operador aritmético module tem como função calcular o resto de uma divisão (5 % 2 = 1), util para identificar se um valor é ímpar ou par quando aplicado um número 
+MODULE_DESC_2;under the module of 2 (4% 2 = 0 even, 3% 2 = 1 odd). It is represented by the percentage symbol [%].;sob o módulo de 2 (4 % 2 = 0 par, 3 % 2 = 1 ímpar). É representado pelo símbolo porcentagem [ % ].
+B_TUT_1;What a beautiful view of the mountain, isn't it Jimmy? Nothing better than an exercise to later rest on the edge of a beach ... But come on, we have service to do, hehe;Que vista linda da montanha não é Jimmy? Nada melhor do que um exercício para depois descansar na beira de uma praia... Mas vamos lá, temos serviço para fazer, hehe
+B_TUT_2;Here at Conditional's Beach you will challenge codemons of the logical type, they are responsible for returning an expression with a true or false value, that is, a;Aqui na Praia das Condicionais você vai desafiar os codemons do tipo lógico, eles são responsáveis em retornar de uma expressão um valor verdadeiro ou falso, ou seja, um 
+B_TUT_3;boolean value. Don't worry about understanding all the concepts right away, you will become familiar with them over time.;valor booleano. Não se preocupe em entender todos os conceitos logo de cara, você ficará familiarizado com eles com o passar do tempo. 
+B_TUT_4;But in summary, they perform a comparison between two variables.;Mas resumindo tudo, eles realizam comparação entre duas variáveis.
+B_TUT_5;Which of these would you like to know more about?;Qual desses gostaria de saber mais?
+B_TUT_6;Would you like to know more about any other logical operator?;Gostaria de saber sobre mais algum operador lógico?
+B_TUT_7;If you need any more help, I'll be around taking a sun. Ahhh! Rest well and recover your energy, because the next map,;Se precisar de mais alguma ajuda, estarei por aqui tomando um sol. Ahhh! Descanse bem e recupere a energia, porque o próximo mapa, 
+B_TUT_8;the Control Desert, it’s not easy. See you, Jimmy!;o Deserto do Controle, não é nada fácil. Até mais Jimmy!
+BIGGER_DESC;The logical operator Bigger has the function of comparing numbers (Int and Double). If one value is greater than the other (4> 2 = true). It is represented by the larger symbol [>].;O operador lógico Bigger tem como função comparar números (Int e Double). Se um valor é maior que o outro (4 > 2 = true). É representado pelo símbolo maior [ > ].
+LESS_DESC;The logical operator Less has the function of comparing numbers (Int and Double). If one value is less than the other (4 <2 = false). It is represented by the smaller symbol [<].;O operador lógico Less tem como função comparar números (Int e Double). Se um valor é menor que o outro (4 < 2 = false). É representado pelo símbolo menor [ < ].
+EQUAL_DESC_1;The Equal logical operator has the function of comparing numbers, texts and Boolean values ​​(Int, Double, String and Bool). If one value is equal to the other (4 == 2 = false).;O operador lógico Equal tem como função comparar números, textos e valores booleanos (Int, Double, String e Bool). Se um valor é igual ao outro (4 == 2 = false).
+EQUAL_DESC_2;It is represented by two equality symbols [==].;É representado por dois símbolos de igualdade [ == ].
+NOT_EQUAL_DESC_1;The logical operator Not Equal has the function of comparing numbers, texts and Boolean values ​​(Int, Double, String and Bool). If one value is not the same (4! = 2 = true).;O operador lógico Not Equal tem como função comparar números, textos e valores booleanos (Int, Double, String e Bool). Se um valor não é igual ao outro (4 != 2 = true). 
+NOT_EQUAL_DESC_2;It is represented by an exclamation symbol and an equality symbol [! =].;É representado por um símbolo de exclamação e um de igualdade [ != ].
+AND_DESC_1;The logical operator And has the function of comparing Boolean values ​​(Bool). Returns true only if both variables are true (true and true = true).;O operador lógico And tem como função comparar valores booleanos (Bool). Retorna verdadeiro somente se as duas variáveis forem verdadeiras (true and true =  true). 
+AND_DESC_2;It is represented in the lowercase [and] format.;É representado no formato escrito em caixa-baixa [ and ].
+OR_DESC_1;The logical operator Or has the function of comparing Boolean values ​​(Bool). Returns true if at least one of the variables is true (true or false = true).;O operador lógico Or tem como função comparar valores booleanos (Bool). Retorna verdadeiro se pelo menos uma das variáveis for verdadeira (true or false = true).
+OR_DESC_2;It is represented in the lowercase [or] format.;É representado no formato escrito em caixa-baixa [ or ].
+D_TUT_1;Our longing for the beach, the heat here is suffocating. Did you rest well Jimmy? Because in addition to the climate here, the codemons in this habitat are thick shells!;Nossa que saudade da praia, o calor aqui é sufocante. Descansou bem Jimmy? Porque além do clima aqui, os codemons desse habitat são cascas grossas! 
+D_TUT_2;But don't be alarmed, you will have all the support to beat them. These are the scope control type codemons, they are responsible for saying if a line of;Mas não se assuste, você irá ter todo o suporte para vencê-los. Esses são os codemons do tipo Controle de Escopo, são responsáveis em dizer se uma linha de 
+D_TUT_3;code will be executed or not, and how many times. There are only 4 types here (If, Else, While and For), each with its own peculiarity.;código será executada ou não, e quantas vezes. Aqui existem somente 4 tipos (If, Else, While e For), cada um com sua peculiaridade. 
+D_TUT_4;Which of these would you like to know more about?;Qual desses gostaria de saber mais?
+D_TUT_5;Would you like to know about any other control commands?;Gostaria de saber sobre mais algum comando de controle?
+D_TUT_6;As soon as I finish capturing the 3 codemons, I will be waiting for you in the Bubble room to explain the last challenge.;Assim que terminar de capturar os 3 codemons, estarei te esperando na sala do Bubble para te explicar o último desafio. 
+D_TUT_7;But don't rush, these Control Desert codemons are central to your programmer journey.;Mas não se apresse, esses codemons do Deserto do Controle são fundamentais na sua jornada de programador.
+FOR_DESC_1;The For control command also known as “For each”, executes the lines of code within its scope according to the amount assigned in its range.;O comando de controle For também conhecido como “Para cada”, executa as linhas de código dentro do seu escopo conforme a quantidade atribuída no seu range. 
+FOR_DESC_2;To control the amount of repetition, it has a variable that counts that starts at zero.;Para controlar a quantidade de repetição, ele possui uma variável que faz a contagem que é iniciada em zero.
+FOR_DESC_3;When this counter reaches the value equal to the range, the repetition of the scope is stopped.;Quando esse contador atinge o valor igual ao range, a repetição do escopo é parada.
+WHILE_DESC_1;The While control command, also known as “Do while,” executes lines of code within its scope until the Boolean expression;O comando de controle While também conhecido como “Faça enquanto”, executa as linhas de código dentro do seu escopo até que a expressão booleana 
+WHILE_DESC_2;declared at your side is false. An important point is that within its scope it must have an expression that alters the;declarada ao seu lado seja falsa. Um ponto importante é que dentro do seu escopo deve possuir uma expressão que altere a 
+WHILE_DESC_3;While condition, because otherwise the scope of the While is executed infinitely.;condição do While, porque senão o escopo do While é executado infinitamente.
+IF_DESC_1;The If control command, also known as “If”, executes lines of code within its scope only if the Boolean condition;O comando de controle If também conhecido como “Se”, executa as linhas de código dentro do seu escopo somente se a condição booleana
+IF_DESC_2;is answered, otherwise it will not be executed.;for atendida, caso contrário não será executado.
+ELSE_DESC_1;The Else control command, also known as “Else”, will only be possible when there is an If in advance.;O comando de controle Else também conhecido como “Senão”, só será possível ser utilizado quando houver um If previamente. 
+ELSE_DESC_2;Because if the condition of If is false, Else will be executed, if If is true, Else will not be executed.;Porque caso a condição do If for false, o Else será executado, caso o If seja true, o Else não será executado. 
+BOSS_TUT_1;So we finally got to the last Jimmy challenge. There is no need to be terrified by this awful face he has hehehe.;Então finalmente chegamos no último desafio Jimmy. Não precisa ficar apavorado com essa cara medonha que ele tem hehehe.
+BOSS_TUT_2;I adjusted the entire algorithm for you to perform this task. But first, let me explain a little bit about Bubble.;Eu ajustei todo o algoritmo para você realizar essa tarefa. Mas antes, deixa eu te explicar um pouco sobre o Bubble.
+BOSS_TUT_3;Bubble is an ordering algorithm with complexity in O (n²), in other words it uses two repetition structures to order a collection of variables.;O Bubble é um algoritmo de ordenação com a complexidade na O (n²), em outras palavras ele utiliza duas estruturas de repetição para ordenar uma coleção de variáveis. 
+BOSS_TUT_4;Briefly what this algorithm does is, having the first iteration to go through each element, minus the last one, and an iteration to perform the exchanges;Resumidamente o que esse algoritmo faz é, possuir a primeira iteração para percorrer cada elemento, menos o último, e uma iteração para realizar as trocas
+BOSS_TUT_5;between the element (i) counter of the first iteration with the element (i + 1). But what you should do is simply exchange these two values,;entre o elemento (i) contador da primeira iteração com o elemento (i + 1). Mas o que você deve fazer é simplesmente realizar a troca desses dois valores,
+BOSS_TUT_6;if the value on the left is greater than the value on the direct, it must be changed. Otherwise, keep order.;se o valor da esquerda é maior que o da direta, deve ser trocado. Caso contrário, manter a ordem.
+BOSS_TUT_7;Well that was Jimmy, good luck and may the gods of programming guide you between 0 and 1. If you need me I'll be here too …;Bom era isso Jimmy, boa sorte e que os deuses da programação te guiem entre os 0 e 1. Se precisar de mim estarei aqui também...
+ALFRED_1;Hello adventurer, my name is Alfred. I am responsible for allowing you to enter the next levels. It’s not that I’m a villain, I just want to make sure you’ve learned;Olá aventureiro, me chamo Alfred. Sou o responsável em permitir sua entrada nos próximos níveis. Não é que eu seja um vilão, só quero garantir que você aprendeu o
+ALFRED_2;enough to move on to a new challenge. Well, what I check is always the amount of capture you have from the Codemons on the current map.;suficiente para avançar para um novo desafio. Bom, o que eu verifico é sempre a quantidade de captura que você possui dos Codemons do mapa atual.
+ALFRED_3;You must have at least 3 Codemons of each type on the current map. Example: Forest of Variables, would be 3 Int, 3 Double, 3 Bool and 3 String captured.;Você deve possuir no mínimo 3 Codemons de cada tipo do mapa atual. Exemplo: Floresta da Variáveis, seriam 3 Int, 3 Double, 3 Bool e 3 String capturados.
+ALFRED_4;If you are unsure of how much the 3 Codemons are missing from each one to capture and release the portal, you should check in Codex [C].;Caso tenha dúvida do quanto falta dos 3 Codemons de cada para capturar e liberar o portal, você deve verificar no Codex [C].
+BUBBLE_1;This was just a small test to see your ability, now get ready to order words ... Muahahahahaha;Esse  foi apenas um pequeno teste para ver sua capacidade, agora se prepare para ordenar palavras... Muahahahahaha
+BUBBLE_2;I don't believe that a mere apprentice programmer defeated me so easily. But no problem ... I'll be back! Muahahahahahaha;Não acredito que um mero aprendiz de programador me derrotou tão facilmente. Mas não tem problema... I'll be back! Muahahahahahaha
+BUBBLE_3;Thank you very much, adventurer, this virus completely left me in disarray. CodeWorld will owe you an eternal debt.;Muito obrigado aventureiro, esse vírus me deixou complemente em desordem. O CodeWorld terá uma dívida eterna com você.
+BUBBLE_4;As a reward you can access my super computer anytime you want. There you will be able to simulate any challenge already faced on the island.;Como recompensa você pode acessar o meu super computador no momento que quiser. Ali você irá conseguir simular qualquer desafio já enfrentado na ilha.
+INFECTED_BUBBLE;Infected Bubble;Bolha Infectada
+BUBBLE;Bubble;Bolha
+COMPUTER;Computer;Computador
+COMPUTER_1;"""Infected system, it is not possible to operate.""";"""Sistema infectado, não é possível operar."""
+QUESTION_1;What kind of data can I store?;Qual tipo de dados que consigo armazenar?
+QUESTION_2;In what condition can I be used?;Em qual condição posso ser utilizado?
+QUESTION_3;Which expression can I execute?;Qual expressão posso executar?
+AWNSER_1;"""I'm a String""";"""Sou uma String"""
+AWNSER_2;Boolean expression;Expressão Booleana
+AWNSER_3;Conditionals;Condicionais
+AWNSER_4;Count;Contagem
+AWNSER_5;Index;Índice
+AWNSER_6;Position;Posição
+AWNSER_7;Exact Calculations;Cálculos Exatos
+AWNSER_8;Monetary Calc.;Cálculos Monetário
+AWNSER_9;Fees;Juros
+AWNSER_10;Fraction;Fração
+AWNSER_11;Text;Texto
+AWNSER_12;Description;Descrição
+AWNSER_13;Identifier;Identificador
+AWNSER_14;"""eig""+""th""";"""oi+ ""to"""
+AWNSER_15;"""ni""+""ne""";"""no""+""ve"""
+STAGE_1_TITLE;Question and Answer;Pergunta e Resposta
+FLEE;Flee;Fugir
+CHALLENGING;Challenging;Desafiando
+STAGE_1_TUT_1;Read the challenge question carefully.;Leia atentamente a pergunta do desafio.
+STAGE_1_TUT_2;Check which Codemon is being challenged.;Verifique qual o Codemon que está sendo desafiado.
+STAGE_1_TUT_3;You can consult Help to remember about Codemon.;Você pode consultar Ajuda para relembrar sobre o Codemon.
+STAGE_1_TUT_4;You can escape the challenge if you are not confident, thus avoiding losing another 10% of the battery.;Você pode fugir do desafio se não estiver confiante, evitando assim perder mais 10% da bateria.
+STAGE_1_TUT_5;"Select one of the alternatives that you think is correct. In this case, alternative ""A"".";"Selecione uma das alternativas que você considera correta. Neste caso, alternativa ""A""."
+STAGE_1_TUT_6;Start capturing the Codemon.;Inicie a captura do Codemon.
+STAGE_1_TUT_7;After the capture, all responses are revealed. Correct alternative green and wrong red.;Após a captura, todas as respostas são reveladas. Verde alternativa correta e vermelho errada.
+STAGE_1_TUT_8;If the answer is correct, the award screen starts.;Se a resposta estiver correta, é iniciado a tela de premiação.
+STAGE_1_TUT_9;Each Codemon has its own chance to capture. Items and Missions increase this chance.;Cada Codemon possui sua própria chance de captura. Itens e Missões aumentam essa chance.
+STAGE_1_TUT_10;Just like the Codecoins amount. Useful for buying batteries and buff items.;Assim como a quantidade Codecoins. Útil para comprar baterias e itens de buff.

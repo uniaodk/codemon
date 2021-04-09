@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://art/chalenge/analyze_algorithm/btn_list.png" type="Texture" id=1]
+[ext_resource path="res://art/chalenge/analyze_algorithm/btn_list_hover.png" type="Texture" id=2]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://art/character/codemon/and.png" type="Texture" id=4]
+[ext_resource path="res://scene/component/btn_list.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 3 )
+
+[node name="btn_list" type="TextureButton"]
+anchor_right = 0.0664063
+anchor_bottom = 0.0616667
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="codemon" type="TextureRect" parent="."]
+anchor_left = 0.0526316
+anchor_top = 0.111111
+anchor_right = 0.421053
+anchor_bottom = 0.888889
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="codemon_name" type="Label" parent="."]
+anchor_left = 0.368421
+anchor_top = 0.108108
+anchor_right = 1.42763
+anchor_bottom = 0.891891
+margin_right = 103.5
+margin_bottom = 87.0
+rect_scale = Vector2( 0.25, 0.25 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Multiply"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}

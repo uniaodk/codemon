@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scene/interface/help.gd" type="Script" id=1]
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://art/chalenge/background_chalenge.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 38
+outline_size = 1
+outline_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 2 )
+
+[node name="help" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.529412 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="TextureRect" parent="."]
+margin_left = 175.657
+margin_top = 59.1594
+margin_right = 856.657
+margin_bottom = 540.159
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ok" parent="." instance=ExtResource( 3 )]
+margin_left = 433.354
+margin_top = 473.632
+margin_right = 341.034
+margin_bottom = 454.832
+
+[node name="img" type="TextureRect" parent="."]
+margin_left = 212.071
+margin_top = 127.674
+margin_right = 820.071
+margin_bottom = 460.674
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="."]
+margin_left = 205.69
+margin_top = 83.2699
+margin_right = 304.69
+margin_bottom = 126.27
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Ajuda"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ok" to="." method="_on_ok_pressed"]

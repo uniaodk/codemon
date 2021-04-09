@@ -1,0 +1,74 @@
+[
+	{
+		"shape_type" : ["circle", "triangle", "hide"],
+		"assign_type" : ["if", "int", "else", "int"],
+		"assign" : ["b", "c", "b", "c"],
+		"expression": ["b @a 5", "b + 2", "else","b - 2"],
+		"variable" : [["b", "a"], ["b"], ["b"], ["b"]],
+		"return" : "c",
+		"waited" : ["6", "-3", "-4", "-7", "4", "-2", "7", "-5", "-1", "2", "5", "1", "-6", "3"]
+	},
+	{
+		"shape_type" : ["triangle", "circle", "hide"],
+		"assign_type" : ["if", "int", "else", "int"],
+		"assign" : ["a", "c", "a", "c"],
+		"expression": ["a @b 4", "a + 1", "else", "a + 3"],
+		"variable" : [["a", "b"], ["a"], ["a"], ["a"]],
+		"return" : "c",
+		"waited" : ["2", "1", "6", "5", "-1", "-2", "0", "-4", "8", "4", "3", "7"]
+	},
+	{
+		"shape_type" : ["triangle", "square", "square"],
+		"assign_type" : ["if", "int", "else", "int"],
+		"assign" : ["a", "b", "a", "b"],
+		"expression": ["a < 2", "a #b 3", "else", "a #c 1"],
+		"variable" : [["a"], ["a", "b"], ["a"], ["a", "c"]],
+		"return" : "b",
+		"waited" : ["4", "-3", "-6", "-8", "-2", "-1", "5", "0", "3", "-12", "2", "-4", "1", "-9"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "circle"],
+		"assign_type" : ["if", "int", "else" ,"int"],
+		"assign" : ["b", "a", "b" , "a"],
+		"expression": ["b @c 2", "b * a", "else", "b + 3"],
+		"variable" : [["b", "c"], ["b", "a"], ["b"], ["b"]],
+		"return" : "a",
+		"waited" : ["4", "5", "-1", "6", "0", "-2", "10", "-3", "8", "-20", "3", "1", "7", "15", "-6", "25", "2"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "triangle"],
+		"assign_type" : ["if", "string", "else", "string"],
+		"assign" : ["a", "b", "a", "b"],
+		"expression": ["a == \"no\"", "a + \"ve\"", "else", "b + c"],
+		"variable" : [["a"], ["a"], ["a"], ["b", "c"]],
+		"return" : "b",
+		"waited" : ["#-D", "eqT", "zd*", "Ljtx", "VG):", "pM8", "k%_", "JU", "rsf", ".YU", "_lq", "+E_", "(@", ".S", "%!h", "Umu", "S_t", "1AIm", "Xzj", "o$l", "N9r", "f(#", "WU<", "Ur%", "t_", "nove"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "hide"],
+		"assign_type" : ["if", "string", "else", "string"],
+		"assign" : ["a", "c", "a", "c"],
+		"expression": ["a != \"le\"", "a + \"@\"", "else" , "b + a"],
+		"variable" : [["a"], ["a"], ["a"], ["b", "a"]],
+		"return" : "c",
+		"waited" : ["gq@", "^1@", "6@", "^@", "-g@", "P@", "9P@", "$@", "kC@", "2@", "4@", "?.@", "9@", "0%@", "+:@", ".-@", "vp@", "7@", "@T@", "6n@", "H@", "l@", "T@", "m8@", "I%@","<le", "wole", "F%le", "oGle", "c%le", "yle", "ule", "6mle", "*le", "1le", "_le", "7Ole", "jFle", "`le", "&le", "O<le", "#le", "=gle", "Ele", "^)le", "g>le", "Fle", "Lle", "a.le"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "circle"],
+		"assign_type" : ["if", "double", "else", "double"],
+		"assign" : ["b", "a", "b", "a"],
+		"expression": ["b @c 4.5", "b + 2.2", "else", "b - a"],
+		"variable" : [["b", "c"], ["b"], ["b"], ["b", "a"]],
+		"return" : "a",
+		"waited" : ["3.6", "7.6", "8.6", "2.0", "0.8", "5.8", "4.2", "-3.2", "-2.3", "-7.5", "-0.3", "8.9", "-2.7", "5.7", "2.9", "-5.6", "1.2", "-6.2", "0.3", "-5.0", "-5.3", "1.4", "4.7", "-3.1", "-0.1", "-3.5", "-0.9", "-3.9", "2.1", "-1.5", "1.3", "-0.5", "3.2", "6.7", "0.5", "7.9", "6.8", "1.8", "-9.3", "-1.6", "-4.6", "1.5", "-0.8", "-1.4"]
+	},
+	{
+		"shape_type" : ["triangle", "square", "circle"],
+		"assign_type" : ["if", "double", "else", "double"],
+		"assign" : ["a", "d", "a", "d"],
+		"expression": ["a @c 1.6", "a + 0.6", "else", "a #b 1.6"],
+		"variable" : [["a", "c"], ["a"], ["a"], ["a", "b"]],
+		"return" : "d",
+		"waited" : ["-2.6", "-0.2", "6.1", "-7.8", "-4.0", "-4.8", "-3.5", "0.4", "3.8", "4.2", "-6.9", "1.9", "-0.6", "3.2", "3.7", "-5.3", "3.5", "2.6", "-1.1", "0.2", "-0.5", "3.6", "-3.3", "3.3", "-3.0", "1.0", "0.3", "1.2", "-5.7", "-4.1", "2.0", "-6.1", "5.9", "4.0", "-5.9", "-3.1", "0.8", "-0.3", "2.2", "9.1", "9.4", "6.4"]
+	}
+]

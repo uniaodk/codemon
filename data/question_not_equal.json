@@ -1,0 +1,84 @@
+
+[
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["int", "int", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a - 6", "b #c 1", "a != b"],
+		"variable" : [["a"], ["b", "c"], ["a","b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["int", "int", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a * 3", "b #c -3", "a != b"],
+		"variable" : [["a"], ["b", "c"], ["a","b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["string", "string", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["\"oi\" + a", "b #c \"to\"", "a != b"],
+		"variable" : [["a"], ["b", "c"], ["a", "b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "square", "triangle"],
+		"assign_type" : ["string", "string", "bool"],
+		"assign" : ["a", "d"],
+		"expression": ["a #b c", "a != \"nove\""],
+		"variable" : [["a", "b", "c"], ["a"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["string", "string", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a + \"0\"", "b #c a", "b != \"oit0\""],
+		"variable" : [["a"], ["b", "c", "a"], ["b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["int", "int", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a #c 1", "b * 4", "a != b"],
+		"variable" : [["a", "c"], ["b"], ["a","b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["double", "double", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a + 1.3", "b #c 2.3", "a != b"],
+		"variable" : [["a"], ["b", "c"], ["a","b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "triangle", "square"],
+		"assign_type" : ["double", "double", "bool"],
+		"assign" : ["a", "b", "d"],
+		"expression": ["a #c 2.2", "b #c 1.2", "a != b"],
+		"variable" : [["a", "c"], ["b", "c"], ["a","b"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	},
+	{
+		"shape_type" : ["triangle", "square", "square"],
+		"assign_type" : ["double", "double", "bool"],
+		"assign" : ["a", "a", "d"],
+		"expression": ["a #c 1.7", "a #b 1.3", "a != 1.8"],
+		"variable" : [["a", "c"], ["a", "b"], ["a"]],
+		"return" : "d",
+		"waited" : ["False", "True"]
+	}
+]

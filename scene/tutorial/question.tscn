@@ -1,0 +1,162 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://font/freepixel.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scene/component/btn_normal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/component/btn_question.tscn" type="PackedScene" id=5]
+[ext_resource path="res://art/hud/battery.png" type="Texture" id=8]
+[ext_resource path="res://art/chalenge/background_chalenge.png" type="Texture" id=13]
+[ext_resource path="res://scene/tutorial/question.gd" type="Script" id=15]
+[ext_resource path="res://scene/character/codemons/intt.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scene/tutorial/tip.tscn" type="PackedScene" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+resource_local_to_scene = true
+size = 38
+outline_size = 1
+outline_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
+size = 26
+extra_spacing_bottom = 4
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 3 )
+
+[node name="question" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
+texture = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="VBoxContainer" parent="."]
+margin_left = 49.0
+margin_top = 287.0
+margin_right = 273.0
+margin_bottom = 411.0
+rect_scale = Vector2( 2, 2 )
+custom_constants/separation = 14
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="a" parent="options" instance=ExtResource( 5 )]
+margin_right = 224.0
+margin_bottom = 32.0
+rect_scale = Vector2( 1, 1 )
+focus_mode = 1
+disabled = true
+enabled_focus_mode = 1
+
+[node name="b" parent="options" instance=ExtResource( 5 )]
+margin_top = 46.0
+margin_right = 224.0
+margin_bottom = 78.0
+rect_scale = Vector2( 1, 1 )
+disabled = true
+letter = "b"
+
+[node name="c" parent="options" instance=ExtResource( 5 )]
+margin_top = 92.0
+margin_right = 224.0
+margin_bottom = 124.0
+rect_scale = Vector2( 1, 1 )
+disabled = true
+letter = "c"
+
+[node name="title" type="Label" parent="."]
+margin_left = 53.0
+margin_top = 43.0
+margin_right = 416.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.372549, 0, 0, 1 )
+text = "Pergunta e Resposta"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="question" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 151.0
+margin_right = 965.0
+margin_bottom = 253.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0.152941, 1, 1 )
+text = "Qual tipo de dados consigo armazenar?"
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chalenge" type="Label" parent="."]
+anchor_left = 0.549301
+anchor_top = 0.417576
+anchor_right = 0.936996
+anchor_bottom = 0.469243
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Desafiando Int"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="intt" parent="chalenge" instance=ExtResource( 16 )]
+position = Vector2( 203.316, 91.7128 )
+
+[node name="capture" parent="." instance=ExtResource( 4 )]
+margin_left = 672.279
+margin_top = 409.319
+margin_right = 579.959
+margin_bottom = 390.519
+disabled = true
+
+[node name="help" parent="." instance=ExtResource( 4 )]
+margin_left = 672.339
+margin_top = 454.34
+margin_right = 580.018
+margin_bottom = 435.54
+disabled = true
+
+[node name="flee" parent="." instance=ExtResource( 4 )]
+margin_left = 672.003
+margin_top = 498.641
+margin_right = 579.683
+margin_bottom = 479.841
+disabled = true
+
+[node name="battery" type="Sprite" parent="."]
+position = Vector2( 931, 63 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+vframes = 11
+
+[node name="tip" parent="." instance=ExtResource( 17 )]
+anchor_left = 0.392578
+anchor_top = 0.33
+anchor_right = 0.758789
+anchor_bottom = 0.601667
+[connection signal="tree_exited" from="." to="." method="_on_question_tree_exited"]
+[connection signal="pressed" from="options/a" to="." method="_on_a_pressed"]
+[connection signal="pressed" from="capture" to="." method="_on_capture_pressed"]

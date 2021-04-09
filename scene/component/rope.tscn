@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://art/chalenge/bubble_sort/needle.png" type="Texture" id=1]
+[ext_resource path="res://art/chalenge/bubble_sort/rope.png" type="Texture" id=2]
+[ext_resource path="res://scene/component/rope.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "roll"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.17
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1, 0 ]
+}
+
+[node name="rope" type="Control"]
+anchor_right = 0.390625
+anchor_bottom = 0.161667
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 200.013, 19.0488 )
+texture = ExtResource( 2 )
+vframes = 2
+frame = 1
+
+[node name="tween" type="Tween" parent="."]
+
+[node name="animation" type="AnimationPlayer" parent="."]
+anims/roll = SubResource( 1 )
+
+[node name="needle" type="Control" parent="."]
+anchor_left = 0.1
+anchor_top = 0.175258
+anchor_right = 0.13
+anchor_bottom = 0.721649
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="sprite" type="Sprite" parent="needle"]
+position = Vector2( 5.40731, 24.3184 )
+texture = ExtResource( 1 )
+hframes = 3
+
+[node name="animation" type="AnimationPlayer" parent="needle"]
+anims/stick = SubResource( 2 )

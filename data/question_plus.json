@@ -1,0 +1,93 @@
+[
+	{
+	"shape_type" : ["triangle", "triangle", "hide"],
+	"assign_type" : ["string", "string"],
+	"assign" : ["d", "a"],
+	"expression": ["a + \"se\"", "b + d"],
+	"variable" : [["a"], ["b", "d"]],
+	"return" : "a",
+	"waited" : ["h4se", "IY6se", "8+Gse", "P;ase", ">G<se", "59%Ose", "Jj4se", "3c1se", "Z25se", "3tkse", "!0se", "BLi0se", "LLse", "!uAWse", "k+zse", "VZr+se", "6G>+se", "hdise", "$fFlse", "Ne*se", "$#Hse", "J#0se", "z&fYse", "Rlse", "0ase", "t*C8se", "8*wse", "gp`se", "++j8se", ".M'@se", "'-p'se", "jCse", "^oMse", "*uvMse", "7Xse", "Lfp%se", "dBIse", "ztse", "H_>3se", "?Nbse", "Y1sse", "kSkse", ")6wse", "2Aase", "_Eise", "EHse", "y&Bse", "&8$se", "8Tse", "=?0Ese"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "hide"],
+	"assign_type" : ["string", "string"],
+	"assign" : ["a", "a"],
+	"expression": ["a + \"!\"", "b + a"],
+	"variable" : [["a"], ["b", "a"]],
+	"return" : "a",
+	"waited" : ["O;H1!", "S%BQ!", "mG`>!", "ZsH!", "mP!", "PZ%!", "m5d!", "M@t!", "i^Z!", "P7f!", "'gr!", "V>n!", "vc!", "CO!", "2w9!", "6X.!", "!tH!", "`Jl!", "d*`E!", ">Tqv!", "Y(.!", "Fo+!", "rC-%!", "O?!", "prO:!", "b2g!", "I<r!", "+0j!", "hd^!", ":ajy!", "+*IV!", "'x!", "l:`!", "g!F!", "60w'!", "'sD!", "!aA)!", "Kw2!", "kJS!", "e!!", "`ysB!", "NJ!", "$4Y6!", "SoT!", "QO!", "OI5!", "0nZ!", "*yC!", "TB5!!", "JGT!"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "triangle"],
+	"assign_type" : ["string", "string", "string"],
+	"assign" : ["d", "a", "a"],
+	"expression": ["b + c", "a + \"@\"", "d + a"],
+	"variable" : [["b", "c"], ["a"], ["d", "a"]],
+	"return" : "a",
+	"waited" : ["fo6S@", "7L?$@", "`&So'@", "#0BWS@", "H>m0S@", "fS:@", ".QM!@", "8E.@", "t7H@", "e*7qe@", ":vni@", "hSjQB@", "53z^Or@", "!20%@", "'S$5*@", "@n.wLZ@", "AioX@", "2nv4<k@", "0TL(^@", "'lx@", "mPLT9@", "QDd3_@", "nj3o@", "HJi*Hw@", "Q$5)r@", "^<S(N@", "yZO@", "*$8D@", "@xw$s@", ":oF:@", "ktZX@", "HF)Xl@", "_61Y@", "iiEQW@", "l#I6@", "o.p:x@", "PLI@", "#y-@", "cJ@Q@", "Jc0;0@", "_xpu@", "7685+@", "u7*0@", "+rXw>@", "s79@", "LA&No@", "-J;MH@", "E2-@", "dKBh@", "flUi@"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "hide"],
+	"assign_type" : ["string", "string", "string"],
+	"assign" : ["d", "a", "c"],
+	"expression": ["a + \"1\"", "b + \"u\"", "d + a"],
+	"variable" : [["a"], ["b"], ["d", "a"]],
+	"return" : "c",
+	"waited" : ["@1Vxu", "Ti1uau", ":<1Shu", "cY1mPu", "m1Mvu", "b1Ju", "la13u", "j1C&u", "+1rSu", "v1)Fu", "@1Hbu", "31su", "7q1o!u", "o%1=yu", "M1U!u", "K*1Wu", "Ym1&mu", "q*1Nu", "D1ku", "A612u", "V1Atu", "iU1bu", "d1eYu", "e1iu", "@1ayu", "B1`ou", "z:1%u", "+U1)Xu", "'71X3u", "q1APu", "R1.u", "(1au", "(1Vu", "-1ru", "%Q1Wu", "mw1wRu", ".1;u", "K1F!u", "YQ15!u", "i&1%u", "V%1f.u", "hS1C8u", "8v1Du", "ag1=mu", "O1ju", "K1<Eu", "Nr1ku", "pY1ktu", "61=Lu", "S1vu"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "hide"],
+	"assign_type" : ["double", "double"],
+	"assign" : ["d", "a"],
+	"expression": ["a + 3.5", "b + d"],
+	"variable" : [["a"], ["b", "d"]],
+	"return" : "a",
+	"waited" : ["5.1", "9.2", "6.3", "6.8", "12.7", "5.8", "3.0", "1.8", "12.4", "10.1", "-0.1", "-4.9", "-0.3", "5.9", "6.9", "5.3", "-1.3", "9.8", "4.1", "1.9", "6.7", "4.5", "-2.1", "8.3", "1.3", "3.4", "12.6", "2.3", "-0.7", "7.2", "8.8", "0.6", "4.8", "8.7", "11.8", "8.4", "12.9", "1.0", "4.7", "6.2"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "hide"],
+	"assign_type" : ["double", "double", "double"],
+	"assign" : ["a", "b", "d"],
+	"expression": ["a + 2.3", "b + 1.5", "a + b"],
+	"variable" : [["a"], ["b"], ["a", "b"]],
+	"return" : "d",
+	"waited" : ["11.3", "-0.6", "6.0", "0.0", "7.7", "-4.4", "3.7", "7.0", "-1.7", "-0.4", "2.9", "0.9", "5.0", "11.7", "6.2", "6.9", "12.4", "8.3", "-2.9", "6.7", "1.6", "2.5", "6.6", "7.1", "7.4", "12.1", "4.1", "7.8", "3.0", "8.4", "1.7", "-0.3", "4.5", "3.1", "10.9", "7.6", "4.2", "11.2", "-3.2", "9.2", "0.5", "5.5", "14.6", "-1.2"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "triangle"],
+	"assign_type" : ["double", "double", "double"],
+	"assign" : ["d", "a", "c"],
+	"expression": ["c + 1.7", "d + 2.2", "d + a + b"],
+	"variable" : [["c"], ["d"], ["d", "a", "b"]],
+	"return" : "c",
+	"waited" : ["-2.9", "4.5", "8.1", "14.7", "10.1", "10.5", "2.4", "9.6", "0.2", "14.0", "14.4", "16.1", "9.9", "7.4", "6.4", "7.2", "-4.0", "12.2", "-6.2", "2.6", "2.7", "8.5", "13.9", "10.7", "1.6", "0.9", "11.5", "12.4", "9.2", "5.0", "20.2", "3.8", "3.2", "3.7", "5.3", "-0.6", "13.4", "9.4", "17.7", "-3.2", "9.5", "0.1", "14.2", "11.3", "1.8", "7.7"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "hide"],
+	"assign_type" : ["int", "int"],
+	"assign" : ["d", "a"],
+	"expression": ["a + 5", "d + b"],
+	"variable" : [["a"], ["d", "b"]],
+	"return" : "a",
+	"waited" : ["14", "11", "6", "15", "-4", "3", "12", "9", "-3", "-1", "4", "5", "1", "10", "0", "-2", "13", "7", "8", "2"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "triangle"],
+	"assign_type" : ["int", "int", "int"],
+	"assign" : ["d", "a", "d"],
+	"expression": ["a + c", "b + 3", "d + a"],
+	"variable" : [["a", "c"], ["b"], ["d", "a"]],
+	"return" : "d",
+	"waited" : ["5", "0", "-11", "-1", "6", "7", "3", "8", "15", "11", "10", "14", "2", "-5", "1", "-7", "12", "4", "-2", "9", "-10", "-9", "-3", "16", "13", "-8", "-6", "-4", "17"]
+	},
+	{
+	"shape_type" : ["triangle", "triangle", "triangle"],
+	"assign_type" : ["int", "int", "int", "int"],
+	"assign" : ["a", "b", "c", "d"],
+	"expression": ["a + 1", "b + 2", "c + 3", "a + b + c"],
+	"variable" : [["a"], ["b"], ["c"], ["a", "b", "c"]],
+	"return" : "d",
+	"waited" : ["6", "0", "8", "9", "-1", "7", "12", "4", "-4", "-3", "2", "10", "1", "13", "17", "16", "14", "5", "-7", "18", "-8", "3", "11", "15", "19", "-2", "-6", "-5"]
+	}
+
+]

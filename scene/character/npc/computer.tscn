@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scene/character/npc/character.gd" type="Script" id=1]
+[ext_resource path="res://art/object/computer.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 239.21
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 345.466, 38.9191 )
+
+[node name="computer" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 2147483679
+script = ExtResource( 1 )
+
+[node name="chat" type="Area2D" parent="."]
+position = Vector2( 141.271, 56.6143 )
+scale = Vector2( 0.749307, -0.762249 )
+collision_layer = 0
+
+[node name="area" type="CollisionShape2D" parent="chat"]
+position = Vector2( -188.535, 109.214 )
+shape = SubResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 0.561249, -76.5821 )
+texture = ExtResource( 2 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0.256927, 14.1057 )
+scale = Vector2( 0.374, 0.5 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="chat" to="." method="_on_chat_body_entered"]
+[connection signal="body_exited" from="chat" to="." method="_on_chat_body_exited"]
