@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://art/chalenge/bubble_sort/swap_line.png" type="Texture" id=1]
 [ext_resource path="res://scene/component/btn_medium.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/component/btn_swap.gd" type="Script" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "swap"
@@ -22,6 +23,7 @@ tracks/0/keys = {
 [node name="btn_swap" type="Control"]
 anchor_right = 0.326172
 anchor_bottom = 0.341667
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -48,7 +50,6 @@ margin_left = 95.7578
 margin_top = 56.7128
 margin_right = 145.758
 margin_bottom = 75.7128
-btn_name = "Ok"
 
 [node name="swap" parent="." instance=ExtResource( 2 )]
 anchor_left = -0.284749
@@ -59,7 +60,6 @@ margin_left = 66.7471
 margin_top = 98.7518
 margin_right = 116.747
 margin_bottom = 117.752
-btn_name = "Trocar"
 
 [node name="animation" type="AnimationPlayer" parent="."]
 anims/swap = SubResource( 1 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tomada.png-a33bb22928b35d73d088342da0a76400.stex"
+path="res://.import/plug.png-e84b88aba5678b505ac355086d5c902d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/character/codemon/tomada.png"
-dest_files=[ "res://.import/tomada.png-a33bb22928b35d73d088342da0a76400.stex" ]
+source_file="res://art/character/codemon/plug.png"
+dest_files=[ "res://.import/plug.png-e84b88aba5678b505ac355086d5c902d.stex" ]
 
 [params]
 

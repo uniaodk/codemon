@@ -13,8 +13,8 @@
 [ext_resource path="res://art/character/codemon/or_select.png" type="Texture" id=11]
 [ext_resource path="res://art/character/codemon/or.png" type="Texture" id=12]
 [ext_resource path="res://art/character/codemon/and_selected.png" type="Texture" id=13]
-[ext_resource path="res://art/character/codemon/tomada.png" type="Texture" id=14]
-[ext_resource path="res://art/character/codemon/tomada_selected.png" type="Texture" id=15]
+[ext_resource path="res://art/character/codemon/plug.png" type="Texture" id=14]
+[ext_resource path="res://art/character/codemon/plug_selected.png" type="Texture" id=15]
 [ext_resource path="res://art/character/codemon/bubble_sort.png" type="Texture" id=16]
 [ext_resource path="res://art/character/codemon/bubble_sort_selected.png" type="Texture" id=17]
 [ext_resource path="res://art/character/codemon/for_selected.png" type="Texture" id=18]
@@ -353,7 +353,6 @@ margin_left = 430.502
 margin_top = 522.698
 margin_right = 338.182
 margin_bottom = 503.898
-btn_name = "Voltar"
 [connection signal="pressed" from="variables/int" to="." method="_on_int_pressed"]
 [connection signal="pressed" from="variables/double" to="." method="_on_double_pressed"]
 [connection signal="pressed" from="variables/string" to="." method="_on_string_pressed"]

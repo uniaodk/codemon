@@ -215,14 +215,12 @@ margin_left = 511.443
 margin_top = 522.0
 margin_right = 419.123
 margin_bottom = 503.2
-btn_name = "Voltar"
 
 [node name="help" parent="." instance=ExtResource( 8 )]
 margin_left = 302.759
 margin_top = 523.41
 margin_right = 210.439
 margin_bottom = 504.61
-btn_name = "Ajuda"
 
 [node name="battery" type="Sprite" parent="."]
 position = Vector2( 772, 190 )

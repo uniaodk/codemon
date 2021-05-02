@@ -26,6 +26,7 @@ var seq: Dictionary = {0: {"text": "O objetivo principal é atribuir os valores 
 						   "position": Vector2(505, 338)}}
 
 func _ready() -> void:
+	init_translation();
 	$plus.play_idle()
 	$btn_1/btn.connect("focus_exited", self, "on_focus_exited_btn_1")
 	$btn_1/label.connect("focus_exited", self, "on_focus_exited_btn_1_label")
@@ -33,6 +34,22 @@ func _ready() -> void:
 	$btn_2/label.connect("focus_exited", self, "on_focus_exited_btn_2_label")
 	config_button()
 	init_tutorial()
+
+func init_translation() -> void:
+	$title.text = tr("STAGE_2_TITLE");
+	$question.text = tr("STAGE_2_DESC");
+	$function/title.text = tr("FUNCTION");
+	$function/waited.text = tr("EXPECTED");
+	$function/result.text = tr("RESULT");
+	$hint/title.text = tr("REMINDER");
+	$hint/variable.text = tr("VARIABLES");
+	$hint/arithmetic.text = tr("ARITHMETIC_OP2");
+	$hint/logic.text = tr("LOGIC_OP2");
+	$capture/btn_name.text = tr("CAPTURE");
+	$flee/btn_name.text = tr("FLEE");
+	$help/btn_name.text = tr("HELP");
+	$debuger/btn_name.text = tr("DEBUG");
+	$chalenge.text = tr("CHALLENGING") + " Plus";
 
 func config_button() -> void:
 	pos_btn_1 = $btn_1.get_position_in_parent()

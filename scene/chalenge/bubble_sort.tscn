@@ -117,14 +117,12 @@ margin_left = 735.205
 margin_top = 518.319
 margin_right = 642.885
 margin_bottom = 499.519
-btn_name = "Fugir"
 
 [node name="help" parent="bg" instance=ExtResource( 7 )]
 margin_left = 735.205
 margin_top = 477.319
 margin_right = 642.885
 margin_bottom = 458.519
-btn_name = "Ajuda"
 
 [node name="rope" parent="bg" instance=ExtResource( 1 )]
 anchor_left = -0.0618335

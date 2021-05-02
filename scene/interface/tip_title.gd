@@ -17,7 +17,7 @@ export (String) var codemon = ""
 
 func _ready() -> void:
 	translation();
-	$hbox/codemon/value.text = codemon.replace("_", " ").capitalize()
+	$hbox/codemon/value.text = tr(codemon.replace("_", " ").to_upper());
 	$image.texture = load("res://art/character/codemon/"+ codemon +".png")
 	if variables.has(codemon):
 		$hbox/type/value.text = content_variable.get("type")

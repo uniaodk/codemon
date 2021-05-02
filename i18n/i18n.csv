@@ -54,7 +54,9 @@ OBS_STORE;Double-click on item to remove from cart;Clique duas vezes no item par
 DESC_QUEST;Capture the following types of codemons;Capture os seguintes tipos de codemons
 VARIABLES;Variables;Variáveis
 ARITHMETIC_OP;Arithmetic\nOperator;Operador\nAritmético
+ARITHMETIC_OP2;Arithmetic Operator;Operador Aritmético
 LOGIC_OP;Logic\nOperator;Operador\nLógico
+LOGIC_OP2;Logic Operator;Operador Lógico
 CONTROL_FLOW;Control\nFlow;Controle\nEscopo
 VAR_HINT;Easier than the Alphabet;Mais fácil que o Alfabeto
 ARITH_HINT;Master of Calculations;Mestre dos Cálculos
@@ -218,3 +220,17 @@ STAGE_1_TUT_7;After the capture, all responses are revealed. Correct alternative
 STAGE_1_TUT_8;If the answer is correct, the award screen starts.;Se a resposta estiver correta, é iniciado a tela de premiação.
 STAGE_1_TUT_9;Each Codemon has its own chance to capture. Items and Missions increase this chance.;Cada Codemon possui sua própria chance de captura. Itens e Missões aumentam essa chance.
 STAGE_1_TUT_10;Just like the Codecoins amount. Useful for buying batteries and buff items.;Assim como a quantidade Codecoins. Útil para comprar baterias e itens de buff.
+STAGE_2_TITLE;Algorithm Analysis;Análise de Algoritmo
+STAGE_2_DESC;Use the types of codemons correctly to return the expected result. In case of a variable, it is necessary to assign the stored value.;Utilize corretamente os tipos de codemons para que retorne o resultado esperado. Em caso de variável é necessário atribuir o valor armazenado. 
+FUNCTION;Function;Função
+EXPECTED;Expected ->;Esperado  ->
+RESULT;Result ->;Resultado ->
+REMINDER;Reminder;Lembrete
+DEBUG;Debug;Debugar
+BUBBLE_SORT;Bubble Sort;Algoritmo Bolha
+STAGE_FINAL_DESC;Perform the swap function correctly, so that the codemons are in ascending order and are saved.;Execute a função de troca (swap) corretamente, para que os codemons fiquem na ordem crescente e sejam salvos.
+SWAP;Swap;Trocar
+SIMULATOR_DESC;"Click on one of the codemons to simulate a battle.
+Simulation does not affect the points of challenge and capture, nor the gain of coins.";"Clique sobre um dos codemons para simular uma batalha.
+Simulação não afeta nos pontos de desafio e captura, nem no ganho de moedas."
+SHOW_TUTORIAL;Show tutorial;Apresentar tutorial

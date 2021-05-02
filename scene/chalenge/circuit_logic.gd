@@ -11,6 +11,7 @@ onready var tutorial: Control = load("res://scene/tutorial/circuit.tscn").instan
 onready var help: Resource = load("res://scene/interface/help.tscn")
 
 func _ready() -> void:
+	init_translation();
 	if game.show_tutorial_circuit:
 		add_child(tutorial)
 		yield(tutorial, "tree_exited")
@@ -32,6 +33,10 @@ func _ready() -> void:
 		start = false
 	$zero_one/btn_1.grab_focus()
 
+func init_translation() -> void:
+	$title.text = tr("LOGIC_GATE");
+	$help/btn_name.text = tr("HELP");
+	$back/btn_name.text = tr("BACK");
 
 func reset_buttons() -> void:
 	$zero_one/btn_1.reset()
@@ -147,5 +152,5 @@ func _on_animation_finished(anim_name: String) -> void:
 
 func _on_help_pressed() -> void:
 	var help_instance: CanvasLayer = help.instance()
-	help_instance.set_image("tomada")
+	help_instance.set_image("plug")
 	add_child(help_instance)

@@ -81,13 +81,30 @@ var variables_code: Dictionary = { 	1 : "bool",
 									4 : "string"}
 
 func _ready() -> void:
+	init_translation();
 	init_variables()
 	update_level()
 	update_sprite()
 	init_connections()
 	init_components()
 	draw_expression()
-	
+
+func init_translation() -> void:
+	$title.text = tr("STAGE_2_TITLE");
+	$question.text = tr("STAGE_2_DESC");
+	$function/title.text = tr("FUNCTION");
+	$function/waited.text = tr("EXPECTED");
+	$function/result.text = tr("RESULT");
+	$hint/title.text = tr("REMINDER");
+	$hint/variable.text = tr("VARIABLES");
+	$hint/arithmetic.text = tr("ARITHMETIC_OP2");
+	$hint/logic.text = tr("LOGIC_OP2");
+	$capture/btn_name.text = tr("CAPTURE");
+	$flee/btn_name.text = tr("FLEE");
+	$help/btn_name.text = tr("HELP");
+	$debuger/btn_name.text = tr("DEBUG");
+
+
 func result_chalenge() -> void:
 	if (values.get(question.get("return")).get("type") == "double" 
 			and step_decimals(float(return_value)) == 0):
@@ -118,7 +135,7 @@ func init_variables() -> void:
 	shapes_type = question.get("shape_type")
 
 func init_components() -> void:
-	$chalenge.text = "Desafiando " + codemon_chalenged.capitalize()
+	$chalenge.text = tr("CHALLENGING") + " " + codemon_chalenged.capitalize()
 	$capture.set_disabled(true)
 	$btn_1/btn.grab_focus()
 

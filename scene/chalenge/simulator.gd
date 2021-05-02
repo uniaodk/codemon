@@ -8,9 +8,15 @@ onready var circuit: Resource = load("res://scene/chalenge/circuit_logic.tscn")
 
 
 func _ready() -> void:
+	init_translation();
 	$check_box.is_checked = false
 	$check_box._on_check_box_pressed()
 
+func init_translation() -> void:
+	$title.text = tr("SIMULATOR");
+	$question.text = tr("SIMULATOR_DESC");
+	$check_box/text.text = tr("SHOW_TUTORIAL");
+	$back/btn_name.text = tr("BACK");
 
 func init_chalenge(codemon: String, tutorial_name: String, resource: Resource) -> void:
 	var chalenge: Control = resource.instance()

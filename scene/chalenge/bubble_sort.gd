@@ -17,12 +17,19 @@ var sort_step: int = 1
 var is_simulation: bool = false
 
 func _ready() -> void:
+	init_translation();
 	$bg.connect("end_dialogue", self, "_on_end_dialogue")
 	$bg/bubble.play_idle()
 	update_values()
 	init_connections()
 	routine_bubble()
 
+func init_translation() -> void:
+	$bg/title.text = tr("BUBBLE_SORT");
+	$bg/question.text = tr("STAGE_FINAL_DESC");
+	$bg/chalenge.text = tr("CHALLENGING") + " " + tr("BUBBLE");
+	$bg/flee/btn_name.text = tr("FLEE");
+	$bg/help/btn_name.text = tr("HELP");
 
 func update_values() -> void:
 	values.clear()
