@@ -12,7 +12,9 @@
   - [Challenge - Question and Answer](#challenge_2)
   - [Challenge - Algorithm Analysis](#challenge_3)
   - [Boss - Bubble Sort](#boss)
-- [How to Create New Challenges](#how_to_create_new_challenges)
+- [How to Add New Challenges](#how_to_create_new_challenges)
+  - [Question and Answer](#question_answer)
+  - [Algorithm Analysis](#algorithm_analysis)
 
 ## About <a name = "about"></a>
 This is a educational RPG game developed in Godot Game Engine in 2D pixel art. The main goal is introduce the fundamentals of programing, such as concept about variables and yours types, the arithmetic operator, the logic operator, control flow and the last challenge the bubble sort algorithm (BOSS). The game is for a single player, with the concept of exploration and RPG adventure in discovering new areas, challenging and capturing all codemons, completing missions and finally defeating the terrible bubble to restore order to the world. The player controls the character Jimmy who must solve the challenges offered by the codemons, according to the guidelines given by the NPCs during the journey.
@@ -82,8 +84,27 @@ On the first level are algorithms modeled for arithmetic operator type codemons,
 
 ### Boss - Bubble Sort <a name = "boss"></a>
 
-![bubble_sort](https://user-images.githubusercontent.com/52884069/128777885-808ba50e-d525-4e72-8196-9e51d43f4f2a.png)
+![bubble_sort](https://user-images.githubusercontent.com/52884069/128782979-349b0144-89eb-478f-8539-3f48b205df87.png)
 
 As a last challenge, the player interacts with the swaps of the bubble algorithm, being divided into two steps with the following sequence, the ordering of variables of type int and the ordering of variables of type string. The challenge is to present to the player 5 codemons inside bubbles with their values described, aiming to order the values presented in ascending order. In the last swap of each iteration, the bubble that held the last codemon is burst, so the player cannot swap again with that value. In total there will be 4 iterations of swaps, in the last iteration all codemons will have popped bubbles and a feedback will be presented to the player if the sequence was performed correctly.
 
-## How to Create New Challenges <a name = "how_to_create_new_challenges"></a>
+## How to Add New Challenges <a name = "how_to_create_new_challenges"></a>
+
+All challenges are located in the "data" folder. To facilitate the process of generating the question and answer challenges, as well as the algorithm analysis, structures in **JSON** format were developed that streamlined the process of population of the challenges.
+
+### Question and Answer <a name = "question_answer"></a>
+  - **Question:** the description of the challenge question;
+  - **Wrong:** a list of possible incorrect alternatives for the question, two being chosen per challenge;
+  - **Correct:** a list of possible correct alternatives for the question, only one being chosen per challenge.
+
+### Algorithm Analysis <a name = "algorithm_analysis"></a>
+
+![create_challenge](https://user-images.githubusercontent.com/52884069/128783837-6300abcf-b43f-42be-be0a-ccf7c4706c56.png)
+
+  - **Shape Type:** the type of codemon that the player can use, being possible to assign; triangle for variable types, square for arithmetic operator types, hexagon for logical operator types, and hide to hide the component from the player;
+  - **Assign Type:** a list of the types of variables that will be assigned by each expression executed;
+  - **Assign:** a list of variables that will receive the value for each expression executed;
+  - **Expression:** a list of expressions that will be executed;
+  - **Variable:** a list of variables that will be used in expressions;
+  - **Return:** the variable that will return the function's value;
+  - **Waited:** a list of possible values that the function can return, a value being selected randomly in each challenge;
