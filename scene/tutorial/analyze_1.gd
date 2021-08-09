@@ -4,25 +4,25 @@ var pos_btn_1: int
 var pos_btn_2: int 
 var debug_count: int = 0
 
-var seq: Dictionary = {0: {"text": "O objetivo principal é atribuir os valores para as formas geométricas, para que a função retorne o valor esperado.",
+var seq: Dictionary = {0: {"text": "ANALYZE_1_TUT_1",
 						   "position": Vector2(413, 36)},
-					   1: {"text": "Em outras palavras, qual tipo e valor devem ser atribuídos para o triângulo vermelho e azul para que retorne...",
+					   1: {"text": "ANALYZE_1_TUT_2",
 						   "position": Vector2(428, 87)},
-					   2: {"text": "O valor 4, que é o esperado dessa função.",
+					   2: {"text": "ANALYZE_1_TUT_3",
 						   "position": Vector2(467, 307)},
-					   3: {"text": "Para isso vamos atribuir incialmente o tipo do triângulo vermelho como INT.",
+					   3: {"text": "ANALYZE_1_TUT_4",
 						   "position": Vector2(107, 71)},
-					   4: {"text": "Muito bem, agora vamos alterar o valor. Clique no componente ao lado do círculo e atribuída o valor 2.",
+					   4: {"text": "ANALYZE_1_TUT_5",
 						   "position": Vector2(169, 87)},
-					   5: {"text": "Agora vamos repetir o mesmo processo para o triângulo azul. Tipo INT e valor 2.",
+					   5: {"text": "ANALYZE_1_TUT_6",
 						   "position": Vector2(143, 190)},
-					   6: {"text": "Após preencher todos os valores necessários para executar a função, o botão Capturar estará habilitado. Clique em capturar.",
+					   6: {"text": "ANALYZE_1_TUT_7",
 						   "position": Vector2(641, 264)},
-					   7: {"text": "Note que os valores que você atribui vão ser calculado na expressão.",
+					   7: {"text": "ANALYZE_1_TUT_8",
 						   "position": Vector2(430, 80)},
-					   8: {"text": "Para finalizar o desafio, continue clicando em Debug até o resultado for revelada.",
+					   8: {"text": "ANALYZE_1_TUT_9",
 						   "position": Vector2(505, 338)},
-					   9: {"text": "Muito bem! Boa sorte na sua jornada aventureiro.",
+					   9: {"text": "ANALYZE_1_TUT_10",
 						   "position": Vector2(505, 338)}}
 
 func _ready() -> void:

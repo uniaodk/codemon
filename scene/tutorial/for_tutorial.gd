@@ -2,24 +2,41 @@ extends Control
 
 var interaction: int = 0
 
-var seq: Dictionary = {0: {"text": "O comando de controle FOR pode executar ou não seu escopo várias vezes, dependendo da quantidade do range atribuído.",
+var seq: Dictionary = {0: {"text": "FOR_TUT_1",
 						   "position": Vector2(522, 87)},
-					   1: {"text": "Digamos que o range foi atribuido o valor 3. Significa dizer que o escopo marcado com a caixa vermelha será executada 3 vezes.",
+					   1: {"text": "FOR_TUT_2",
 						   "position": Vector2(432, 87)},
-					   2: {"text": "Vamos iniciar a 1ª iteração. Repare que o triângulo branco está com valor 0. Isso porque ele fica responsável em fazer a contagem do range.",
+					   2: {"text": "FOR_TUT_3",
 						   "position": Vector2(414, 110)}, 
-					   3: {"text": "Na 2ª iteração podemos reparar que aumentou o valor do triângulo branco para 1 devido a contagem. E o triângulo vermelho devido a 1ª iteração onde a expressão \"0 + 1 + 2 = 3\"",
+					   3: {"text": "FOR_TUT_4",
 						   "position": Vector2(414, 110)},
-					   4: {"text": "E a 3ª e última iteração. Contador triângulo branco aumenta mais 1. E o triângulo vermelho possui o valor 6 devido a 2º iteração com a expressão \"1 + 3 + 2\"",
+					   4: {"text": "FOR_TUT_5",
 						   "position": Vector2(414, 110)},
-					   5: {"text": "Após completar as 3 repetições do escopo do for, é executado a próxima linha.",
+					   5: {"text": "FOR_TUT_6",
 						   "position": Vector2(359, 139)}}
 
 func _ready() -> void:
+	translation()
 	$red_square.visible = false
 	$forr.play_idle()
 	config_button()
 	init_tutorial()
+
+func translation() -> void:
+	$title.text = tr("STAGE_2_TITLE");
+	$question.text = tr("STAGE_2_DESC");
+	$function/title.text = tr("FUNCTION");
+	$function/waited.text = tr("EXPECTED");
+	$function/result.text = tr("RESULT");
+	$hint/title.text = tr("REMINDER");
+	$hint/variable.text = tr("VARIABLES");
+	$hint/arithmetic.text = tr("ARITHMETIC_OP2");
+	$hint/logic.text = tr("LOGIC_OP2");
+	$capture/btn_name.text = tr("CAPTURE");
+	$flee/btn_name.text = tr("FLEE");
+	$help/btn_name.text = tr("HELP");
+	$debuger/btn_name.text = tr("DEBUG");
+	$chalenge.text = tr("CHALLENGING") + " For";
 
 func config_button() -> void:
 	$capture.disabled = true

@@ -226,7 +226,7 @@ FUNCTION;Function;Função
 EXPECTED;Expected ->;Esperado  ->
 RESULT;Result ->;Resultado ->
 REMINDER;Reminder;Lembrete
-DEBUG;Debug;Debugar
+DEBUG;Debug;Debug
 BUBBLE_SORT;Bubble Sort;Algoritmo Bolha
 STAGE_FINAL_DESC;Perform the swap function correctly, so that the codemons are in ascending order and are saved.;Execute a função de troca (swap) corretamente, para que os codemons fiquem na ordem crescente e sejam salvos.
 SWAP;Swap;Trocar
@@ -234,3 +234,82 @@ SIMULATOR_DESC;"Click on one of the codemons to simulate a battle.
 Simulation does not affect the points of challenge and capture, nor the gain of coins.";"Clique sobre um dos codemons para simular uma batalha.
 Simulação não afeta nos pontos de desafio e captura, nem no ganho de moedas."
 SHOW_TUTORIAL;Show tutorial;Apresentar tutorial
+CIRCUIT_TUT_1;To recharge the notebook, the circuit output must be 1, a green line. But for that it is necessary to know the logic gates.;Para recarregar o notebook, é necessário que a saída do circuito seja 1, uma linha verde. Mas para isso é necessário conhecer as portas lógicas.
+CIRCUIT_TUT_2;OR - This port outputs 1, if at least one input is outputting signal 1.;OR / Ou - Essa porta emite a saída 1, se pelo menos uma entrada estiver emitindo o sinal 1.
+CIRCUIT_TUT_3;AND - This port  outputs 1, only if all inputs are outputting signal 1.;AND / E - Essa porta emite a saída 1, somente se todas as entradas estiverem emitindo o sinal 1.
+CIRCUIT_TUT_4;XOR / Exclusive - This port outputs 1 only if the inputs are different from each other.;XOR / Exclusiva - Essa porta emite a saída 1, somente se as entradas forem diferentes uma da outra.
+CIRCUIT_TUT_5;NOT / Inverter - Inverts the emitted signal.;NOT / Inversora - Inverte o sinal emitido.
+CIRCUIT_TUT_6;If necessary, use the help button to remind these concepts.;Caso necessário utilize o botão de ajuda para relembrar esses conceitos.
+CIRCUIT_TUT_7;To change the input signal, just click on one of these 4 buttons. Click on the first button.;Para alterar o sinal de entrada, basta clicar em um desses 4 botões. Clique no primeiro botão.
+CIRCUIT_TUT_8;Now click on the third button.;Agora clique no terceiro botão.
+CIRCUIT_TUT_9;The moment it manages to issue 1 as an output, the battery is recharged and a new challenge is generated.;No momento que conseguir emitir 1 como saída, a bateria é recarregada e novo desafio é gerado.
+CIRCUIT_TUT_10;You can return to your adventure anytime you want by clicking back.;Você pode retornar para sua aventura no momento que quiser clicando em voltar.
+ANALYZE_1_TUT_1;The main purpose is to assign the values ​​to the geometric shapes so that the function returns the expected value.;O objetivo principal é atribuir os valores para as formas geométricas, para que a função retorne o valor esperado.
+ANALYZE_1_TUT_2;In other words, what type and value must be assigned to the red and blue triangle in order for it to return...;Em outras palavras, qual tipo e valor devem ser atribuídos para o triângulo vermelho e azul para que retorne...
+ANALYZE_1_TUT_3;The value 4, which is expected from this function.;O valor 4, que é o esperado dessa função.
+ANALYZE_1_TUT_4;For this we will initially assign the type of the red triangle to INT.;Para isso vamos atribuir incialmente o tipo do triângulo vermelho como INT.
+ANALYZE_1_TUT_5;Okay, now let's change the value. Click on the component next to the circle and assign the value 2.;Muito bem, agora vamos alterar o valor. Clique no componente ao lado do círculo e atribuída o valor 2.
+ANALYZE_1_TUT_6;Now let's repeat the same process for the blue triangle. INT type and value 2.;Agora vamos repetir o mesmo processo para o triângulo azul. Tipo INT e valor 2.
+ANALYZE_1_TUT_7;After filling in all the necessary values ​​to execute the function, the Capture button will be enabled. Click capture.;Após preencher todos os valores necessários para executar a função, o botão Capturar estará habilitado. Clique em capturar.
+ANALYZE_1_TUT_8;Note that the values ​​you assign will be calculated in the expression.;Note que os valores que você atribui vão ser calculado na expressão.
+ANALYZE_1_TUT_9;To end the challenge, keep clicking on Debug until the result is revealed.;Para finalizar o desafio, continue clicando em Debug até o resultado for revelada.
+ANALYZE_1_TUT_10;Very good! Good luck on your adventurous journey.;Muito bem! Boa sorte na sua jornada aventureiro.
+ANALYZE_2_TUT_1;The main objective remains the same. Assign types and values ​​to the geometric shapes to result in the expected value.;O objetivo principal continua o mesmo. Atribuir tipos e valores as formas geométricas para resultar o valor esperado.
+ANALYZE_2_TUT_2;But now we will use arithmetic operators to help arrive at the expected value.;Porém agora iremos utilizar os operadores aritméticos para auxiliar a chegar no valor esperado.
+ANALYZE_2_TUT_3;Okay, let's initially set the red triangle's type to INT and value 4;Muito bem, vamos atribuir incialmente o tipo do triângulo vermelho como INT e valor 4
+ANALYZE_2_TUT_4;And now assign the MULTIPLY arithmetic operator to the blue square.;E agora atribuir o operador aritmético MULTIPLY para o quadrado azul
+ANALYZE_2_TUT_5;Click on the Capture button to start debugging the function.;Clicar no botão Capturar para iniciar o debug da função.
+ANALYZE_2_TUT_6;And press the Debug button until the function ends.;E apertar o botão Debug até finalizar a função.
+ANALYZE_2_TUT_7;Very good! May the force be with you.;Muito bem! Que a força esteja com você.
+ELSE_TUT_1;The ELSE control command will only be present when there is an IF, as it depends on the IF to be executed or not.;O comando de controle ELSE só estará presente quando houver um IF, pois, depende do IF para ser executado ou não
+ELSE_TUT_2;In other words, if the IF executes ELSE it does not execute, or if the IF does not execute ELSE executes.;Em outras palavras, se o IF executar o ELSE não executa, ou se o IF não executar o ELSE executa.
+ELSE_TUT_3;Let's start an example to make it easier to understand, let's say that shape assignments got that way.;Vamos iniciar um exemplo para ficar mais fácil de entender, digamos que atribuição das formas ficou desse jeito.
+ELSE_TUT_4;As 2 is less than 3, the IF has a TRUE condition, which allows the execution of its scope.;Como 2 é menor que 3, o IF tem condição TRUE, o que permite a execução do seu escopo.
+ELSE_TUT_5;And since IF is TRUE, ELSE is FALSE. Consequently, the scope of ELSE is not executed.;E como IF é TRUE, ELSE é FALSE. Consequentemente não é executado o escopo do ELSE.
+ELSE_TUT_6;Now let's start the other scenario.;Agora vamos iniciar o outro cenário.
+ELSE_TUT_7;In this situation 4 is not less than 3, so the IF has a FALSE condition, which makes its scope skip.;Nessa situação 4 não é menor que 3, então o IF tem condição FALSE, o que faz pular o seu escopo.
+ELSE_TUT_8;And since IF is FALSE, ELSE is TRUE. Consequently, the scope of ELSE is executed.;E como IF é FALSE, ELSE é TRUE. Consequentemente é executado o escopo do ELSE.
+FOR_TUT_1;The FOR control command may or may not execute its scope multiple times, depending on the amount of the assigned range.;O comando de controle FOR pode executar ou não seu escopo várias vezes, dependendo da quantidade do range atribuído.
+FOR_TUT_2;Let's say that the range was assigned a value of 3. It means to say that the scope marked with the red box will be executed 3 times.;Digamos que o range foi atribuido o valor 3. Significa dizer que o escopo marcado com a caixa vermelha será executada 3 vezes.
+FOR_TUT_3;Let's start the 1st iteration. Notice that the white triangle has a value of 0. This is because it is responsible for counting the range.;Vamos iniciar a 1ª iteração. Repare que o triângulo branco está com valor 0. Isso porque ele fica responsável em fazer a contagem do range.
+FOR_TUT_4;"In the 2nd iteration we can notice that the value of the white triangle increased to 1 due to counting. And the red triangle due to the 1st iteration where the expression \""0 + 1 + 2 = 3\""";"Na 2ª iteração podemos reparar que aumentou o valor do triângulo branco para 1 devido a contagem. E o triângulo vermelho devido a 1ª iteração onde a expressão \""0 + 1 + 2 = 3\"""
+FOR_TUT_5;"And the 3rd and last iteration. White triangle counter increases by more 1. And the red triangle has the value 6 due to the 2nd iteration with the expression \""1 + 3 + 2\""";"E a 3ª e última iteração. Contador triângulo branco aumenta mais 1. E o triângulo vermelho possui o valor 6 devido a 2º iteração com a expressão \""1 + 3 + 2\"""
+FOR_TUT_6;After completing the 3 iterations of the for scope, the next line is executed.;Após completar as 3 repetições do escopo do for, é executado a próxima linha.
+IF_TUT_1;The IF control command has an action scope, being delimited by the text indentation.;O comando de controle IF possue um escopo de ação, sendo delimitado pela indentação do texto.
+IF_TUT_2;Having the responsibility to execute or not this expression.;Tendo a responsabilidade de executar ou não essa expressão.
+IF_TUT_3;Depending on the return of the boolean expression declared next to it.;Dependendo do retorno da expressão booleana declarada ao seu lado.
+IF_TUT_4;For a better understanding, assign the red triangle the type INT and the value 2.;Para entender melhor, atribua o triângulo vermelho o tipo INT e o valor 2.
+IF_TUT_5;And the blue hexagon is the LESS logical operator.;E o hexágono azul o operador lógico LESS.
+IF_TUT_6;Start capturing.;Inicie a captura.
+IF_TUT_7;Debug to the end.;Debug até o final.
+IF_TUT_8;Note that boolean expression returns TRUE, as 2 is less than 3, therefore it executes the action scope.;Repare que expressão booleana retorna TRUE, pois 2 é menor que 3, consequentemente executa o escopo de ação.
+IF_TUT_9;Let's test a FALSE condition. Assign the red triangle the type INT and the value 2.;Vamos testar uma condição FALSE. Atribua o triângulo vermelho o tipo INT e o valor 2.
+IF_TUT_10;And the blue hexagon is the logical operator BIGGER.;E o hexágono azul o operador lógico BIGGER.
+IF_TUT_11;Start capturing.;Inicie a captura.
+IF_TUT_12;Debug to the end.;Debug até o final
+IF_TUT_13;With the FALSE condition, the action scope is not executed, affecting the result value.;Com a condição FALSE, o escopo de ação não é executado, afetando no valor do resultado.
+WHILE_TUT_1;The WHILE control command may or may not execute its scope multiple times, depending on the Boolean expression beside it.;O comando de controle WHILE pode executar ou não seu escopo várias vezes, dependendo da expressão booleana ao seu lado.
+WHILE_TUT_2;Let's say the expression is 2 < 5, that is, TRUE. It means to say that the scope marked with the red box will be executed until this condition becomes FALSE.;Digamos que a expressão seja 2 < 5, ou seja TRUE. Significa dizer que o escopo marcado com a caixa vermelha será executado até que essa condição se torne FALSE.
+WHILE_TUT_3;"In the 1st iteration, the expression \""2 + 2 = 4\"" will be executed and assigned to the red triangle. Where the WHILE condition \""4 < 5\"" remains TRUE.";"Na 1ª iteração será executada a expressão \""2 + 2 = 4\"" e atribuído ao triângulo vermelho. Onde a condição do WHILE \""4 < 5\"" permanece TRUE."
+WHILE_TUT_4;"In the 2nd iteration, the expression \""4 + 2 = 6\"" will be executed and assigned a red triangle. Where the condition of WHILE \""6 < 5\"" becomes FALSE.";"Na 2ª iteração será executada a expressão \""4 + 2 = 6\"" e atribuído a triângulo vermelho. Onde a condição do WHILE \""6 < 5\"" se torna FALSE."
+WHILE_TUT_5;When the condition becomes FALSE, the next line is executed.;Quando a condição se torna FALSE, é executado a próxima linha.
+WHILE_TUT_6;But be careful about assigning values ​​that are impossible to meet the WHILE condition. Because they can generate an infinite repetition.;Mas tome cuidado em atribuir valores impossíveis de atender a condição do WHILE. Pois podem gerar uma repetição infinita.
+WHILE_TUT_7;Let's say that instead of using the LESS logical operator, we will use NOT EQUAL.;Digamos que ao invés de utilizar o operador lógico LESS, utilizaremos o NOT EQUAL.
+WHILE_TUT_8;"Thus, the WHILE conditions as iteration would be \""2 != 5\"", \""4 != 5\"", \""6 != 5\"". We can deduce that the condition will never be FALSE.";"Com isso as condições do WHILE conforme iteração seriam \""2 != 5\"", \""4 != 5\"", \""6 != 5\"". Podemos deduzir que nunca será FALSE a condição."
+WHILE_TUT_9;Because the value of the triangle tends to grow by 2, and if we notice it can never have the value 5 which is the only WHILE exit condition.;Porque o valor do triângulo tende a crescer em 2, e se notarmos nunca poderá ter o valor 5 que é a única condição de saída do WHILE.
+BUBBLE_TUT_1;In the bubble challenge, it is not necessary for you to focus on the iterations performed. Even because Dr Compiler has already made it ready for you.;No desafio bolha, não é necessário que você foque nas iterações realizadas. Até porque o Dr Compilador já deixou pronto para você.
+BUBBLE_TUT_2;The only thing necessary is to control the exchange between Codemons. Ordering your values ​​in crescent form.;A única coisa necessária é controlar a troca entre os Codemons. Ordenando os seus valores na forma crescente.
+BUBBLE_TUT_3;Let's start an example to make it easier to understand.;Vamos iniciar um exemplo para ficar mais fácil de entender.
+BUBBLE_TUT_4;Since 3 is greater than 1, we will make the switch. Click on the Swap button.;Como 3 é maior que 1, iremos fazer a troca. Clique no botão Trocar.
+BUBBLE_TUT_5;Okay, click Ok to advance the exchange mechanism.;Muito bem, clique em Ok para avançar o mecanismo de troca.
+BUBBLE_TUT_6;In this case 3 is greater than 2, once again we will exchange. Click on the Swap button.;Nesse caso 3 é maior que 2, mais uma vez iremos troca. Clique no botão Trocar.
+BUBBLE_TUT_7;Now on the Ok button.;Agora no botão Ok.
+BUBBLE_TUT_8;When we reach the last exchange of the iteration the bubble around the Codemon is burst, making it impossible to order this Codemon.;Quando atingimos a última troca da iteração a bolha ao redor do Codemon é estourada, impossibilitando de ordenar esse Codemon.
+BUBBLE_TUT_9;Let's perform the last exchange. In this case 1 is not greater than 2, so it is not necessary to change. Click OK.;Vamos realizar a última troca. Nesse caso 1 não é maior que 2, então não é necessário trocar. Clique em Ok.
+BUBBLE_TUT_10;Very good! You performed all exchanges correctly.;Muito bem! Você realizou todas as trocas corretamente.
+TALK;Talk;Falar
+PICK;Pick;Pegar
+CHALLENGE;Challenge;Desafiar
+ACESS;Acess;Acessar
+STORE;Store;Loja
+RECHARGE;Recharge;Recarregar

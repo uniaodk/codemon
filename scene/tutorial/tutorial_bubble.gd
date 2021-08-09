@@ -6,31 +6,39 @@ var step: int = 105
 
 onready var init_x: int = $bg/btn_swap.rect_position.x
 
-var seq: Dictionary = {0: {"text": "No desafio bolha, não é necessário que você foque nas iterações realizadas. Até porque o Dr Compilador já deixou pronto para você.",
+var seq: Dictionary = {0: {"text": "BUBBLE_TUT_1",
 						   "position": Vector2(251, 13)},
-					   1: {"text": "A única coisa necessária é controlar a troca entre os Codemons. Ordenando os seus valores na forma crescente.",
+					   1: {"text": "BUBBLE_TUT_2",
 						   "position": Vector2(114, 141)},
-					   2: {"text": "Vamos iniciar um exemplo para ficar mais fácil de entender.",
+					   2: {"text": "BUBBLE_TUT_3",
 						   "position": Vector2(114, 141)},
-					   3: {"text": "Como 3 é maior que 1, iremos fazer a troca. Clique no botão Trocar.",
+					   3: {"text": "BUBBLE_TUT_4",
 						   "position": Vector2(111, 255)},
-					   4: {"text": "Muito bem, clique em Ok para avançar o mecanismo de troca.",
+					   4: {"text": "BUBBLE_TUT_5",
 						   "position": Vector2(111, 255)},
-					   5: {"text": "Nesse caso 3 é maior que 2, mais uma vez iremos troca. Clique no botão Trocar.",
+					   5: {"text": "BUBBLE_TUT_6",
 						   "position": Vector2(215, 255)},
-					   6: {"text": "Agora no botão Ok.",
+					   6: {"text": "BUBBLE_TUT_7",
 						   "position": Vector2(215, 255)},
-					   7: {"text": "Quando atingimos a última troca da iteração a bolha ao redor do Codemon é estourada, impossibilitando de ordenar esse Codemon.",
+					   7: {"text": "BUBBLE_TUT_8",
 						   "position": Vector2(268, 241)},
-					   8: {"text": "Vamos realizar a última troca. Nesse caso 1 não é maior que 2, então não é necessário trocar. Clique em Ok.",
+					   8: {"text": "BUBBLE_TUT_9",
 						   "position": Vector2(111, 255)},
-					   9: {"text": "Muito bem! Você realizou todas as trocas corretamente.",
+					   9: {"text": "BUBBLE_TUT_10",
 						   "position": Vector2(350, 252)}}
 
 func _ready() -> void:
+	translation()
 	$bg/bubble.play_idle()
 	config_button()
 	init_tutorial()
+
+func translation() -> void:
+	$bg/title.text = tr("BUBBLE_SORT");
+	$bg/question.text = tr("STAGE_FINAL_DESC");
+	$bg/chalenge.text = tr("CHALLENGING") + " " + tr("BUBBLE");
+	$bg/flee/btn_name.text = tr("FLEE");
+	$bg/help/btn_name.text = tr("HELP");
 
 func config_button() -> void:
 	$bg/flee.disabled = true

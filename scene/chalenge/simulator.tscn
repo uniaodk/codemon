@@ -353,6 +353,7 @@ margin_left = 430.502
 margin_top = 522.698
 margin_right = 338.182
 margin_bottom = 503.898
+
 [connection signal="pressed" from="variables/int" to="." method="_on_int_pressed"]
 [connection signal="pressed" from="variables/double" to="." method="_on_double_pressed"]
 [connection signal="pressed" from="variables/string" to="." method="_on_string_pressed"]

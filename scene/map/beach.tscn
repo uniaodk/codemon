@@ -1232,6 +1232,7 @@ __meta__ = {
 [node name="animation" type="AnimationPlayer" parent="."]
 anims/transition_in = SubResource( 18 )
 anims/transition_out = SubResource( 19 )
+
 [connection signal="body_entered" from="tilemap/portal_mountain" to="." method="_on_portal_mountain_body_entered"]
 [connection signal="body_entered" from="tilemap/portal_desert" to="." method="_on_portal_desert_body_entered"]
 [connection signal="chat_entered" from="ysort/doorman" to="." method="_on_doorman_chat_entered"]

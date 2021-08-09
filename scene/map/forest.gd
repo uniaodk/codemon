@@ -35,6 +35,7 @@ var in_dialog : bool = true
 signal end_dialogue(reference)
 
 func _ready() -> void:
+	TranslationServer.set_locale(game.ENG)
 	config_position_player()
 	init_transition()
 	connect("end_dialogue", self, "_on_end_dialogue")
@@ -126,7 +127,7 @@ func create_position() -> Vector2:
 func _on_chalenge_entered(codemon: String, node: Node) -> void:
 	if !in_dialog:
 		codemon_chalenge = node
-		game.add_interaction_btn($ysort/player, "Desafiar", codemon)
+		game.add_interaction_btn($ysort/player, tr("CHALLENGE"), codemon)
 
 
 func _on_chalenge_exited(object) -> void:
@@ -138,12 +139,12 @@ func _on_chalenge_exited(object) -> void:
 
 func _on_merchant_chat_entered() -> void:
 	in_dialog = true
-	game.add_interaction_btn($ysort/player, "Acessar", "Loja")
+	game.add_interaction_btn($ysort/player, tr("ACESS"), tr("STORE"))
 
 
 func _on_merchant_chat_exited() -> void:
 	in_dialog = false
-	_on_chalenge_exited("Loja")
+	_on_chalenge_exited(tr("STORE"))
 
 
 func _on_doorman_chat_entered() -> void:
@@ -164,40 +165,39 @@ func _on_doorman_chat_exited() -> void:
 
 func _on_plug_chat_entered() -> void:
 	in_dialog = true
-	game.add_interaction_btn($ysort/player, "Recarregar", "Bateria")
+	game.add_interaction_btn($ysort/player, tr("RECHARGE"), tr("BATTERY"))
 
 
 func _on_plug_chat_exited() -> void:
 	in_dialog = false
-	_on_chalenge_exited("Bateria")
+	_on_chalenge_exited(tr("BATTERY"))
 
 
 func _on_dr_forest_chat_entered() -> void:
 	in_dialog = true
 	if is_interact:
-		game.add_interaction_btn($ysort/player, "Falar", "Dr Compilador")
+		game.add_interaction_btn($ysort/player, tr("TALK"), tr("DR"))
 
 
 func _on_dr_forest_chat_exited() -> void:
 	in_dialog = false
-	_on_chalenge_exited("Dr Compilador")
+	_on_chalenge_exited(tr("DR"))
 
 
 func _on_pick_talk_interaction(object: String) -> void:
 	_on_chalenge_exited(object)
-	match object:
-		"Dr Compilador":
-			in_dialog = true
-			$ysort/player.play_animation("", true)
-			game.run_dialogue("forest_tutorial", self)
-		"Loja":
-			hud.add_child(market.instance())
-			get_tree().paused = true
-		"Bateria":
-			hud.add_child(circuit.instance())
-			get_tree().paused = true
-		_:
-			init_chalenge_codemon(object)
+	if object == tr("DR"):
+		in_dialog = true
+		$ysort/player.play_animation("", true)
+		game.run_dialogue("forest_tutorial", self)
+	elif object == tr("STORE"):
+		hud.add_child(market.instance())
+		get_tree().paused = true
+	elif object == tr("BATTERY"):
+		hud.add_child(circuit.instance())
+		get_tree().paused = true
+	else:
+		init_chalenge_codemon(object)
 
 
 func repopulate(node: Node) -> void:

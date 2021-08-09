@@ -8,6 +8,7 @@ onready var circuit: Resource = load("res://scene/chalenge/circuit_logic.tscn")
 
 
 func _ready() -> void:
+	TranslationServer.set_locale(game.ENG);
 	init_translation();
 	$check_box.is_checked = false
 	$check_box._on_check_box_pressed()

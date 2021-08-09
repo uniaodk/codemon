@@ -110,14 +110,12 @@ margin_left = 735.205
 margin_top = 518.319
 margin_right = 642.885
 margin_bottom = 499.519
-btn_name = "Fugir"
 
 [node name="help" parent="bg" instance=ExtResource( 9 )]
 margin_left = 735.205
 margin_top = 477.319
 margin_right = 642.885
 margin_bottom = 458.519
-btn_name = "Ajuda"
 
 [node name="rope" parent="bg" instance=ExtResource( 14 )]
 anchor_left = -0.0618335
@@ -158,6 +156,7 @@ __meta__ = {
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_bottom = 61.0
+rect_scale = Vector2( 1, 1 )
 codemon = "intt"
 
 [node name="b2" parent="bg/bubbles" instance=ExtResource( 10 )]
@@ -166,6 +165,7 @@ anchor_bottom = 0.0
 margin_left = 60.0
 margin_right = 60.0
 margin_bottom = 61.0
+rect_scale = Vector2( 1, 1 )
 codemon = "intt"
 
 [node name="b3" parent="bg/bubbles" instance=ExtResource( 10 )]
@@ -174,6 +174,7 @@ anchor_bottom = 0.0
 margin_left = 120.0
 margin_right = 120.0
 margin_bottom = 61.0
+rect_scale = Vector2( 1, 1 )
 codemon = "intt"
 
 [node name="function" type="VBoxContainer" parent="bg"]

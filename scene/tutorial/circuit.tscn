@@ -249,20 +249,19 @@ margin_left = 302.759
 margin_top = 523.41
 margin_right = 210.439
 margin_bottom = 504.61
-btn_name = "Ajuda"
 
 [node name="back" parent="." instance=ExtResource( 20 )]
 margin_left = 511.443
 margin_top = 522.0
 margin_right = 419.123
 margin_bottom = 503.2
-btn_name = "Voltar"
 
 [node name="tip" parent="." instance=ExtResource( 5 )]
 anchor_left = 0.503906
 anchor_top = 0.59
 anchor_right = 0.870117
 anchor_bottom = 0.861667
+
 [connection signal="pressed" from="zero_one/btn_1" to="." method="_on_btn_1_pressed"]
 [connection signal="pressed" from="zero_one/btn_3" to="." method="_on_btn_3_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]

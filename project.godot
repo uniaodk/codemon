@@ -10,13 +10,11 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [PluginSettings]
 
 gddlg/DialogJsonPaths={
-
 }
 gddlg/LoadOnReady=true
 gddlg/StrictDialogAttributes=false
@@ -49,6 +47,7 @@ gdscript/warnings/return_value_discarded=false
 [display]
 
 window/size/resizable=false
+window/size/fullscreen=true
 window/size/test_width=1024
 window/size/test_height=600
 window/per_pixel_transparency/allowed=true
@@ -114,7 +113,29 @@ locale_filter=[ 1, [ "en", "pt_BR" ] ]
 translations=PoolStringArray( "res://i18n/i18n.en.translation", "res://i18n/i18n.pt_BR.translation" )
 translation_remaps={
 "res://art/chalenge/circuit_logic/off.png": PoolStringArray( "res://art/chalenge/circuit_logic/off_pt.png:pt_BR" ),
-"res://art/object/board.png": PoolStringArray( "res://art/object/board_pt.png:pt_BR" )
+"res://art/chalenge/circuit_logic/on.png": PoolStringArray( "res://art/chalenge/circuit_logic/on_pt.png:pt_BR" ),
+"res://art/object/board.png": PoolStringArray( "res://art/object/board_pt.png:pt_BR" ),
+"res://art/tutorial/and.png": PoolStringArray( "res://art/tutorial/and_pt.png:pt_BR" ),
+"res://art/tutorial/bigger.png": PoolStringArray( "res://art/tutorial/bigger_pt.png:pt_BR" ),
+"res://art/tutorial/bool.png": PoolStringArray( "res://art/tutorial/bool_pt.png:pt_BR" ),
+"res://art/tutorial/bubble_sort.png": PoolStringArray( "res://art/tutorial/bubble_sort.png:pt_BR" ),
+"res://art/tutorial/divide.png": PoolStringArray( "res://art/tutorial/divide_pt.png:pt_BR" ),
+"res://art/tutorial/double.png": PoolStringArray( "res://art/tutorial/double_pt.png:pt_BR" ),
+"res://art/tutorial/else.png": PoolStringArray( "res://art/tutorial/else_pt.png:pt_BR" ),
+"res://art/tutorial/equal.png": PoolStringArray( "res://art/tutorial/equal_pt.png:pt_BR" ),
+"res://art/tutorial/for.png": PoolStringArray( "res://art/tutorial/for_pt.png:pt_BR" ),
+"res://art/tutorial/if.png": PoolStringArray( "res://art/tutorial/if_pt.png:pt_BR" ),
+"res://art/tutorial/int.png": PoolStringArray( "res://art/tutorial/int_pt.png:pt_BR" ),
+"res://art/tutorial/less.png": PoolStringArray( "res://art/tutorial/less_pt.png:pt_BR" ),
+"res://art/tutorial/minus.png": PoolStringArray( "res://art/tutorial/minus_pt.png:pt_BR" ),
+"res://art/tutorial/modulo.png": PoolStringArray( "res://art/tutorial/modulo_pt.png:pt_BR" ),
+"res://art/tutorial/multiply.png": PoolStringArray( "res://art/tutorial/multiply_pt.png:pt_BR" ),
+"res://art/tutorial/not_equal.png": PoolStringArray( "res://art/tutorial/not_equal_pt.png:pt_BR" ),
+"res://art/tutorial/or.png": PoolStringArray( "res://art/tutorial/or_pt.png:pt_BR" ),
+"res://art/tutorial/plug.png": PoolStringArray( "res://art/tutorial/plug_pt.png:pt_BR" ),
+"res://art/tutorial/plus.png": PoolStringArray( "res://art/tutorial/plus_pt.png:pt_BR" ),
+"res://art/tutorial/string.png": PoolStringArray( "res://art/tutorial/string_pt.png:pt_BR" ),
+"res://art/tutorial/while.png": PoolStringArray( "res://art/tutorial/while_pt.png:pt_BR" )
 }
 
 [logging]
@@ -130,5 +151,6 @@ common/physics_fps=150
 quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
-quality/2d/use_pixel_snap=true
+2d/snapping/use_gpu_pixel_snap=true
 environment/default_clear_color=Color( 0, 0, 0, 1 )
+quality/2d/use_pixel_snap=true

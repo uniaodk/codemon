@@ -239,6 +239,7 @@ text = "Portas Lógicas"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="zero_one/btn_1" to="." method="_on_btn_1_pressed"]
 [connection signal="pressed" from="zero_one/btn_2" to="." method="_on_btn_2_pressed"]
 [connection signal="pressed" from="zero_one/btn_3" to="." method="_on_btn_3_pressed"]

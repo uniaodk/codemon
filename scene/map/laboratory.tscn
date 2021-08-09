@@ -494,6 +494,7 @@ shape = SubResource( 12 )
 anims/intro = SubResource( 13 )
 anims/transition_in = SubResource( 14 )
 anims/transition_out = SubResource( 15 )
+
 [connection signal="body_entered" from="tilemap/portal_street" to="." method="_on_portal_street_body_entered"]
 [connection signal="chat_entered" from="ysort/dr_compilador" to="." method="_on_dr_compilador_chat_entered"]
 [connection signal="chat_exited" from="ysort/dr_compilador" to="." method="_on_dr_compilador_chat_exited"]

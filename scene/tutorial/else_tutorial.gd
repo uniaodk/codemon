@@ -6,24 +6,25 @@ var debug_count: int = 0
 
 var first_debug: bool = true
 
-var seq: Dictionary = {0: {"text": "O comando de controle ELSE só estará presente quando houver um IF, pois, depende do IF para ser executado ou não",
+var seq: Dictionary = {0: {"text": "ELSE_TUT_1",
 						   "position": Vector2(481, 104)},
-					   1: {"text": "Em outras palavras, se o IF executar o ELSE não executa, ou se o IF não executar o ELSE executa.",
+					   1: {"text": "ELSE_TUT_2",
 						   "position": Vector2(362, 85)},
-					   2: {"text": "Vamos iniciar um exemplo para ficar mais fácil de entender, digamos que atribuição das formas ficou desse jeito.",
+					   2: {"text": "ELSE_TUT_3",
 						   "position": Vector2(362, 85)},
-					   3: {"text": "Como 2 é menor que 3, o IF tem condição TRUE, o que permite a execução do seu escopo.",
+					   3: {"text": "ELSE_TUT_4",
 						   "position": Vector2(441, 110)},
-					   4: {"text": "E como IF é TRUE, ELSE é FALSE. Consequentemente não é executado o escopo do ELSE.",
+					   4: {"text": "ELSE_TUT_5",
 						   "position": Vector2(442, 203)},
-					   5: {"text": "Agora vamos iniciar o outro cenário.",
+					   5: {"text": "ELSE_TUT_6",
 						   "position": Vector2(362, 85)},
-					   6: {"text": "Nessa situação 4 não é menor que 3, então o IF tem condição FALSE, o que faz pular o seu escopo.",
+					   6: {"text": "ELSE_TUT_7",
 						   "position": Vector2(441, 110)},
-					   7: {"text": "E como IF é FALSE, ELSE é TRUE. Consequentemente é executado o escopo do ELSE.",
+					   7: {"text": "ELSE_TUT_8",
 						   "position": Vector2(442, 203)}}
 
 func _ready() -> void:
+	translation()
 	$elsee.play_idle()
 	$btn_1/btn.connect("focus_exited", self, "on_focus_exited_btn_1")
 	$btn_1/label.connect("focus_exited", self, "on_focus_exited_btn_1_label")
@@ -31,6 +32,22 @@ func _ready() -> void:
 	$btn_2/label.connect("focus_exited", self, "on_focus_exited_btn_2_label")
 	config_button()
 	init_tutorial()
+
+func translation() -> void:
+	$title.text = tr("STAGE_2_TITLE");
+	$question.text = tr("STAGE_2_DESC");
+	$function/title.text = tr("FUNCTION");
+	$function/waited.text = tr("EXPECTED");
+	$function/result.text = tr("RESULT");
+	$hint/title.text = tr("REMINDER");
+	$hint/variable.text = tr("VARIABLES");
+	$hint/arithmetic.text = tr("ARITHMETIC_OP2");
+	$hint/logic.text = tr("LOGIC_OP2");
+	$capture/btn_name.text = tr("CAPTURE");
+	$flee/btn_name.text = tr("FLEE");
+	$help/btn_name.text = tr("HELP");
+	$debuger/btn_name.text = tr("DEBUG");
+	$chalenge.text = tr("CHALLENGING") + " Else";
 
 func config_button() -> void:
 	pos_btn_1 = $btn_1.get_position_in_parent()

@@ -6,34 +6,35 @@ var debug_count: int = 0
 
 var first_debug: bool = true
 
-var seq: Dictionary = {0: {"text": "O comando de controle IF possue um escopo de ação, sendo delimitado pela indentação do texto.",
+var seq: Dictionary = {0: {"text": "IF_TUT_1",
 						   "position": Vector2(302, 132)},
-					   1: {"text": "Tendo a responsabilidade de executar ou não essa expressão.",
+					   1: {"text": "IF_TUT_2",
 						   "position": Vector2(397, 167)},
-					   2: {"text": "Dependendo do retorno da expressão booleana declarada ao seu lado.",
+					   2: {"text": "IF_TUT_3",
 						   "position": Vector2(361, 129)},
-					   3: {"text": "Para entender melhor, atribua o triângulo vermelho o tipo INT e o valor 2.",
+					   3: {"text": "IF_TUT_4",
 						   "position": Vector2(97, 76)},
-					   4: {"text": "E o hexágono azul o operador lógico LESS.",
+					   4: {"text": "IF_TUT_5",
 						   "position": Vector2(94, 187)},
-					   5: {"text": "Inicie a captura.",
+					   5: {"text": "IF_TUT_6",
 						   "position": Vector2(645, 268)},
-					   6: {"text": "Debug até o final",
+					   6: {"text": "IF_TUT_7",
 						   "position": Vector2(488, 341)},
-					   7: {"text": "Repare que expressão booleana retorna TRUE, pois 2 é menor que 3, consequentemente executa o escopo de ação.",
+					   7: {"text": "IF_TUT_8",
 						   "position": Vector2(372, 108)},
-					   8: {"text": "Vamos testar uma condição FALSE. Atribua o triângulo vermelho o tipo INT e o valor 2.",
+					   8: {"text": "IF_TUT_9",
 						   "position": Vector2(97, 76)},
-					   9: {"text": "E o hexágono azul o operador lógico BIGGER.",
+					   9: {"text": "IF_TUT_10",
 						   "position": Vector2(94, 187)},
-					  10: {"text": "Inicie a captura.",
+					  10: {"text": "IF_TUT_11",
 						   "position": Vector2(645, 268)},
-					  11: {"text": "Debug até o final",
+					  11: {"text": "IF_TUT_12",
 						   "position": Vector2(488, 341)},
-					  12: {"text": "Com a condição FALSE, o escopo de ação não é executado, afetando no valor do resultado.",
+					  12: {"text": "IF_TUT_13",
 						   "position": Vector2(372, 108)}}
 
 func _ready() -> void:
+	translation()
 	$red_square.visible = false
 	$iff.play_idle()
 	$btn_1/btn.connect("focus_exited", self, "on_focus_exited_btn_1")
@@ -42,6 +43,22 @@ func _ready() -> void:
 	$btn_2/label.connect("focus_exited", self, "on_focus_exited_btn_2_label")
 	config_button()
 	init_tutorial()
+
+func translation() -> void:
+	$title.text = tr("STAGE_2_TITLE");
+	$question.text = tr("STAGE_2_DESC");
+	$function/title.text = tr("FUNCTION");
+	$function/waited.text = tr("EXPECTED");
+	$function/result.text = tr("RESULT");
+	$hint/title.text = tr("REMINDER");
+	$hint/variable.text = tr("VARIABLES");
+	$hint/arithmetic.text = tr("ARITHMETIC_OP2");
+	$hint/logic.text = tr("LOGIC_OP2");
+	$capture/btn_name.text = tr("CAPTURE");
+	$flee/btn_name.text = tr("FLEE");
+	$help/btn_name.text = tr("HELP");
+	$debuger/btn_name.text = tr("DEBUG");
+	$chalenge.text = tr("CHALLENGING") + " If";
 
 func config_button() -> void:
 	pos_btn_1 = $btn_1.get_position_in_parent()
@@ -129,13 +146,13 @@ func _on_debuger_pressed() -> void:
 			$function/vbox/line_4/s_1/animation.play("pop_up")
 		else:
 			$debuger.visible = false
-			$function/value_result.text = "False"
+			$function/value_result.text = "2"
 			$function/bg.color = Color("ffcccc")
 			$tip/ok.emit_signal("pressed")
 		debug_count = 3
 	else: 
 		$debuger.visible = false
-		$function/value_result.text = "True"
+		$function/value_result.text = "4"
 		$function/bg.color = Color("ccffcc")
 		$tip/ok.emit_signal("pressed")
 		debug_count = 0
@@ -149,6 +166,5 @@ func reset_debug_action() -> void:
 	$function/vbox/line_4/s_1/balloon.visible = false
 	$btn_1.reset()
 	$btn_2.reset()
-	$btn_3.reset()
 	$function/bg.color = Color("00ffffff")
 	$function/value_result.text = ""

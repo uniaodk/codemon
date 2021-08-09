@@ -2,30 +2,47 @@ extends Control
 
 var interaction: int = 0
 
-var seq: Dictionary = {0: {"text": "O comando de controle WHILE pode executar ou não seu escopo várias vezes, dependendo da expressão booleana ao seu lado.",
+var seq: Dictionary = {0: {"text": "WHILE_TUT_1",
 						   "position": Vector2(409, 82)},
-					   1: {"text": "Digamos que a expressão seja 2 < 5, ou seja TRUE. Significa dizer que o escopo marcado com a caixa vermelha será executado até que essa condição se torne FALSE.",
+					   1: {"text": "WHILE_TUT_2",
 						   "position": Vector2(495, 107)},
-					   2: {"text": "Na 1ª iteração será executada a expressão \"2 + 2 = 4\" e atribuído ao triângulo vermelho. Onde a condição do WHILE \"4 < 5\" permanece TRUE",
+					   2: {"text": "WHILE_TUT_3",
 						   "position": Vector2(495, 107)}, 
-					   3: {"text": "Na 2ª iteração será executada a expressão \"4 + 2 = 6\" e atribuído a triângulo vermelho. Onde a condição do WHILE \"6 < 5\" se torna FALSE",
+					   3: {"text": "WHILE_TUT_4",
 						   "position": Vector2(495, 107)}, 
-					   4: {"text": "Quando a condição se torna FALSE, é executado a próxima linha.",
+					   4: {"text": "WHILE_TUT_5",
 						   "position": Vector2(312, 163)},
-					   5: {"text": "Mas tome cuidado em atribuir valores impossíveis de atender a condição do WHILE. Pois podem gerar uma repetição infinita.",
+					   5: {"text": "WHILE_TUT_6",
 						   "position": Vector2(409, 82)},
-					   6: {"text": "Digamos que ao invés de utilizar o operador lógico LESS, utilizaremos o NOT EQUAL.",
+					   6: {"text": "WHILE_TUT_7",
 						   "position": Vector2(409, 82)},
-					   7: {"text": "Com isso as condições do WHILE conforme iteração seriam \"2 != 5\", \"4 != 5\", \"6 != 5\". Podemos deduzir que nunca será FALSE a condição.",
+					   7: {"text": "WHILE_TUT_8",
 						   "position": Vector2(409, 82)},
-					   8: {"text": "Porque o valor do triângulo tende a crescer em 2, e se notarmos nunca poderá ter o valor 5 que é a única condição de saída do WHILE.",
+					   8: {"text": "WHILE_TUT_9",
 						   "position": Vector2(409, 82)}}
 
 func _ready() -> void:
+	translation()
 	$red_square.visible = false
 	$whilee.play_idle()
 	config_button()
 	init_tutorial()
+
+func translation() -> void:
+	$title.text = tr("STAGE_2_TITLE");
+	$question.text = tr("STAGE_2_DESC");
+	$function/title.text = tr("FUNCTION");
+	$function/waited.text = tr("EXPECTED");
+	$function/result.text = tr("RESULT");
+	$hint/title.text = tr("REMINDER");
+	$hint/variable.text = tr("VARIABLES");
+	$hint/arithmetic.text = tr("ARITHMETIC_OP2");
+	$hint/logic.text = tr("LOGIC_OP2");
+	$capture/btn_name.text = tr("CAPTURE");
+	$flee/btn_name.text = tr("FLEE");
+	$help/btn_name.text = tr("HELP");
+	$debuger/btn_name.text = tr("DEBUG");
+	$chalenge.text = tr("CHALLENGING") + " While";
 
 func config_button() -> void:
 	$capture.disabled = true

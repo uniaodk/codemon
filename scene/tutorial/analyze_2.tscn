@@ -505,14 +505,12 @@ margin_left = 744.029
 margin_top = 427.628
 margin_right = 651.709
 margin_bottom = 408.828
-btn_name = "Capturar"
 
 [node name="flee" parent="." instance=ExtResource( 18 )]
 margin_left = 743.862
 margin_top = 516.108
 margin_right = 651.542
 margin_bottom = 497.308
-btn_name = "Fugir"
 
 [node name="debuger" parent="." instance=ExtResource( 19 )]
 visible = false
@@ -520,14 +518,12 @@ anchor_left = 0.529569
 anchor_top = 0.830463
 anchor_right = 0.529569
 anchor_bottom = 0.830463
-btn_name = "Debug"
 
 [node name="help" parent="." instance=ExtResource( 18 )]
 margin_left = 744.052
 margin_top = 472.107
 margin_right = 651.732
 margin_bottom = 453.307
-btn_name = "Ajuda"
 
 [node name="chalenge" type="Label" parent="."]
 margin_left = 695.882
@@ -550,5 +546,6 @@ anchor_left = 0.481445
 anchor_top = 0.571667
 anchor_right = 0.847656
 anchor_bottom = 0.843334
+
 [connection signal="pressed" from="capture" to="." method="_on_capture_pressed"]
 [connection signal="pressed" from="debuger" to="." method="_on_debuger_pressed"]

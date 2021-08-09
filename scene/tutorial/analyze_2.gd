@@ -4,22 +4,23 @@ var pos_btn_1: int
 var pos_btn_2: int 
 var debug_count: int = 0
 
-var seq: Dictionary = {0: {"text": "O objetivo principal continua o mesmo. Atribuir tipos e valores as formas geométricas para resultar o valor esperado.",
+var seq: Dictionary = {0: {"text": "ANALYZE_2_TUT_1",
 						   "position": Vector2(429, 37)},
-					   1: {"text": "Porém agora iremos utilizar os operadores aritméticos para auxiliar a chegar no valor esperado.",
+					   1: {"text": "ANALYZE_2_TUT_2",
 						   "position": Vector2(3, 204)},
-					   2: {"text": "Muito bem, vamos atribuir incialmente o tipo do triângulo vermelho como INT e valor 4",
+					   2: {"text": "ANALYZE_2_TUT_3",
 						   "position": Vector2(109, 77)},
-					   3: {"text": "E agora atribuir o operador aritmético MULTIPLY para o quadrado azul",
+					   3: {"text": "ANALYZE_2_TUT_4",
 						   "position": Vector2(120, 190)},
-					   4: {"text": "Clicar no botão Capturar para iniciar o debug da função.",
+					   4: {"text": "ANALYZE_2_TUT_5",
 						   "position": Vector2(639, 265)},
-					   5: {"text": "E apertar o botão Debug até finalizar a função.",
+					   5: {"text": "ANALYZE_2_TUT_6",
 						   "position": Vector2(493, 343)},
-					   6: {"text": "Muito bem! Que a força esteja com você.",
+					   6: {"text": "ANALYZE_2_TUT_7",
 						   "position": Vector2(493, 343)}}
 
 func _ready() -> void:
+	translation();
 	$bigger.play_idle()
 	$btn_1/btn.connect("focus_exited", self, "on_focus_exited_btn_1")
 	$btn_1/label.connect("focus_exited", self, "on_focus_exited_btn_1_label")
@@ -27,6 +28,22 @@ func _ready() -> void:
 	$btn_2/label.connect("focus_exited", self, "on_focus_exited_btn_2_label")
 	config_button()
 	init_tutorial()
+	
+func translation() -> void:
+	$title.text = tr("STAGE_2_TITLE");
+	$question.text = tr("STAGE_2_DESC");
+	$function/title.text = tr("FUNCTION");
+	$function/waited.text = tr("EXPECTED");
+	$function/result.text = tr("RESULT");
+	$hint/title.text = tr("REMINDER");
+	$hint/variable.text = tr("VARIABLES");
+	$hint/arithmetic.text = tr("ARITHMETIC_OP2");
+	$hint/logic.text = tr("LOGIC_OP2");
+	$capture/btn_name.text = tr("CAPTURE");
+	$flee/btn_name.text = tr("FLEE");
+	$help/btn_name.text = tr("HELP");
+	$debuger/btn_name.text = tr("DEBUG");
+	$chalenge.text = tr("CHALLENGING") + " Bigger";
 
 func config_button() -> void:
 	pos_btn_1 = $btn_1.get_position_in_parent()

@@ -475,5 +475,6 @@ anchor_left = 0.483398
 anchor_top = 0.573333
 anchor_right = 0.849609
 anchor_bottom = 0.845
+
 [connection signal="pressed" from="capture" to="." method="_on_capture_pressed"]
 [connection signal="pressed" from="debuger" to="." method="_on_debuger_pressed"]
