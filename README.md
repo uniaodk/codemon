@@ -20,8 +20,13 @@
 This is a educational RPG game developed in Godot Game Engine in 2D pixel art. The main goal is introduce the fundamentals of programing, such as concept about variables and yours types, the arithmetic operator, the logic operator, control flow and the last challenge the bubble sort algorithm (BOSS). The game is for a single player, with the concept of exploration and RPG adventure in discovering new areas, challenging and capturing all codemons, completing missions and finally defeating the terrible bubble to restore order to the world. The player controls the character Jimmy who must solve the challenges offered by the codemons, according to the guidelines given by the NPCs during the journey.
 
 ## Getting Started <a name = "getting_started"></a>
-Access the following link and download the “.zip” file with the name of the operating system installed on the machine that will run the game (ex. windows_x64.zip).
+Access the following link and download the “.zip” file with the name of the operating system installed on the machine that will run the game.
 After downloading, you must extract and run the “Codemon” file to start the game.
+
+[codemon_pt-en_windows-x86.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon-v1.0-alpha-pt_eng-windows_x86.zip)
+[codemon_pt-en_windows-x64.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon-v1.0-alpha-pt_eng-windows_x64.zip)
+[codemon_pt-en_linux-x86-x64.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon-v1.0-alpha-pt_eng-linux_x86_x64.zip)
+[codemon_pt-en_macOS.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon-v1.0-alpha-pt_eng-macOS.zip)
 
 Note: Linux is necessary to make it executable first.
 ```chmod +x Codemon.x86_64```
