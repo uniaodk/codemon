@@ -23,10 +23,10 @@ This is a educational RPG game developed in Godot Game Engine in 2D pixel art. T
 Access the following link and download the “.zip” file with the name of the operating system installed on the machine that will run the game.
 After downloading, you must extract and run the “Codemon” file to start the game.
 
-[codemon_pt-en_windows-x86.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon-v1.0-alpha-pt_eng-windows_x86.zip)<br>
-[codemon_pt-en_windows-x64.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon-v1.0-alpha-pt_eng-windows_x64.zip)<br>
-[codemon_pt-en_linux-x86-x64.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon-v1.0-alpha-pt_eng-linux_x86_x64.zip)<br>
-[codemon_pt-en_macOS.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon-v1.0-alpha-pt_eng-macOS.zip)<br>
+[codemon_pt-en_windows-x86.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon_v1.0-alpha_pt-en_windows-x86.zip)<br>
+[codemon_pt-en_windows-x64.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon_v1.0-alpha_pt-en_windows-x64.zip)<br>
+[codemon_pt-en_linux-x86-x64.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon_v1.0-alpha_pt-en_linux-x86x64.zip)<br>
+[codemon_pt-en_macOS.zip](https://github.com/uniaodk/codemon/releases/download/v1.0-alpha/codemon_v1.0-alpha_pt-en_macOS.zip)<br>
 
 Note: Linux is necessary to make it executable first.
 ```chmod +x Codemon.x86_64```
