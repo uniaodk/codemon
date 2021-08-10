@@ -44,10 +44,10 @@ The player takes control of the avatar Jimmy that, through keyboard and mouse ac
 | Key | Description |
 |--|--|
 | Mouse Left Click | Interaction on Challenges |
-| Up | Move Forward |
-| Left| Move to Left |
-| Down| Move Backward|
-| Right| Move to Right |
+| Up, W | Move Forward |
+| Left, D| Move to Left |
+| Down, S| Move Backward|
+| Right, A| Move to Right |
 | E | Interaction |
 | ESC | Open the Menu |
 | B | Open the Bestiary |
