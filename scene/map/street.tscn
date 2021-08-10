@@ -816,6 +816,7 @@ anims/intro_1 = SubResource( 17 )
 anims/intro_2 = SubResource( 18 )
 anims/transition_in = SubResource( 19 )
 anims/transition_out = SubResource( 20 )
+
 [connection signal="body_entered" from="tilemap/portal_forest" to="." method="_on_portal_forest_body_entered"]
 [connection signal="body_entered" from="tilemap/portal_laboratory" to="." method="_on_portal_laboratory_body_entered"]
 [connection signal="animation_finished" from="animation" to="." method="_on_animation_finished"]

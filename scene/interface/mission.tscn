@@ -289,4 +289,5 @@ margin_right = 5.0
 margin_bottom = -114.0
 shortcut_in_tooltip = false
 shortcut = SubResource( 7 )
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -22,6 +22,8 @@ func _on_pt_pressed():
 	set_language(game.PT)
 
 func set_language(language: String) -> void:
+	persistence.load_progress();
 	game.language = language;
+	persistence.save_progress()
 	TranslationServer.set_locale(game.language);
 	get_tree().change_scene("res://scene/interface/main_menu.tscn")

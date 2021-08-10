@@ -35,7 +35,6 @@ var in_dialog : bool = true
 signal end_dialogue(reference)
 
 func _ready() -> void:
-	TranslationServer.set_locale(game.ENG)
 	config_position_player()
 	init_transition()
 	connect("end_dialogue", self, "_on_end_dialogue")

@@ -68,10 +68,10 @@ func _on_portal_desert_body_entered(body: Node) -> void:
 	game.change_music(load("res://audio/music/desert.ogg"))
 
 func _on_chalenge_entered(object, _node) -> void:
-	if object == "Bolha Infectado":
-		game.add_interaction_btn($ysort/player, "Desafiar", object)
+	if object == tr("INFECTED_BUBBLE"):
+		game.add_interaction_btn($ysort/player, tr("CHALLENGE"), tr("INFECTED_BUBBLE"))
 	else:
-		game.add_interaction_btn($ysort/player, "Falar", "Bolha")	
+		game.add_interaction_btn($ysort/player, tr("TALK"), tr("BUBBLE"))	
 
 func _on_chalenge_exited(object) -> void:
 	for child in $ysort/player.get_children():
@@ -81,31 +81,29 @@ func _on_chalenge_exited(object) -> void:
 
 func _on_dr_compilador_chat_entered() -> void:
 	if is_interact:
-		game.add_interaction_btn($ysort/player, "Falar", "Dr Compilador")
-
+		game.add_interaction_btn($ysort/player, tr("TALK"), tr("DR"))
 
 func _on_dr_compilador_chat_exited() -> void:
-	_on_chalenge_exited("Dr Compilador")
+	_on_chalenge_exited(tr("DR"))
 	
 func _on_pick_talk_interaction(object: String) -> void:
 	_on_chalenge_exited(object)
-	match object:
-		"Dr Compilador":
+	if object == tr("DR"):
+		$ysort/player.play_animation("", true)
+		game.run_dialogue("boss_tutorial", self)
+	elif object == tr("BUBBLE"):
+		$ysort/player.play_animation("", true)
+		game.run_dialogue("bubble_good", self)
+	elif object == tr("SIMULATOR"):
+		if game.is_finished_game:
+			var simulation: Control = simulator.instance()
+			hud.add_child(simulation)
+			get_tree().paused = true
+		else:
 			$ysort/player.play_animation("", true)
-			game.run_dialogue("boss_tutorial", self)
-		"Bolha":
-			$ysort/player.play_animation("", true)
-			game.run_dialogue("bubble_good", self)
-		"Simulador":
-			if game.is_finished_game:
-				var simulation: Control = simulator.instance()
-				hud.add_child(simulation)
-				get_tree().paused = true
-			else:
-				$ysort/player.play_animation("", true)
-				game.run_dialogue("simulator", self)
-		_:
-			init_chalenge_bubble()
+			game.run_dialogue("simulator", self)
+	else:
+		init_chalenge_bubble()
 
 func _on_end_dialogue(reference: String) -> void:
 	$ysort/player.play_animation("", false)
@@ -132,8 +130,8 @@ func end_game() -> void:
 
 
 func _on_computer_chat_entered() -> void:
-	game.add_interaction_btn($ysort/player, "Iniciar", "Simulador")
+	game.add_interaction_btn($ysort/player, tr("ACESS"), tr("SIMULATOR"))
 
 
 func _on_computer_chat_exited() -> void:
-	_on_chalenge_exited("Simulador")
+	_on_chalenge_exited(tr("SIMULATOR"))

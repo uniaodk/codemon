@@ -37,7 +37,7 @@ func _on_portal_street_body_entered(_body: Node) -> void:
 
 func _on_end_dialogue(reference: String) -> void:
 	$ysort/player.play_animation("", false)
-	game.add_interaction_btn($ysort/player, tr("Talk"), tr("DR"))
+	game.add_interaction_btn($ysort/player, tr("TALK"), tr("DR"))
 	if reference == "laboratory_part_1":
 		$ysort/player.play_animation("idle_left", false)	
 	elif reference == "laboratory_tutorial":
@@ -48,7 +48,7 @@ func _on_end_dialogue(reference: String) -> void:
 	
 func _on_dr_compilador_chat_entered() -> void:
 	if !$animation.is_playing():
-		game.add_interaction_btn($ysort/player, tr("Talk"), tr("DR"))
+		game.add_interaction_btn($ysort/player, tr("TALK"), tr("DR"))
 
 
 func _on_dr_compilador_chat_exited() -> void:
@@ -56,7 +56,7 @@ func _on_dr_compilador_chat_exited() -> void:
 
 
 func _on_notebook_pickup_entered() -> void:
-	game.add_interaction_btn($ysort/player, tr("Pick"), "Notebook")
+	game.add_interaction_btn($ysort/player, tr("PICK"), "Notebook")
 
 
 func _on_notebook_pickup_exited() -> void:

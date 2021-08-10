@@ -143,6 +143,7 @@ vframes = 11
 
 [node name="animation" type="AnimationPlayer" parent="."]
 anims/shake = SubResource( 1 )
+
 [connection signal="pressed" from="options/a" to="." method="_on_a_pressed"]
 [connection signal="pressed" from="options/b" to="." method="_on_b_pressed"]
 [connection signal="pressed" from="options/c" to="." method="_on_c_pressed"]

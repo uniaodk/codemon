@@ -107,10 +107,10 @@ __meta__ = {
 }
 
 [node name="vbox_container" type="VBoxContainer" parent="background"]
-margin_left = 396.0
-margin_top = 306.0
-margin_right = 488.0
-margin_bottom = 394.0
+margin_left = 399.367
+margin_top = 270.081
+margin_right = 491.367
+margin_bottom = 381.081
 rect_scale = Vector2( 2.5, 2.5 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -163,6 +163,14 @@ margin_right = 92.0
 margin_bottom = 88.0
 rect_scale = Vector2( 1, 1 )
 
+[node name="exit" parent="background/vbox_container" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 92.0
+margin_right = 92.0
+margin_bottom = 111.0
+rect_scale = Vector2( 1, 1 )
+
 [node name="logo_uniaodk" type="TextureRect" parent="background"]
 margin_left = 899.0
 margin_top = 507.0
@@ -208,10 +216,12 @@ __meta__ = {
 
 [node name="animation" type="AnimationPlayer" parent="."]
 anims/transition = SubResource( 4 )
+
 [connection signal="pressed" from="background/vbox_container/new_game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="background/vbox_container/continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="background/vbox_container/simulator" to="." method="_on_simulator_pressed"]
 [connection signal="pressed" from="background/vbox_container/option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="background/vbox_container/exit" to="." method="_on_exit_pressed"]
 [connection signal="animation_finished" from="animation" to="." method="_on_animation_finished"]
 
 [editable path="background/vbox_container/simulator"]

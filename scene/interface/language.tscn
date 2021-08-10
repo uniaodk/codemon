@@ -94,6 +94,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="mouse_entered" from="pt" to="." method="_on_pt_mouse_entered"]
 [connection signal="mouse_exited" from="pt" to="." method="_on_pt_mouse_exited"]
 [connection signal="pressed" from="pt" to="." method="_on_pt_pressed"]

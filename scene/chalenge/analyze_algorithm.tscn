@@ -400,5 +400,6 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="flee" to="." method="_on_flee_pressed"]
 [connection signal="pressed" from="help" to="." method="_on_help_pressed"]

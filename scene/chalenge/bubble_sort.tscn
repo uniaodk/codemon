@@ -558,6 +558,7 @@ __meta__ = {
 position = Vector2( 822.941, 396 )
 
 [node name="tween" type="Tween" parent="bg"]
+
 [connection signal="pressed" from="bg/flee" to="." method="_on_flee_pressed"]
 [connection signal="pressed" from="bg/help" to="." method="_on_help_pressed"]
 [connection signal="tween_completed" from="bg/tween" to="." method="_on_tween_completed"]

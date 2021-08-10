@@ -25,7 +25,6 @@ var music: Dictionary = {
 
 func _ready() -> void:
 	translation();
-	persistence.load_progress()
 	$background/vbox_container/continue.set_disabled(game.is_new_game)
 	$background/vbox_container/simulator.set_disabled(!game.is_finished_game)
 	$background/vbox_container/new_game.grab_focus()
@@ -37,6 +36,7 @@ func translation() -> void:
 	$background/vbox_container/simulator/btn_name.text = tr("SIMULATOR");
 	$background/vbox_container/simulator.hint_tooltip = tr("SIMULATOR_HINT");
 	$background/vbox_container/option/btn_name.text = tr("OPTIONS");
+	$background/vbox_container/exit/btn_name.text = tr("EXIT");
 	
 
 func _on_option_pressed() -> void:
@@ -68,3 +68,6 @@ func get_music() -> Resource:
 		return music.get(game.current_map)[int(game.is_finished_game)]
 	else:
 		return music.get(game.current_map)
+
+func _on_exit_pressed():
+	get_tree().quit();

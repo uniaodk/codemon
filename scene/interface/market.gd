@@ -31,14 +31,14 @@ func translate() -> void:
 	$warning.text = tr("OBS_STORE");
 
 func calculate_total() -> void:
-	var total: int = (buy_coin * int($coin/price.btn_name)
-					+ buy_capture * int($capture/price.btn_name)
-					+ buy_battery * int($battery/price.btn_name))
+	var total: int = (buy_coin * int($coin/price/btn_name.text)
+					+ buy_capture * int($capture/price/btn_name.text)
+					+ buy_battery * int($battery/price/btn_name.text))
 	$total/value.text = "%03d" % total
 
 
 func _on_battery_price_pressed() -> void:
-	if !pass_limit(int($battery/price.btn_name)):
+	if !pass_limit(int($battery/price/btn_name.text)):
 		buy_battery = buy_battery + 1
 		battery.get_node("qtd").text = "%02d" % buy_battery
 		if !$grid.is_a_parent_of(battery):
@@ -46,7 +46,7 @@ func _on_battery_price_pressed() -> void:
 		calculate_total()
 
 func _on_capture_price_pressed() -> void:
-	if !pass_limit(int($capture/price.btn_name)):
+	if !pass_limit(int($capture/price/btn_name.text)):
 		buy_capture = buy_capture + 1
 		capture.get_node("qtd").text = "%02d" % buy_capture
 		if !$grid.is_a_parent_of(capture):
@@ -55,7 +55,7 @@ func _on_capture_price_pressed() -> void:
 
 
 func _on_coin_price_pressed() -> void:
-	if !pass_limit(int($coin/price.btn_name)):
+	if !pass_limit(int($coin/price/btn_name.text)):
 		buy_coin = buy_coin + 1
 		coin.get_node("qtd").text = "%02d" % buy_coin
 		if !$grid.is_a_parent_of(coin):
